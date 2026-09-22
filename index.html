@@ -1539,6 +1539,465 @@
       .amenities-grid{display:flex}
     }
 
+
+    /* =========================================================
+       MOBILE V6 — inspired by the cleaner Cucu Residence rhythm
+       Desktop remains unchanged.
+       ========================================================= */
+    .premium-menu-icon{
+      position:relative;
+      width:19px;
+      height:14px;
+      display:block;
+    }
+    .premium-menu-icon span{
+      position:absolute;
+      left:0;
+      width:100%;
+      height:2px;
+      border-radius:999px;
+      background:currentColor;
+      transition:top .25s ease, transform .25s ease, opacity .25s ease;
+    }
+    .premium-menu-icon span:nth-child(1){top:0}
+    .premium-menu-icon span:nth-child(2){top:6px}
+    .premium-menu-icon span:nth-child(3){top:12px}
+    .menu-toggle[aria-expanded="true"] .premium-menu-icon span:nth-child(1){
+      top:6px;transform:rotate(45deg);
+    }
+    .menu-toggle[aria-expanded="true"] .premium-menu-icon span:nth-child(2){opacity:0}
+    .menu-toggle[aria-expanded="true"] .premium-menu-icon span:nth-child(3){
+      top:6px;transform:rotate(-45deg);
+    }
+
+    @media (max-width:760px){
+
+      /* ---------- HEADER ---------- */
+      .site-header{
+        padding:
+          max(20px, env(safe-area-inset-top))
+          20px
+          0;
+      }
+
+      .brand{
+        gap:5px;
+      }
+
+      .brand strong{
+        font-size:27px;
+        font-weight:400;
+        letter-spacing:-.025em;
+      }
+
+      .brand span{
+        display:block;
+        margin-top:0;
+        font-size:8px;
+        letter-spacing:.20em;
+        opacity:.72;
+      }
+
+      .header-right{gap:8px}
+
+      .language-btn{
+        min-width:58px;
+        height:43px;
+        padding:0 10px;
+        font-size:11px;
+        border-color:rgba(255,255,255,.28);
+        background:rgba(255,255,255,.10);
+      }
+
+      .menu-toggle{
+        width:43px;
+        height:43px;
+        border-color:rgba(255,255,255,.28);
+        background:rgba(255,255,255,.10);
+      }
+
+      /* ---------- HERO ---------- */
+      .hero{
+        min-height:100vh;
+        min-height:100svh;
+        height:auto;
+        max-height:none;
+        align-items:flex-end;
+      }
+
+      .hero::before{
+        background:
+          linear-gradient(
+            180deg,
+            rgba(7,20,16,.38) 0%,
+            rgba(7,20,16,.07) 34%,
+            rgba(7,20,16,.34) 62%,
+            rgba(7,20,16,.80) 100%
+          ),
+          url("assets/images/living_room_02.webp") 10% center / cover no-repeat;
+        transform:none;
+      }
+
+      .hero::after{
+        height:0;
+        background:none;
+      }
+
+      .hero-inner{
+        width:100%;
+        margin:0;
+        padding:
+          120px
+          20px
+          max(34px, env(safe-area-inset-bottom));
+      }
+
+      .eyebrow{
+        display:flex;
+        margin-bottom:16px;
+        gap:12px;
+        font-size:10px;
+        letter-spacing:.22em;
+      }
+
+      .eyebrow::before{width:34px}
+
+      .hero h1{
+        max-width:440px;
+        margin:0 0 20px;
+        font-size:clamp(54px,18vw,74px);
+        line-height:.86;
+        letter-spacing:-.05em;
+      }
+
+      .hero-copy{
+        max-width:500px;
+        margin:0 0 27px;
+        font-size:15.5px;
+        line-height:1.55;
+      }
+
+      .hero-actions{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        width:100%;
+        gap:10px;
+        margin-top:0;
+      }
+
+      .hero .btn{
+        width:100%;
+        min-height:54px;
+        padding:0 13px;
+        font-size:11.5px;
+        line-height:1.2;
+        text-align:center;
+        white-space:normal;
+      }
+
+      /* ---------- QUICK FACTS ----------
+         One premium compact card, not a rail of pills.
+      */
+      .quick-facts-wrap{
+        width:calc(100% - 28px);
+        margin:-18px auto 0;
+        padding:0;
+        background:transparent;
+        position:relative;
+        z-index:7;
+      }
+
+      .quick-facts{
+        display:grid;
+        grid-template-columns:repeat(6,minmax(0,1fr));
+        gap:5px;
+        padding:6px;
+        overflow:visible;
+        border:1px solid rgba(23,61,49,.08);
+        border-radius:22px;
+        background:rgba(255,253,249,.97);
+        box-shadow:0 18px 44px rgba(19,50,40,.12);
+        backdrop-filter:blur(18px);
+        -webkit-backdrop-filter:blur(18px);
+      }
+
+      .fact,
+      .fact:nth-child(even),
+      .fact:nth-child(7),
+      .fact:nth-child(5),
+      .fact:nth-child(6){
+        min-height:0;
+        padding:11px 10px;
+        border:0;
+        border-radius:15px;
+        background:#f8f5ee;
+        box-shadow:none;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:flex-start;
+        gap:8px;
+        text-align:left;
+      }
+
+      .fact:nth-child(-n+4){
+        grid-column:span 3;
+        min-height:66px;
+      }
+
+      .fact:nth-child(n+5){
+        grid-column:span 2;
+        min-height:48px;
+        padding:9px 8px;
+      }
+
+      .fact-icon{
+        display:grid;
+        flex:0 0 30px;
+        width:30px;
+        height:30px;
+        margin:0;
+        border-radius:50%;
+        background:#fff;
+        font-size:15px;
+        color:var(--green-deep);
+        box-shadow:inset 0 0 0 1px rgba(23,61,49,.06);
+      }
+
+      .fact:nth-child(n+5) .fact-icon{
+        flex-basis:24px;
+        width:24px;
+        height:24px;
+        font-size:12px;
+      }
+
+      .fact strong{
+        display:block;
+        font-size:11.5px;
+        line-height:1.18;
+        white-space:normal;
+      }
+
+      .fact small{
+        display:block;
+        margin-top:3px;
+        font-size:9px;
+        line-height:1.25;
+        color:#7d8883;
+      }
+
+      .fact:nth-child(n+5) small{display:none}
+      .fact:nth-child(n+5) strong{
+        font-size:9.7px;
+        line-height:1.18;
+      }
+
+      /* ---------- GENERAL MOBILE RHYTHM ---------- */
+      .section{
+        width:calc(100% - 40px);
+        padding:58px 0;
+      }
+
+      .intro{
+        padding-top:62px;
+      }
+
+      .section-title{
+        font-size:clamp(31px,9vw,39px);
+        line-height:1.02;
+      }
+
+      .section-copy{
+        font-size:14.5px;
+        line-height:1.62;
+      }
+
+      /* Keep the Tâmpa section elegant but less oversized */
+      .view-section{padding:58px 0}
+      .view-inner{width:calc(100% - 32px)}
+      .view-main{min-height:345px}
+      .view-side-photo{min-height:300px}
+      .view-side-photo h3{
+        font-size:23px;
+        left:18px;
+        right:18px;
+        bottom:17px;
+      }
+      .view-side .view-card-copy{padding:15px 18px 17px}
+      .view-side .view-card-copy p{font-size:12.5px}
+
+      /* Balcony stays compact */
+      .balcony-section{
+        margin-top:48px;
+        padding:14px;
+      }
+      .balcony-copy{padding:10px 7px 12px}
+      .balcony-copy .section-title{font-size:30px}
+      .balcony-image,
+      .balcony-image img{min-height:290px}
+
+      /* ---------- CALENDAR / BOOKING ---------- */
+      .reservation-section{padding:54px 0}
+
+      .reservation-inner{
+        width:calc(100% - 24px);
+        gap:20px;
+      }
+
+      .booking-panel{
+        padding:13px;
+        border-radius:20px;
+      }
+
+      .booking-panel-head{
+        margin-bottom:12px;
+      }
+
+      .booking-panel-head strong{
+        font-size:20px;
+      }
+
+      .booking-badge{
+        font-size:8px;
+        padding:6px 8px;
+      }
+
+      .calendar-shell{
+        margin-bottom:12px;
+        border-radius:15px;
+      }
+
+      .calendar-toolbar{
+        padding:9px 10px;
+      }
+
+      .calendar-toolbar-copy strong{
+        font-size:16px;
+      }
+
+      .calendar-toolbar-copy span{
+        display:none;
+      }
+
+      .calendar-nav button{
+        width:31px;
+        height:31px;
+      }
+
+      .calendar-month{
+        padding:8px 7px 9px;
+      }
+
+      .calendar-month-title{
+        margin-bottom:7px;
+        font-size:12px;
+      }
+
+      .calendar-weekdays span{
+        padding:2px 0 3px;
+        font-size:8px;
+      }
+
+      .calendar-days{
+        gap:2px;
+      }
+
+      .calendar-day{
+        aspect-ratio:auto;
+        height:32px;
+        border-radius:8px;
+        font-size:10.5px;
+      }
+
+      .calendar-legend{
+        display:none;
+      }
+
+      /* Check-in + Check-out on the same row */
+      .booking-fields{
+        grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+        gap:8px;
+      }
+
+      .booking-field{
+        gap:5px;
+        min-width:0;
+      }
+
+      .booking-field.full{
+        grid-column:1 / -1;
+      }
+
+      .booking-field label{
+        font-size:8.5px;
+        letter-spacing:.04em;
+      }
+
+      .booking-field input,
+      .booking-field select{
+        min-width:0;
+        min-height:42px;
+        padding:0 8px;
+        border-radius:11px;
+        font-size:11px;
+      }
+
+      .booking-field input[type="date"]{
+        padding-right:4px;
+      }
+
+      .booking-summary{
+        min-height:0;
+        margin-top:10px;
+        padding:9px 10px;
+        border-radius:11px;
+        font-size:10.5px;
+        line-height:1.4;
+      }
+
+      .booking-panel .btn{
+        min-height:42px;
+        margin-top:10px;
+        padding:9px 12px;
+        font-size:11.5px;
+      }
+
+      .booking-status{
+        display:none;
+      }
+
+      .booking{
+        min-height:420px;
+        margin-top:52px;
+      }
+
+      .booking-inner{
+        width:calc(100% - 40px);
+        padding:46px 0;
+      }
+
+      .booking-inner h2{
+        font-size:36px;
+      }
+
+      .booking-inner p{
+        font-size:14px;
+      }
+    }
+
+    @media (max-width:430px){
+      .brand strong{font-size:23px}
+      .brand span{font-size:7px}
+      .hero h1{font-size:clamp(52px,18vw,70px)}
+      .hero-copy{font-size:15px}
+      .hero .btn{font-size:10.8px;padding:0 10px}
+      .fact{padding:10px 8px}
+      .fact strong{font-size:10.8px}
+      .fact:nth-child(n+5) strong{font-size:9.2px}
+      .booking-field input,
+      .booking-field select{font-size:10.5px;padding:0 6px}
+    }
+
   </style>
 </head>
 
@@ -1568,7 +2027,9 @@
         </div>
       </div>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+        <span class="premium-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
       <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
         <a href="#apartment" data-i18n="navApartment">Apartamentul</a>
         <a href="#gallery" data-i18n="navGallery">Galerie</a>
@@ -1907,7 +2368,7 @@
         <strong>Central Premium Apartment</strong>
         <span>Brașov, România</span>
       </div>
-      <div data-i18n="footerText">RO · EN · DE · Website concept v5</div>
+      <div data-i18n="footerText">RO · EN · DE · Website concept v6</div>
     </div>
   </footer>
 
@@ -1961,7 +2422,7 @@
         reserveKicker:"Planifică sejurul", reserveTitle:"Alege datele. De aici începe Brașovul tău.", reserveCopy:"Selectează perioada și numărul de oaspeți. Calendarul este pregătit pentru conectarea la disponibilitatea reală și fluxul final de rezervare.", reservePanelTitle:"Verifică perioada", reserveBadge:"până la 6 oaspeți", calendarTitle:"Alege perioada", calendarHelp:"Prima dată selectată este check-in; a doua este check-out.", calendarToday:"Astăzi", calendarSelected:"Selectat", calendarPast:"Date trecute indisponibile", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Oaspeți", bookingSummaryEmpty:"Selectează datele pentru a vedea rezumatul sejurului.", reserveButton:"Continuă rezervarea", reserveStatus:"În etapa următoare conectăm acest formular la calendarul real de disponibilitate și canalul de rezervare.", bookingSummaryNights:"nopți", bookingSummaryGuests:"oaspeți", bookingFormMessage:"Perfect. Perioada este selectată; conectarea la rezervarea reală va fi activată înainte de publicare.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Alege datele",
         bookingKicker:"Central Premium Apartment", bookingTitle:"Brașovul e mai frumos când îl vezi de aici.",
         bookingCopy:"Pentru un city break, un sejur în familie sau câteva zile de liniște, apartamentul oferă spațiul și priveliștea care fac diferența.",
-        bookingButton:"Verifică disponibilitatea", footerText:"RO · EN · DE · Website concept v5"
+        bookingButton:"Verifică disponibilitatea", footerText:"RO · EN · DE · Website concept v6"
       },
       en: {
         navApartment:"Apartment", navGallery:"Gallery", navLocation:"Location", navBook:"Book",
@@ -2006,7 +2467,7 @@
         reserveKicker:"Plan your stay", reserveTitle:"Choose your dates. Your Brașov stay starts here.", reserveCopy:"Select your dates and number of guests. The calendar is ready to be connected to live availability and the final booking flow.", reservePanelTitle:"Check your dates", reserveBadge:"up to 6 guests", calendarTitle:"Choose your dates", calendarHelp:"Your first selection is check-in; the second is check-out.", calendarToday:"Today", calendarSelected:"Selected", calendarPast:"Past dates unavailable", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Guests", bookingSummaryEmpty:"Choose your dates to see a stay summary.", reserveButton:"Continue booking", reserveStatus:"Next, we will connect this form to live availability and the final booking channel.", bookingSummaryNights:"nights", bookingSummaryGuests:"guests", bookingFormMessage:"Great. Your dates are selected; the live booking connection will be activated before publication.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Choose dates",
         bookingKicker:"Central Premium Apartment", bookingTitle:"Brașov looks even better from here.",
         bookingCopy:"For a city break, a family stay or a few quiet days, the apartment offers the space and view that make a real difference.",
-        bookingButton:"Check availability", footerText:"RO · EN · DE · Website concept v5"
+        bookingButton:"Check availability", footerText:"RO · EN · DE · Website concept v6"
       },
       de: {
         navApartment:"Apartment", navGallery:"Galerie", navLocation:"Lage", navBook:"Buchen",
@@ -2051,7 +2512,7 @@
         reserveKicker:"Aufenthalt planen", reserveTitle:"Wählen Sie Ihre Daten. Ihr Brașov-Aufenthalt beginnt hier.", reserveCopy:"Wählen Sie Zeitraum und Gästezahl. Der Kalender ist für die Verbindung mit der Live-Verfügbarkeit und dem finalen Buchungsablauf vorbereitet.", reservePanelTitle:"Zeitraum prüfen", reserveBadge:"bis zu 6 Gäste", calendarTitle:"Zeitraum wählen", calendarHelp:"Die erste Auswahl ist Check-in, die zweite Check-out.", calendarToday:"Heute", calendarSelected:"Ausgewählt", calendarPast:"Vergangene Daten nicht verfügbar", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Gäste", bookingSummaryEmpty:"Wählen Sie die Daten, um die Aufenthaltsübersicht zu sehen.", reserveButton:"Buchung fortsetzen", reserveStatus:"Im nächsten Schritt verbinden wir dieses Formular mit der Live-Verfügbarkeit und dem finalen Buchungskanal.", bookingSummaryNights:"Nächte", bookingSummaryGuests:"Gäste", bookingFormMessage:"Perfekt. Ihre Daten sind ausgewählt; die Live-Buchungsverbindung wird vor der Veröffentlichung aktiviert.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Daten wählen",
         bookingKicker:"Central Premium Apartment", bookingTitle:"Brașov ist von hier aus noch schöner.",
         bookingCopy:"Für einen Citytrip, einen Familienaufenthalt oder ein paar ruhige Tage bietet das Apartment den Raum und die Aussicht, die den Unterschied machen.",
-        bookingButton:"Verfügbarkeit prüfen", footerText:"RO · EN · DE · Website concept v5"
+        bookingButton:"Verfügbarkeit prüfen", footerText:"RO · EN · DE · Website concept v6"
       }
     };
 
