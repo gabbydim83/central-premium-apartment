@@ -1,0 +1,2349 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#173b31" />
+  <meta name="description" content="Central Premium Apartment Brașov — apartament spațios cu vedere spre Tâmpa, 2 dormitoare, 2 băi, balcon, parcare și bucătărie complet echipată." />
+  <title>Central Premium Apartment | Brașov</title>
+
+  <style>
+    :root{
+      --ink:#17342d;
+      --ink-2:#25493f;
+      --muted:#6f7d77;
+      --cream:#f5efe6;
+      --cream-2:#eee3d5;
+      --paper:#fffdf9;
+      --sand:#d9c2a5;
+      --blush:#d9aaa8;
+      --blush-soft:#f3e4e1;
+      --green:#315f51;
+      --green-deep:#173b31;
+      --green-soft:#dfe9e4;
+      --line:rgba(23,52,45,.12);
+      --shadow:0 22px 65px rgba(23,52,45,.14);
+      --shadow-soft:0 12px 36px rgba(23,52,45,.09);
+      --radius:28px;
+      --radius-sm:18px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--paper);
+      color:#1e2925;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+    }
+
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    img{display:block;width:100%;height:auto}
+    section{scroll-margin-top:90px}
+
+    .site-header{
+      position:absolute;
+      inset:0 0 auto 0;
+      z-index:50;
+      padding:18px 4vw;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      color:#fff;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      line-height:1;
+      text-shadow:0 2px 20px rgba(0,0,0,.2);
+    }
+
+    .brand strong{
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(19px,2vw,27px);
+      letter-spacing:.02em;
+      font-weight:600;
+    }
+
+    .brand span{
+      margin-top:7px;
+      font-size:11px;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      opacity:.82;
+    }
+
+    .header-right{
+      display:flex;
+      align-items:center;
+      gap:20px;
+    }
+
+    .main-nav{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .main-nav a{
+      opacity:.9;
+      transition:.2s ease;
+    }
+
+    .main-nav a:hover{
+      opacity:1;
+      transform:translateY(-1px);
+    }
+
+    .language-wrap{position:relative}
+
+    .language-btn{
+      border:1px solid rgba(255,255,255,.48);
+      background:rgba(255,255,255,.12);
+      backdrop-filter:blur(14px);
+      color:#fff;
+      border-radius:999px;
+      padding:10px 14px;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-weight:800;
+      min-width:74px;
+      justify-content:center;
+    }
+
+    .language-menu{
+      position:absolute;
+      right:0;
+      top:calc(100% + 10px);
+      min-width:150px;
+      background:#fff;
+      color:#20312b;
+      border-radius:16px;
+      padding:7px;
+      box-shadow:var(--shadow);
+      display:none;
+    }
+
+    .language-menu.open{display:block}
+
+    .language-menu button{
+      width:100%;
+      border:0;
+      background:transparent;
+      padding:10px 12px;
+      border-radius:11px;
+      text-align:left;
+      cursor:pointer;
+      color:inherit;
+    }
+
+    .language-menu button:hover{background:var(--cream)}
+
+    .hero{
+      position:relative;
+      min-height:650px;
+      height:82vh;
+      display:flex;
+      align-items:flex-end;
+      overflow:hidden;
+      isolation:isolate;
+      background:var(--green-deep);
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-3;
+      background:
+        linear-gradient(90deg, rgba(8,28,22,.72) 0%, rgba(8,28,22,.28) 44%, rgba(8,28,22,.08) 78%),
+        linear-gradient(0deg, rgba(8,24,19,.72) 0%, rgba(8,24,19,.08) 50%, rgba(8,24,19,.18) 100%),
+        url("assets/images/living_room_02.webp") center center / cover no-repeat;
+      transform:scale(1.01);
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:auto 0 0 0;
+      height:180px;
+      background:linear-gradient(to top, rgba(7,19,16,.48), transparent);
+      z-index:-2;
+    }
+
+    .hero-inner{
+      width:min(var(--max),90vw);
+      margin:0 auto;
+      padding:125px 0 105px;
+      color:#fff;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:22px;
+      font-size:12px;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      font-weight:800;
+      opacity:.95;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:44px;
+      height:1px;
+      background:rgba(255,255,255,.75);
+    }
+
+    .hero h1{
+      margin:0;
+      max-width:900px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(48px,6.5vw,84px);
+      line-height:.94;
+      letter-spacing:-.035em;
+      font-weight:500;
+      text-shadow:0 5px 35px rgba(0,0,0,.18);
+    }
+
+    .hero-copy{
+      max-width:720px;
+      margin:28px 0 0;
+      font-size:clamp(17px,1.55vw,21px);
+      line-height:1.55;
+      color:rgba(255,255,255,.92);
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:34px;
+    }
+
+    .btn{
+      border-radius:999px;
+      padding:14px 22px;
+      min-height:50px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      font-weight:800;
+      font-size:14px;
+      border:1px solid transparent;
+      transition:.22s ease;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:#fff;
+      color:var(--green-deep);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      box-shadow:0 13px 30px rgba(0,0,0,.2);
+    }
+
+    .btn-secondary{
+      color:#fff;
+      border-color:rgba(255,255,255,.5);
+      background:rgba(255,255,255,.08);
+      backdrop-filter:blur(14px);
+    }
+
+    .btn-secondary:hover{background:rgba(255,255,255,.16)}
+
+    .quick-facts-wrap{
+      position:relative;
+      z-index:5;
+      width:min(var(--max),90vw);
+      margin:-68px auto 0;
+    }
+
+    .quick-facts{
+      background:rgba(255,253,249,.97);
+      backdrop-filter:blur(14px);
+      border:1px solid rgba(255,255,255,.75);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:repeat(7,1fr);
+      overflow:hidden;
+    }
+
+    .fact{
+      min-height:136px;
+      padding:22px 16px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      border-right:1px solid var(--line);
+    }
+
+    .fact:last-child{border-right:0}
+
+    .fact-icon{
+      width:43px;
+      height:43px;
+      display:grid;
+      place-items:center;
+      margin-bottom:10px;
+      border-radius:50%;
+      background:var(--cream);
+      color:var(--green);
+      font-size:20px;
+    }
+
+    .fact strong{
+      font-size:15px;
+      line-height:1.25;
+      color:var(--ink);
+    }
+
+    .fact small{
+      display:block;
+      margin-top:4px;
+      font-size:12px;
+      color:#6b7873;
+      line-height:1.35;
+    }
+
+    .section{
+      width:min(var(--max),90vw);
+      margin:0 auto;
+      padding:88px 0;
+    }
+
+    .section-kicker{
+      color:var(--green);
+      font-weight:800;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-size:12px;
+      margin-bottom:16px;
+    }
+
+    .section-title{
+      margin:0;
+      color:var(--ink);
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(36px,4.3vw,58px);
+      line-height:1.02;
+      font-weight:500;
+      letter-spacing:-.025em;
+    }
+
+    .section-copy{
+      margin:22px 0 0;
+      max-width:760px;
+      font-size:18px;
+      line-height:1.75;
+      color:#59655f;
+    }
+
+    .intro{
+      display:grid;
+      grid-template-columns:.72fr 1.28fr;
+      gap:70px;
+      align-items:start;
+      padding-top:96px;
+    }
+
+    .intro-aside{
+      border-left:1px solid var(--line);
+      padding-left:24px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    .view-section{
+      width:100%;
+      background:var(--green-deep);
+      color:#fff;
+      padding:88px 0;
+      overflow:hidden;
+    }
+
+    .view-inner{
+      width:min(var(--max),90vw);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:34px;
+      align-items:stretch;
+    }
+
+    .view-main,
+    .view-side{
+      position:relative;
+      overflow:hidden;
+      border-radius:var(--radius);
+      box-shadow:0 18px 60px rgba(0,0,0,.22);
+      min-height:560px;
+    }
+
+    .view-main img,
+    .view-side img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .view-side{
+      display:grid;
+      grid-template-rows:1fr auto;
+      background:#fff;
+      color:var(--ink);
+    }
+
+    .view-side img{min-height:360px}
+
+    .view-card-copy{
+      padding:28px;
+      background:#fff;
+    }
+
+    .view-card-copy h3{
+      margin:0;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:34px;
+      font-weight:500;
+    }
+
+    .view-card-copy p{
+      margin:12px 0 0;
+      color:var(--muted);
+      line-height:1.65;
+    }
+
+    .view-overlay{
+      position:absolute;
+      inset:auto 0 0 0;
+      padding:36px;
+      background:linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,0));
+    }
+
+    .view-overlay h2{
+      margin:0;
+      max-width:700px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(36px,4.8vw,68px);
+      line-height:1;
+      font-weight:500;
+    }
+
+    .view-overlay p{
+      max-width:640px;
+      margin:16px 0 0;
+      color:rgba(255,255,255,.86);
+      line-height:1.65;
+    }
+
+    .overview-grid{
+      margin-top:44px;
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .overview-card{
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:#fff;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow-soft);
+      min-height:520px;
+    }
+
+    .overview-card img{
+      height:100%;
+      object-fit:cover;
+    }
+
+    .floorplan-card{
+      background:var(--cream);
+      padding:24px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .floorplan-card img{
+      height:auto;
+      object-fit:contain;
+      border-radius:18px;
+      background:#fff;
+    }
+
+    .floorplan-note{
+      padding:18px 6px 2px;
+      display:flex;
+      align-items:flex-start;
+      gap:14px;
+      color:var(--ink-2);
+      line-height:1.6;
+    }
+
+    .floorplan-note strong{display:block;margin-bottom:4px}
+
+    .rooms-grid{
+      margin-top:48px;
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:22px;
+    }
+
+    .room-card{
+      position:relative;
+      min-height:420px;
+      overflow:hidden;
+      border-radius:24px;
+      box-shadow:var(--shadow-soft);
+      background:#ddd;
+    }
+
+    .room-card.large{grid-column:span 7;min-height:520px}
+    .room-card.medium{grid-column:span 5;min-height:520px}
+    .room-card.third{grid-column:span 4}
+
+    .room-card img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .45s ease;
+    }
+
+    .room-card:hover img{transform:scale(1.03)}
+
+    .room-card::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to top, rgba(9,26,21,.72), rgba(9,26,21,.04) 62%);
+    }
+
+    .room-content{
+      position:absolute;
+      z-index:2;
+      inset:auto 0 0 0;
+      padding:26px;
+      color:#fff;
+    }
+
+    .room-content span{
+      display:block;
+      margin-bottom:8px;
+      font-size:11px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      font-weight:800;
+      opacity:.8;
+    }
+
+    .room-content h3{
+      margin:0;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:34px;
+      font-weight:500;
+    }
+
+    .room-content p{
+      margin:8px 0 0;
+      max-width:520px;
+      line-height:1.55;
+      color:rgba(255,255,255,.85);
+      font-size:14px;
+    }
+
+    .balcony-section{
+      display:grid;
+      grid-template-columns:.92fr 1.08fr;
+      gap:34px;
+      align-items:center;
+      background:var(--blush-soft);
+      border-radius:34px;
+      padding:32px;
+      margin-top:88px;
+    }
+
+    .balcony-copy{
+      padding:22px 24px 22px 14px;
+    }
+
+    .balcony-image{
+      border-radius:26px;
+      overflow:hidden;
+      min-height:500px;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .balcony-image img{
+      height:100%;
+      min-height:500px;
+      object-fit:cover;
+    }
+
+    .gallery-strip{
+      margin-top:44px;
+      display:grid;
+      grid-template-columns:1.2fr .8fr .8fr;
+      grid-auto-rows:230px;
+      gap:16px;
+    }
+
+    .gallery-strip figure{
+      margin:0;
+      overflow:hidden;
+      border-radius:20px;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .gallery-strip figure:first-child{
+      grid-row:span 2;
+    }
+
+    .gallery-strip img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .4s ease;
+    }
+
+    .gallery-strip figure:hover img{transform:scale(1.035)}
+
+    .amenities-section{
+      background:var(--cream);
+      padding:110px 0;
+      margin-top:20px;
+    }
+
+    .amenities-inner{
+      width:min(var(--max),90vw);
+      margin:0 auto;
+    }
+
+    .amenities-grid{
+      margin-top:40px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+
+    .amenity{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:22px;
+      min-height:128px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      box-shadow:0 8px 20px rgba(23,52,45,.05);
+    }
+
+    .amenity span{
+      font-size:26px;
+    }
+
+    .amenity strong{
+      margin-top:18px;
+      color:var(--ink);
+      font-size:15px;
+      line-height:1.4;
+    }
+
+    .location-grid{
+      margin-top:45px;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:32px;
+      align-items:stretch;
+    }
+
+    .location-image{
+      border-radius:var(--radius);
+      overflow:hidden;
+      min-height:520px;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .location-image img{
+      height:100%;
+      object-fit:cover;
+    }
+
+    .location-card{
+      border-radius:var(--radius);
+      background:var(--green-deep);
+      color:#fff;
+      padding:42px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .location-card h3{
+      margin:0 0 24px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:42px;
+      font-weight:500;
+    }
+
+    .location-points{
+      display:grid;
+      gap:18px;
+    }
+
+    .location-point{
+      padding-bottom:18px;
+      border-bottom:1px solid rgba(255,255,255,.14);
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .location-point:last-child{border-bottom:0;padding-bottom:0}
+    .location-point span:first-child{color:rgba(255,255,255,.72)}
+    .location-point strong{white-space:nowrap}
+
+
+    .menu-toggle{
+      display:none;
+      width:42px;height:42px;border-radius:50%;
+      border:1px solid rgba(255,255,255,.42);
+      background:rgba(255,255,255,.12);backdrop-filter:blur(14px);
+      color:#fff;cursor:pointer;align-items:center;justify-content:center;font-size:19px;
+    }
+    .mobile-nav{
+      display:none;position:absolute;top:70px;right:4vw;min-width:230px;padding:10px;
+      border-radius:18px;background:rgba(255,253,249,.98);color:var(--ink);box-shadow:var(--shadow);
+    }
+    .mobile-nav.open{display:grid}
+    .mobile-nav a{padding:13px 14px;border-radius:12px;font-weight:800;font-size:14px}
+    .mobile-nav a:hover{background:var(--cream)}
+
+    .reservation-section{background:linear-gradient(180deg,var(--paper),var(--cream));padding:88px 0}
+    .reservation-inner{
+      width:min(var(--max),90vw);margin:0 auto;display:grid;grid-template-columns:.86fr 1.14fr;
+      gap:42px;align-items:center;
+    }
+    .reservation-copy .section-copy{max-width:560px}
+    .booking-panel{
+      background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:var(--shadow);
+    }
+    .booking-panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:22px}
+    .booking-panel-head strong{color:var(--ink);font-family:Georgia,"Times New Roman",serif;font-size:28px;font-weight:500}
+    .booking-badge{
+      padding:8px 11px;border-radius:999px;background:var(--green-soft);color:var(--green-deep);
+      font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;
+    }
+
+    .calendar-shell{
+      margin:4px 0 20px;
+      border:1px solid var(--line);
+      border-radius:20px;
+      overflow:hidden;
+      background:var(--paper);
+    }
+    .calendar-toolbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:14px 16px;
+      border-bottom:1px solid var(--line);
+      background:linear-gradient(180deg,#fff,var(--cream));
+    }
+    .calendar-toolbar-copy{
+      display:flex;
+      flex-direction:column;
+      gap:3px;
+      min-width:0;
+    }
+    .calendar-toolbar-copy strong{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:20px;
+      font-weight:500;
+      color:var(--ink);
+    }
+    .calendar-toolbar-copy span{
+      color:var(--muted);
+      font-size:11px;
+      line-height:1.35;
+    }
+    .calendar-nav{
+      display:flex;
+      gap:8px;
+      flex:0 0 auto;
+    }
+    .calendar-nav button{
+      width:38px;
+      height:38px;
+      border-radius:50%;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--green-deep);
+      cursor:pointer;
+      font-size:18px;
+      font-weight:900;
+      transition:.18s ease;
+    }
+    .calendar-nav button:hover:not(:disabled){
+      background:var(--green-deep);
+      color:#fff;
+    }
+    .calendar-nav button:disabled{
+      opacity:.28;
+      cursor:not-allowed;
+    }
+    .calendar-months{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:1px;
+      background:var(--line);
+    }
+    .calendar-month{
+      background:#fff;
+      padding:16px;
+    }
+    .calendar-month-title{
+      text-align:center;
+      color:var(--ink);
+      font-weight:900;
+      font-size:14px;
+      text-transform:capitalize;
+      margin-bottom:12px;
+    }
+    .calendar-weekdays,
+    .calendar-days{
+      display:grid;
+      grid-template-columns:repeat(7,1fr);
+      gap:5px;
+    }
+    .calendar-weekdays span{
+      text-align:center;
+      color:var(--muted);
+      font-size:10px;
+      font-weight:900;
+      text-transform:uppercase;
+      padding:4px 0 6px;
+    }
+    .calendar-day{
+      appearance:none;
+      min-width:0;
+      aspect-ratio:1/1;
+      border:0;
+      border-radius:11px;
+      background:transparent;
+      color:var(--ink);
+      display:grid;
+      place-items:center;
+      font-size:12px;
+      font-weight:800;
+      cursor:pointer;
+      position:relative;
+      transition:.15s ease;
+    }
+    .calendar-day:hover:not(:disabled){
+      background:var(--green-soft);
+    }
+    .calendar-day:disabled,
+    .calendar-day.is-past{
+      color:#c4cac7;
+      cursor:not-allowed;
+      background:transparent;
+    }
+    .calendar-day.is-today{
+      box-shadow:inset 0 0 0 1.5px var(--blush);
+    }
+    .calendar-day.is-selected{
+      background:var(--green-deep);
+      color:#fff;
+      box-shadow:none;
+    }
+    .calendar-day.is-in-range{
+      background:var(--green-soft);
+      color:var(--green-deep);
+      border-radius:8px;
+    }
+    .calendar-day.is-selected.is-in-range{
+      background:var(--green-deep);
+      color:#fff;
+    }
+    .calendar-day.empty{
+      pointer-events:none;
+      visibility:hidden;
+    }
+    .calendar-legend{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px 18px;
+      align-items:center;
+      padding:10px 16px 14px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:10px;
+      font-weight:700;
+      background:#fff;
+    }
+    .calendar-legend span{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+    }
+    .calendar-dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:var(--green-deep);
+      display:inline-block;
+    }
+    .calendar-dot.today{
+      background:#fff;
+      box-shadow:inset 0 0 0 1.5px var(--blush);
+    }
+    .calendar-dot.disabled{background:#dfe3e1}
+
+    .booking-fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .booking-field{display:flex;flex-direction:column;gap:8px}
+    .booking-field.full{grid-column:1/-1}
+    .booking-field label{color:var(--ink-2);font-size:12px;font-weight:900;letter-spacing:.05em;text-transform:uppercase}
+    .booking-field input,.booking-field select{
+      width:100%;min-height:52px;padding:0 14px;border:1px solid var(--line);border-radius:14px;
+      background:var(--paper);color:var(--ink);font:inherit;outline:none;
+    }
+    .booking-field input:focus,.booking-field select:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(49,95,81,.10)}
+    .booking-summary{
+      margin-top:16px;min-height:50px;padding:13px 15px;border-radius:14px;background:var(--cream);
+      color:var(--ink-2);font-size:13px;line-height:1.5;
+    }
+    .booking-panel .btn{width:100%;margin-top:14px;background:var(--green-deep);color:#fff;border:0}
+    .booking-panel .btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(23,59,49,.18)}
+    .booking-status{margin:12px 2px 0;font-size:12px;color:var(--muted);line-height:1.5}
+    .mobile-booking-bar{display:none}
+
+    .booking{
+      position:relative;
+      min-height:520px;
+      margin-top:88px;
+      display:flex;
+      align-items:center;
+      isolation:isolate;
+      overflow:hidden;
+    }
+
+    .booking::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-2;
+      background:
+        linear-gradient(90deg, rgba(10,29,23,.76), rgba(10,29,23,.32)),
+        url("assets/images/master_bedroom_tampa_view.webp") center 52% / cover no-repeat;
+    }
+
+    .booking::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      background:linear-gradient(to top, rgba(10,29,23,.5), transparent 55%);
+    }
+
+    .booking-inner{
+      width:min(var(--max),90vw);
+      margin:0 auto;
+      color:#fff;
+      padding:70px 0;
+    }
+
+    .booking-inner h2{
+      margin:0;
+      max-width:760px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(42px,5.2vw,68px);
+      line-height:.98;
+      font-weight:500;
+    }
+
+    .booking-inner p{
+      max-width:640px;
+      margin:22px 0 0;
+      font-size:19px;
+      line-height:1.65;
+      color:rgba(255,255,255,.86);
+    }
+
+    .footer{
+      background:#0f2c24;
+      color:#fff;
+      padding:42px 5vw;
+    }
+
+    .footer-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+      color:rgba(255,255,255,.76);
+      font-size:13px;
+    }
+
+    .footer strong{
+      display:block;
+      color:#fff;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:20px;
+      margin-bottom:5px;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(22px);
+      transition:opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible{
+      opacity:1;
+      transform:none;
+    }
+
+    @media (max-width:1100px){
+      .main-nav{display:none}
+      .menu-toggle{display:flex}
+      .reservation-inner{grid-template-columns:1fr}
+      .quick-facts{grid-template-columns:repeat(4,1fr)}
+      .fact:nth-child(4){border-right:0}
+      .fact:nth-child(-n+4){border-bottom:1px solid var(--line)}
+      .intro,
+      .view-inner,
+      .overview-grid,
+      .balcony-section,
+      .location-grid{grid-template-columns:1fr}
+      .view-main,.view-side{min-height:480px}
+      .room-card.large,.room-card.medium,.room-card.third{grid-column:span 6}
+      .amenities-grid{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media (max-width:760px){
+      .site-header{padding:14px 16px}
+      .brand strong{font-size:16px}
+      .brand span{font-size:8px}
+
+      .header-right{gap:8px}
+      .language-btn{min-width:62px;padding:9px 10px}
+      .mobile-nav{right:16px;left:16px;top:64px;min-width:0}
+
+      .hero{min-height:620px;height:82svh}
+      .hero::before{
+        background:
+          linear-gradient(0deg, rgba(8,24,19,.8) 0%, rgba(8,24,19,.18) 64%, rgba(8,24,19,.22) 100%),
+          url("assets/images/living_room_02.webp") 58% center / cover no-repeat;
+      }
+
+      .hero-inner{
+        width:calc(100% - 40px);
+        padding:112px 0 88px;
+      }
+
+      .hero h1{font-size:clamp(40px,12.5vw,56px);line-height:.98}
+      .hero-copy{font-size:16px;line-height:1.5;margin-top:20px}
+      .hero-actions{display:grid;grid-template-columns:1fr}
+      .btn{width:100%}
+
+      .quick-facts-wrap{
+        width:calc(100% - 28px);
+        margin:-44px auto 0;
+      }
+
+      .quick-facts{
+        grid-template-columns:repeat(2,1fr);
+        border-radius:22px;
+      }
+
+      .fact{
+        min-height:102px;
+        padding:17px 10px;
+        border-right:1px solid var(--line);
+        border-bottom:1px solid var(--line);
+      }
+
+      .fact:nth-child(even){border-right:0}
+      .fact:nth-child(7){grid-column:1/-1;border-right:0;border-bottom:0}
+      .fact:nth-child(5),.fact:nth-child(6){border-bottom:1px solid var(--line)}
+
+      .section{
+        width:calc(100% - 40px);
+        padding:64px 0;
+      }
+
+      .section-copy{font-size:16px}
+
+      .intro{gap:26px}
+
+      .view-section{padding:78px 0}
+      .view-inner{width:calc(100% - 40px)}
+      .view-main,.view-side{min-height:360px}
+      .view-side img{min-height:300px}
+      .view-overlay{padding:24px}
+
+      .overview-card{min-height:360px}
+      .floorplan-card{padding:14px}
+
+      .rooms-grid{grid-template-columns:1fr}
+      .room-card.large,.room-card.medium,.room-card.third{
+        grid-column:1;
+        min-height:330px;
+      }
+
+      .balcony-section{
+        margin-top:64px;
+        padding:18px;
+        border-radius:26px;
+      }
+
+      .balcony-copy{padding:12px 8px 18px}
+      .balcony-image,.balcony-image img{min-height:340px}
+
+      .gallery-strip{
+        grid-template-columns:1fr 1fr;
+        grid-auto-rows:180px;
+      }
+
+      .gallery-strip figure:first-child{
+        grid-column:1/-1;
+        grid-row:auto;
+        min-height:250px;
+      }
+
+      .amenities-section{padding:78px 0}
+      .amenities-grid{grid-template-columns:1fr 1fr}
+
+      .location-image{min-height:370px}
+      .location-card{padding:28px}
+      .location-card h3{font-size:34px}
+      .location-point{
+        flex-direction:column;
+        gap:6px;
+      }
+
+      .reservation-section{padding:64px 0}
+      .reservation-inner{width:calc(100% - 32px);gap:26px}
+      .booking-panel{padding:18px;border-radius:22px}
+
+      .calendar-toolbar{padding:12px}
+      .calendar-toolbar-copy strong{font-size:18px}
+      .calendar-months{grid-template-columns:1fr}
+      .calendar-month:nth-child(2){display:none}
+      .calendar-month{padding:12px 10px 14px}
+      .calendar-weekdays,.calendar-days{gap:3px}
+      .calendar-day{border-radius:9px;font-size:12px}
+      .calendar-legend{padding:9px 12px 12px;gap:8px 12px}
+
+      .booking-panel-head{align-items:center}
+      .booking-panel-head strong{font-size:24px}
+      .booking-fields{grid-template-columns:1fr}
+      .booking-field.full{grid-column:auto}
+
+      .booking{min-height:460px;margin-top:64px}
+      .booking-inner{width:calc(100% - 40px)}
+      .booking-inner p{font-size:16px}
+      .mobile-booking-bar{position:fixed;z-index:80;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 15px;border-radius:18px;background:rgba(23,59,49,.96);color:#fff;box-shadow:0 15px 45px rgba(0,0,0,.28);backdrop-filter:blur(16px)}
+      .mobile-booking-bar span{font-size:12px;font-weight:700;line-height:1.3}
+      .mobile-booking-bar a{padding:11px 14px;border-radius:12px;background:#fff;color:var(--green-deep);font-size:12px;font-weight:900;white-space:nowrap}
+      .footer{padding-bottom:100px}
+
+      .footer-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+
+    @media (max-width:520px){
+      .amenities-grid{grid-template-columns:1fr}
+      .gallery-strip{grid-template-columns:1fr}
+      .gallery-strip figure:first-child{grid-column:auto}
+    }
+
+    /* ===== Refined responsive/mobile presentation ===== */
+    .view-side-photo{
+      position:relative;
+      min-height:360px;
+      overflow:hidden;
+    }
+    .view-side-photo img{
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    }
+    .view-side-photo::after{
+      content:"";position:absolute;inset:45% 0 0;
+      background:linear-gradient(to top,rgba(7,22,17,.68),transparent);
+    }
+    .view-side-photo h3{
+      position:absolute;z-index:2;left:24px;right:24px;bottom:22px;margin:0;color:#fff;
+      font-family:Georgia,"Times New Roman",serif;font-size:30px;line-height:1.03;font-weight:500;
+      text-shadow:0 4px 22px rgba(0,0,0,.28);
+    }
+    .view-side .view-card-copy{padding:20px 24px 22px}
+    .view-side .view-card-copy p{margin:0}
+
+    .gallery-strip{
+      grid-template-columns:1.15fr .85fr .85fr;
+      grid-auto-rows:190px;
+    }
+    .gallery-strip .gallery-item{
+      cursor:zoom-in;
+      outline:none;
+      position:relative;
+    }
+    .gallery-strip .gallery-item:focus-visible{
+      box-shadow:0 0 0 3px var(--blush),var(--shadow-soft);
+    }
+    .gallery-strip .gallery-feature{grid-row:span 2}
+    .gallery-strip .gallery-tall{grid-row:span 2}
+    .gallery-strip .gallery-wide{grid-column:span 2}
+    .gallery-strip figure:first-child{grid-row:span 2}
+
+    .lightbox{
+      position:fixed;z-index:200;inset:0;background:rgba(5,14,11,.94);
+      display:none;align-items:center;justify-content:center;padding:24px;
+    }
+    .lightbox.open{display:flex}
+    .lightbox img{
+      width:auto;height:auto;max-width:min(1200px,90vw);max-height:86vh;object-fit:contain;
+      border-radius:16px;box-shadow:0 25px 80px rgba(0,0,0,.42);
+    }
+    .lightbox-close,.lightbox-nav{
+      position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;
+      backdrop-filter:blur(12px);cursor:pointer;display:grid;place-items:center;
+    }
+    .lightbox-close{
+      top:18px;right:18px;width:44px;height:44px;border-radius:50%;font-size:30px;
+    }
+    .lightbox-nav{
+      top:50%;transform:translateY(-50%);width:46px;height:58px;border-radius:14px;font-size:34px;
+    }
+    .lightbox-prev{left:18px}
+    .lightbox-next{right:18px}
+    .lightbox-count{
+      position:absolute;left:50%;bottom:18px;transform:translateX(-50%);
+      color:rgba(255,255,255,.82);font-size:12px;font-weight:800;
+      padding:7px 11px;border-radius:999px;background:rgba(0,0,0,.25);
+    }
+
+    @media (max-width:760px){
+      .site-header{padding:12px 14px}
+      .brand strong{font-size:15px}
+      .brand span{display:none}
+      .language-btn{min-width:54px;padding:8px 9px;font-size:11px}
+      .menu-toggle{width:36px;height:36px;font-size:17px}
+
+      /* Hero: portrait crop prioritizes Tâmpa, while text/buttons stay compact */
+      .hero{
+        min-height:540px;
+        height:74svh;
+        max-height:650px;
+        align-items:flex-end;
+      }
+      .hero::before{
+        background:
+          linear-gradient(0deg,rgba(7,23,18,.78) 0%,rgba(7,23,18,.48) 24%,rgba(7,23,18,.08) 58%,rgba(7,23,18,.05) 100%),
+          url("assets/images/living_room_02.webp") 8% center / cover no-repeat;
+        transform:none;
+      }
+      .hero::after{height:110px}
+      .hero-inner{
+        width:calc(100% - 30px);
+        padding:82px 0 30px;
+      }
+      .eyebrow{display:none}
+      .hero h1{
+        max-width:330px;
+        font-size:clamp(31px,9.2vw,40px);
+        line-height:.98;
+        letter-spacing:-.025em;
+      }
+      .hero-copy{
+        max-width:330px;
+        margin-top:10px;
+        font-size:13px;
+        line-height:1.42;
+      }
+      .hero-actions{
+        display:flex;
+        flex-wrap:nowrap;
+        gap:7px;
+        margin-top:14px;
+      }
+      .hero .btn{
+        width:auto;
+        min-height:37px;
+        padding:8px 11px;
+        font-size:10.5px;
+        white-space:nowrap;
+      }
+
+      /* Quick facts become a thin swipe rail, no oversized floating card */
+      .quick-facts-wrap{
+        width:100%;
+        margin:0;
+        padding:12px 0 2px;
+        background:var(--paper);
+      }
+      .quick-facts{
+        display:flex;
+        overflow-x:auto;
+        gap:8px;
+        padding:0 15px 8px;
+        border:0;
+        border-radius:0;
+        box-shadow:none;
+        background:transparent;
+        scroll-snap-type:x proximity;
+        scrollbar-width:none;
+      }
+      .quick-facts::-webkit-scrollbar{display:none}
+      .fact,
+      .fact:nth-child(even),
+      .fact:nth-child(7),
+      .fact:nth-child(5),
+      .fact:nth-child(6){
+        flex:0 0 auto;
+        min-height:0;
+        padding:8px 11px;
+        border:1px solid var(--line);
+        border-radius:999px;
+        background:#fff;
+        box-shadow:0 4px 14px rgba(23,52,45,.045);
+        display:flex;
+        flex-direction:row;
+        gap:0;
+        scroll-snap-align:start;
+      }
+      .fact-icon{display:none}
+      .fact strong{font-size:11px;white-space:nowrap}
+      .fact small{display:none}
+
+      .section{
+        width:calc(100% - 32px);
+        padding:44px 0;
+      }
+      .section-kicker{
+        font-size:9px;
+        letter-spacing:.15em;
+        margin-bottom:10px;
+      }
+      .section-title{
+        font-size:clamp(27px,8vw,33px);
+        line-height:1.04;
+      }
+      .section-copy{
+        font-size:13.5px;
+        line-height:1.58;
+        margin-top:12px;
+      }
+      .intro{
+        gap:15px;
+        padding-top:44px;
+      }
+      .intro-aside{
+        padding-left:14px;
+        font-size:12px;
+        line-height:1.5;
+      }
+
+      /* Tâmpa view */
+      .view-section{padding:42px 0}
+      .view-inner{width:calc(100% - 28px);gap:14px}
+      .view-main{min-height:330px;border-radius:20px}
+      .view-overlay{padding:18px}
+      .view-overlay h2{font-size:29px;line-height:1.02}
+      .view-overlay p{margin-top:9px;font-size:12.5px;line-height:1.5}
+      .view-side{
+        min-height:0;
+        border-radius:20px;
+        display:block;
+      }
+      .view-side-photo{min-height:285px}
+      .view-side-photo h3{
+        left:17px;right:17px;bottom:16px;
+        font-size:24px;line-height:1.02;
+      }
+      .view-side .view-card-copy{padding:14px 17px 16px}
+      .view-side .view-card-copy p{font-size:12.5px;line-height:1.52}
+
+      /* Apartment cards */
+      .overview-grid{margin-top:25px;gap:14px}
+      .overview-card{min-height:280px;border-radius:20px}
+      .floorplan-card{padding:10px}
+      .floorplan-note{
+        padding:11px 4px 2px;gap:8px;font-size:11.5px;line-height:1.4;
+      }
+      .rooms-grid{margin-top:25px;gap:12px}
+      .room-card.large,.room-card.medium,.room-card.third{
+        min-height:280px;border-radius:19px;
+      }
+      .room-content{padding:17px}
+      .room-content span{font-size:8.5px;margin-bottom:5px}
+      .room-content h3{font-size:25px}
+      .room-content p{font-size:11.5px;line-height:1.45;margin-top:5px}
+
+      .balcony-section{
+        margin-top:44px;
+        padding:13px;
+        gap:10px;
+        border-radius:22px;
+      }
+      .balcony-copy{padding:9px 6px 11px}
+      .balcony-copy .section-title{font-size:28px}
+      .balcony-image,.balcony-image img{min-height:275px;border-radius:17px}
+
+      /* Gallery: portrait-friendly mosaic + tap to fullscreen */
+      #gallery{padding-bottom:48px}
+      .gallery-strip{
+        margin-top:24px;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        grid-auto-rows:118px;
+        gap:8px;
+      }
+      .gallery-strip figure,
+      .gallery-strip figure:first-child{
+        min-height:0;
+        grid-column:auto;
+        grid-row:auto;
+        border-radius:13px;
+      }
+      .gallery-strip .gallery-feature{
+        grid-column:1 / -1;
+        grid-row:span 2;
+      }
+      .gallery-strip .gallery-tall{grid-row:span 2}
+      .gallery-strip .gallery-wide{grid-column:1 / -1}
+      .gallery-strip img{object-fit:cover}
+
+      .lightbox{padding:12px}
+      .lightbox img{max-width:96vw;max-height:82vh;border-radius:10px}
+      .lightbox-nav{
+        width:38px;height:48px;border-radius:11px;font-size:28px;
+      }
+      .lightbox-prev{left:8px}.lightbox-next{right:8px}
+      .lightbox-close{top:10px;right:10px;width:38px;height:38px;font-size:26px}
+
+      /* Amenities are now a compact horizontal slider on phone */
+      .amenities-section{padding:44px 0}
+      .amenities-inner{width:100%}
+      .amenities-inner > .reveal{
+        width:calc(100% - 32px);
+        margin-left:auto;
+        margin-right:auto;
+      }
+      .amenities-grid{
+        display:flex;
+        overflow-x:auto;
+        gap:8px;
+        margin-top:22px;
+        padding:0 15px 8px;
+        scrollbar-width:none;
+        scroll-snap-type:x proximity;
+      }
+      .amenities-grid::-webkit-scrollbar{display:none}
+      .amenity{
+        flex:0 0 auto;
+        min-height:0;
+        padding:9px 12px;
+        border-radius:999px;
+        flex-direction:row;
+        align-items:center;
+        justify-content:flex-start;
+        gap:0;
+        scroll-snap-align:start;
+      }
+      .amenity span{display:none}
+      .amenity strong{margin:0;font-size:11px;white-space:nowrap}
+
+      /* Location stays readable but much tighter */
+      .location-grid{margin-top:24px;gap:12px}
+      .location-image{min-height:270px;border-radius:20px}
+      .location-card{padding:20px;border-radius:20px}
+      .location-card h3{font-size:27px;margin-bottom:17px}
+      .location-points{gap:11px}
+      .location-point{
+        flex-direction:row;
+        align-items:center;
+        gap:12px;
+        padding-bottom:11px;
+        font-size:12px;
+      }
+
+      /* Booking/calendar remains a focal point */
+      .reservation-section{padding:46px 0}
+      .reservation-inner{width:calc(100% - 24px);gap:20px}
+      .booking-panel{padding:13px;border-radius:19px}
+      .booking-panel-head{margin-bottom:14px}
+      .booking-panel-head strong{font-size:21px}
+      .booking-badge{font-size:8.5px;padding:6px 8px}
+      .calendar-shell{border-radius:15px;margin-bottom:14px}
+      .calendar-toolbar{padding:10px}
+      .calendar-toolbar-copy strong{font-size:16px}
+      .calendar-toolbar-copy span{font-size:9.5px}
+      .calendar-nav button{width:32px;height:32px}
+      .calendar-month{padding:9px 7px 11px}
+      .calendar-month-title{font-size:12px;margin-bottom:8px}
+      .calendar-weekdays span{font-size:8.5px}
+      .calendar-day{font-size:11px}
+      .calendar-legend{font-size:8.5px}
+      .booking-field label{font-size:9.5px}
+      .booking-field input,.booking-field select{min-height:46px;font-size:13px}
+      .booking-summary{font-size:11px;padding:10px 11px}
+      .booking-panel .btn{min-height:43px;font-size:12px;padding:10px 14px}
+
+      .booking{min-height:410px;margin-top:44px}
+      .booking-inner{width:calc(100% - 32px);padding:48px 0}
+      .booking-inner h2{font-size:34px}
+      .booking-inner p{font-size:13px;line-height:1.5}
+      .booking .hero-actions{margin-top:16px}
+      .booking .btn{width:auto;min-height:39px;padding:9px 13px;font-size:11px}
+
+      .mobile-booking-bar{
+        left:9px;right:9px;bottom:max(9px,env(safe-area-inset-bottom));
+        padding:8px 8px 8px 12px;border-radius:15px;
+      }
+      .mobile-booking-bar span{font-size:10.5px}
+      .mobile-booking-bar a{padding:9px 11px;font-size:10.5px}
+      .footer{padding-bottom:86px}
+    }
+
+    @media (max-width:520px){
+      .gallery-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .amenities-grid{display:flex}
+    }
+
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home">
+      <strong>Central Premium Apartment</strong>
+      <span>Brașov · România</span>
+    </a>
+
+    <div class="header-right">
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#apartment" data-i18n="navApartment">Apartamentul</a>
+        <a href="#gallery" data-i18n="navGallery">Galerie</a>
+        <a href="#location" data-i18n="navLocation">Locație</a>
+        <a href="#booking" data-i18n="navBook">Rezervare</a>
+      </nav>
+
+      <div class="language-wrap">
+        <button class="language-btn" id="languageBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="currentLang">RO</span> ▾
+        </button>
+        <div class="language-menu" id="languageMenu">
+          <button data-lang="ro">Română</button>
+          <button data-lang="en">English</button>
+          <button data-lang="de">Deutsch</button>
+        </div>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="#apartment" data-i18n="navApartment">Apartamentul</a>
+        <a href="#gallery" data-i18n="navGallery">Galerie</a>
+        <a href="#location" data-i18n="navLocation">Locație</a>
+        <a href="#booking" data-i18n="navBook">Rezervare</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="eyebrow" data-i18n="eyebrow">Brașov · aproape de Centrul Vechi</div>
+        <h1 data-i18n="heroTitle">Brașovul la fereastra ta.</h1>
+        <p class="hero-copy" data-i18n="heroCopy">
+          Un apartament luminos și generos, cu vedere spectaculoasă spre Tâmpa, balcon spațios și confort pentru până la 6 oaspeți.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#booking" data-i18n="checkAvailability">Verifică disponibilitatea</a>
+          <a class="btn btn-secondary" href="#apartment" data-i18n="exploreApartment">Descoperă apartamentul</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-facts-wrap" aria-label="Quick facts">
+      <div class="quick-facts">
+        <div class="fact">
+          <div class="fact-icon">👥</div>
+          <strong data-i18n="factGuests">Până la 6 oaspeți</strong>
+          <small data-i18n="factGuestsSub">2 dormitoare + canapea extensibilă</small>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">🛏️</div>
+          <strong data-i18n="factBedrooms">2 dormitoare</strong>
+          <small data-i18n="factBedroomsSub">160×200 + 180×200 cm</small>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">🛁</div>
+          <strong data-i18n="factBathrooms">2 băi</strong>
+          <small data-i18n="factBathroomsSub">cadă + duș</small>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">⛰️</div>
+          <strong data-i18n="factView">Vedere spre Tâmpa</strong>
+          <small data-i18n="factViewSub">din living, dormitor și balcon</small>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">☕</div>
+          <strong data-i18n="factKitchen">Bucătărie completă</strong>
+          <small data-i18n="factKitchenSub">inclusiv aparat de cafea</small>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">🚗</div>
+          <strong data-i18n="factParking">Parcare gratuită</strong>
+          <small data-i18n="factParkingSub">la proprietate</small>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">📶</div>
+          <strong data-i18n="factWifi">Wi‑Fi gratuit</strong>
+          <small data-i18n="factWifiSub">în apartament</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro reveal">
+      <div>
+        <div class="section-kicker" data-i18n="introKicker">Central Premium Apartment</div>
+        <div class="intro-aside" data-i18n="introAside">
+          Aproape de centrul istoric, dar suficient de retras pentru liniște.
+        </div>
+      </div>
+      <div>
+        <h2 class="section-title" data-i18n="introTitle">Spațiu, lumină și Tâmpa mereu aproape.</h2>
+        <p class="section-copy" data-i18n="introCopy">
+          La aproximativ 1 km de Centrul Vechi, într-o zonă rezidențială liniștită, apartamentul combină spațiul generos cu una dintre cele mai frumoase priveliști ale Brașovului.
+        </p>
+      </div>
+    </section>
+
+    <section class="view-section" id="view">
+      <div class="view-inner">
+        <div class="view-main reveal">
+          <img src="assets/images/city_view_rainbow.webp" alt="Vedere panoramică spre Tâmpa și Brașov">
+          <div class="view-overlay">
+            <h2 data-i18n="viewTitle">O priveliște pe care o ții minte.</h2>
+            <p data-i18n="viewCopy">
+              Tâmpa, acoperișurile Brașovului și lumina care schimbă atmosfera de-a lungul zilei — toate fac parte din experiența apartamentului.
+            </p>
+          </div>
+        </div>
+
+        <div class="view-side reveal">
+          <div class="view-side-photo">
+            <img src="assets/images/balcony_tampa_view.webp" alt="Balcon cu vedere spre Tâmpa">
+            <h3 data-i18n="balconyMiniTitle">Cafeaua de dimineață, cu Tâmpa în față.</h3>
+          </div>
+          <div class="view-card-copy">
+            <p data-i18n="balconyMiniCopy">
+              Balconul lung și luminos este unul dintre locurile în care apartamentul își arată cel mai bine personalitatea.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="apartment">
+      <div class="reveal">
+        <div class="section-kicker" data-i18n="overviewKicker">Apartamentul</div>
+        <h2 class="section-title" data-i18n="overviewTitle">Gândit pentru un sejur confortabil, nu doar pentru o noapte.</h2>
+        <p class="section-copy" data-i18n="overviewCopy">
+          Două dormitoare, două băi, living generos, bucătărie complet echipată și un balcon cu vedere — suficiente motive să te simți aici mai aproape de o casă decât de o simplă cazare.
+        </p>
+      </div>
+
+      <div class="overview-grid">
+        <div class="overview-card reveal">
+          <img src="assets/images/living_room_open_space.webp" alt="Living open-space Central Premium Apartment">
+        </div>
+        <div class="overview-card floorplan-card reveal">
+          <img src="assets/images/apartment_floor_plan.webp" alt="Planul apartamentului">
+          <div class="floorplan-note">
+            <div>⌂</div>
+            <div>
+              <strong data-i18n="floorTitle">Compartimentare clară și practică</strong>
+              <span data-i18n="floorCopy">2 dormitoare · 2 băi · living · bucătărie & dining · balcon</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rooms-grid">
+        <article class="room-card large reveal">
+          <img src="assets/images/master_bedroom_01.webp" alt="Master Bedroom">
+          <div class="room-content">
+            <span data-i18n="roomPremium">Dormitor premium</span>
+            <h3 data-i18n="masterTitle">Master Bedroom</h3>
+            <p data-i18n="masterCopy">Pat de 180×200 cm, lumină caldă și acces vizual direct către Tâmpa.</p>
+          </div>
+        </article>
+
+        <article class="room-card medium reveal">
+          <img src="assets/images/bedroom_2_01.webp" alt="Bedroom 2">
+          <div class="room-content">
+            <span data-i18n="roomComfort">Confort</span>
+            <h3 data-i18n="bed2Title">Bedroom 2</h3>
+            <p data-i18n="bed2Copy">Pat de 160×200 cm, spațiu de depozitare generos și atmosferă luminoasă.</p>
+          </div>
+        </article>
+
+        <article class="room-card third reveal">
+          <img src="assets/images/living_room_01.webp" alt="Living Room">
+          <div class="room-content">
+            <span data-i18n="roomRelax">Relaxare</span>
+            <h3 data-i18n="livingTitle">Living Room</h3>
+            <p data-i18n="livingCopy">Canapea extensibilă, TV mare și multă lumină naturală.</p>
+          </div>
+        </article>
+
+        <article class="room-card third reveal">
+          <img src="assets/images/kitchen_dining_01.webp" alt="Kitchen and dining">
+          <div class="room-content">
+            <span data-i18n="roomKitchenTag">Open-space</span>
+            <h3 data-i18n="kitchenTitle">Kitchen & Dining</h3>
+            <p data-i18n="kitchenCopy">Bucătărie complet echipată și zonă de dining pentru mese tihnite.</p>
+          </div>
+        </article>
+
+        <article class="room-card third reveal">
+          <img src="assets/images/bathroom_bathtub_02.webp" alt="Bathroom with bathtub">
+          <div class="room-content">
+            <span data-i18n="roomTwoBaths">Două băi</span>
+            <h3 data-i18n="bathTitle">Bath & Shower</h3>
+            <p data-i18n="bathCopy">O baie cu cadă și o a doua baie completă cu duș.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="balcony-section reveal">
+        <div class="balcony-copy">
+          <div class="section-kicker" data-i18n="balconyKicker">Balconul</div>
+          <h2 class="section-title" data-i18n="balconyTitle">Un loc simplu pentru momente care rămân.</h2>
+          <p class="section-copy" data-i18n="balconyCopy">
+            Dimineața pentru cafea, după-amiaza pentru lumină, iar seara pentru liniște. Balconul deschide apartamentul către Tâmpa și către oraș.
+          </p>
+        </div>
+        <div class="balcony-image">
+          <img src="assets/images/balcony_01.webp" alt="Balcon Central Premium Apartment">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="reveal">
+        <div class="section-kicker" data-i18n="galleryKicker">Galerie</div>
+        <h2 class="section-title" data-i18n="galleryTitle">Câteva cadre. Restul îl descoperi aici.</h2>
+      </div>
+
+      <div class="gallery-strip" id="galleryGrid">
+        <figure class="gallery-item gallery-feature reveal" tabindex="0"><img src="assets/images/living_room_02.webp" alt="Living cu vedere spre Tâmpa"></figure>
+        <figure class="gallery-item gallery-tall reveal" tabindex="0"><img src="assets/images/master_bedroom_tampa_view.webp" alt="Master bedroom cu vedere spre Tâmpa"></figure>
+        <figure class="gallery-item reveal" tabindex="0"><img src="assets/images/kitchen_01.webp" alt="Bucătărie complet echipată"></figure>
+        <figure class="gallery-item reveal" tabindex="0"><img src="assets/images/bathroom_bathtub_01.webp" alt="Baie cu cadă"></figure>
+        <figure class="gallery-item gallery-wide reveal" tabindex="0"><img src="assets/images/balcony_tampa_view.webp" alt="Balcon cu vedere spre Tâmpa"></figure>
+        <figure class="gallery-item reveal" tabindex="0"><img src="assets/images/bedroom_2_02.webp" alt="Detaliu dormitor"></figure>
+        <figure class="gallery-item reveal" tabindex="0"><img src="assets/images/building_exterior_01.webp" alt="Exteriorul clădirii"></figure>
+      </div>
+    </section>
+
+    <section class="amenities-section">
+      <div class="amenities-inner">
+        <div class="reveal">
+          <div class="section-kicker" data-i18n="amenitiesKicker">Confort esențial</div>
+          <h2 class="section-title" data-i18n="amenitiesTitle">Tot ce contează pentru un sejur fără complicații.</h2>
+        </div>
+
+        <div class="amenities-grid">
+          <div class="amenity reveal"><span>❄️</span><strong data-i18n="amAir">Aer condiționat</strong></div>
+          <div class="amenity reveal"><span>☕</span><strong data-i18n="amCoffee">Aparat automat de cafea</strong></div>
+          <div class="amenity reveal"><span>🍽️</span><strong data-i18n="amDish">Mașină de spălat vase</strong></div>
+          <div class="amenity reveal"><span>🧺</span><strong data-i18n="amWash">Mașină de spălat</strong></div>
+          <div class="amenity reveal"><span>📺</span><strong data-i18n="amTv">TV cu ecran plat</strong></div>
+          <div class="amenity reveal"><span>📶</span><strong data-i18n="amWifi">Wi‑Fi gratuit</strong></div>
+          <div class="amenity reveal"><span>🚗</span><strong data-i18n="amParking">Parcare gratuită</strong></div>
+          <div class="amenity reveal"><span>🌿</span><strong data-i18n="amBalcony">Balcon / terasă</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="location">
+      <div class="reveal">
+        <div class="section-kicker" data-i18n="locationKicker">Locație</div>
+        <h2 class="section-title" data-i18n="locationTitle">Central, dar într-o zonă liniștită.</h2>
+        <p class="section-copy" data-i18n="locationCopy">
+          Apartamentul este aproape de centrul istoric, dar păstrează atmosfera calmă a unei zone rezidențiale.
+        </p>
+      </div>
+
+      <div class="location-grid">
+        <div class="location-image reveal">
+          <img src="assets/images/building_exterior_02.webp" alt="Zona Central Premium Apartment">
+        </div>
+
+        <div class="location-card reveal">
+          <h3 data-i18n="locationCardTitle">Aproape de tot ce contează</h3>
+          <div class="location-points">
+            <div class="location-point">
+              <span data-i18n="locOldTown">Centrul Vechi</span>
+              <strong>≈ 1 km</strong>
+            </div>
+            <div class="location-point">
+              <span data-i18n="locCouncil">Piața Sfatului</span>
+              <strong>≈ 1.1 km</strong>
+            </div>
+            <div class="location-point">
+              <span data-i18n="locMarket">Supermarket</span>
+              <strong>≈ 200 m</strong>
+            </div>
+            <div class="location-point">
+              <span data-i18n="locParking">Parcare</span>
+              <strong data-i18n="locParkingValue">gratuită</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reservation-section" id="booking">
+      <div class="reservation-inner">
+        <div class="reservation-copy reveal">
+          <div class="section-kicker" data-i18n="reserveKicker">Planifică sejurul</div>
+          <h2 class="section-title" data-i18n="reserveTitle">Alege datele. De aici începe Brașovul tău.</h2>
+          <p class="section-copy" data-i18n="reserveCopy">Selectează perioada și numărul de oaspeți. Calendarul este pregătit pentru conectarea la disponibilitatea reală și fluxul final de rezervare.</p>
+        </div>
+        <form class="booking-panel reveal" id="bookingForm">
+          <div class="booking-panel-head">
+            <strong data-i18n="reservePanelTitle">Verifică perioada</strong>
+            <span class="booking-badge" data-i18n="reserveBadge">până la 6 oaspeți</span>
+          </div>
+
+          <div class="calendar-shell" id="availabilityCalendar">
+            <div class="calendar-toolbar">
+              <div class="calendar-toolbar-copy">
+                <strong data-i18n="calendarTitle">Alege perioada</strong>
+                <span data-i18n="calendarHelp">Prima dată selectată este check-in; a doua este check-out.</span>
+              </div>
+              <div class="calendar-nav">
+                <button type="button" id="calendarPrev" aria-label="Previous month">‹</button>
+                <button type="button" id="calendarNext" aria-label="Next month">›</button>
+              </div>
+            </div>
+            <div class="calendar-months" id="calendarMonths"></div>
+            <div class="calendar-legend">
+              <span><i class="calendar-dot today"></i><span data-i18n="calendarToday">Astăzi</span></span>
+              <span><i class="calendar-dot"></i><span data-i18n="calendarSelected">Selectat</span></span>
+              <span><i class="calendar-dot disabled"></i><span data-i18n="calendarPast">Date trecute indisponibile</span></span>
+            </div>
+          </div>
+
+          <div class="booking-fields">
+            <div class="booking-field"><label for="checkIn" data-i18n="checkInLabel">Check-in</label><input id="checkIn" type="date" required></div>
+            <div class="booking-field"><label for="checkOut" data-i18n="checkOutLabel">Check-out</label><input id="checkOut" type="date" required></div>
+            <div class="booking-field full"><label for="guestCount" data-i18n="guestsLabel">Oaspeți</label><select id="guestCount" required><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select></div>
+          </div>
+          <div class="booking-summary" id="bookingSummary" data-i18n="bookingSummaryEmpty">Selectează datele pentru a vedea rezumatul sejurului.</div>
+          <button class="btn" type="submit" data-i18n="reserveButton">Continuă rezervarea</button>
+          <div class="booking-status" id="bookingStatus" data-i18n="reserveStatus">În etapa următoare conectăm acest formular la calendarul real de disponibilitate și canalul de rezervare.</div>
+        </form>
+      </div>
+    </section>
+
+    <section class="booking" id="final-cta">
+      <div class="booking-inner reveal">
+        <div class="section-kicker" style="color:#fff" data-i18n="bookingKicker">Central Premium Apartment</div>
+        <h2 data-i18n="bookingTitle">Brașovul e mai frumos când îl vezi de aici.</h2>
+        <p data-i18n="bookingCopy">
+          Pentru un city break, un sejur în familie sau câteva zile de liniște, apartamentul oferă spațiul și priveliștea care fac diferența.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#booking" data-i18n="bookingButton">Verifică disponibilitatea</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="galleryLightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Gallery image">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close">×</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous image">‹</button>
+    <img id="lightboxImage" src="" alt="">
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="Next image">›</button>
+    <div class="lightbox-count" id="lightboxCount"></div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <strong>Central Premium Apartment</strong>
+        <span>Brașov, România</span>
+      </div>
+      <div data-i18n="footerText">RO · EN · DE · Website concept v5</div>
+    </div>
+  </footer>
+
+  <div class="mobile-booking-bar">
+    <span data-i18n="mobileBookText">Central Premium Apartment</span>
+    <a href="#booking" data-i18n="mobileBookButton">Alege datele</a>
+  </div>
+
+  <script>
+    const translations = {
+      ro: {
+        navApartment:"Apartamentul", navGallery:"Galerie", navLocation:"Locație", navBook:"Rezervare",
+        eyebrow:"Brașov · aproape de Centrul Vechi",
+        heroTitle:"Brașovul la fereastra ta.",
+        heroCopy:"Un apartament luminos și generos, cu vedere spectaculoasă spre Tâmpa, balcon spațios și confort pentru până la 6 oaspeți.",
+        checkAvailability:"Verifică disponibilitatea", exploreApartment:"Descoperă apartamentul",
+        factGuests:"Până la 6 oaspeți", factGuestsSub:"2 dormitoare + canapea extensibilă",
+        factBedrooms:"2 dormitoare", factBedroomsSub:"160×200 + 180×200 cm",
+        factBathrooms:"2 băi", factBathroomsSub:"cadă + duș",
+        factView:"Vedere spre Tâmpa", factViewSub:"din living, dormitor și balcon",
+        factKitchen:"Bucătărie completă", factKitchenSub:"inclusiv aparat de cafea",
+        factParking:"Parcare gratuită", factParkingSub:"la proprietate",
+        factWifi:"Wi‑Fi gratuit", factWifiSub:"în apartament",
+        introKicker:"Central Premium Apartment",
+        introAside:"Aproape de centrul istoric, dar suficient de retras pentru liniște.",
+        introTitle:"Spațiu, lumină și Tâmpa mereu aproape.",
+        introCopy:"La aproximativ 1 km de Centrul Vechi, într-o zonă rezidențială liniștită, apartamentul combină spațiul generos cu una dintre cele mai frumoase priveliști ale Brașovului.",
+        viewTitle:"O priveliște pe care o ții minte.",
+        viewCopy:"Tâmpa, acoperișurile Brașovului și lumina care schimbă atmosfera de-a lungul zilei — toate fac parte din experiența apartamentului.",
+        balconyMiniTitle:"Cafeaua de dimineață, cu Tâmpa în față.",
+        balconyMiniCopy:"Balconul lung și luminos este unul dintre locurile în care apartamentul își arată cel mai bine personalitatea.",
+        overviewKicker:"Apartamentul",
+        overviewTitle:"Gândit pentru un sejur confortabil, nu doar pentru o noapte.",
+        overviewCopy:"Două dormitoare, două băi, living generos, bucătărie complet echipată și un balcon cu vedere — suficiente motive să te simți aici mai aproape de o casă decât de o simplă cazare.",
+        floorTitle:"Compartimentare clară și practică",
+        floorCopy:"2 dormitoare · 2 băi · living · bucătărie & dining · balcon",
+        roomPremium:"Dormitor premium", masterTitle:"Master Bedroom", masterCopy:"Pat de 180×200 cm, lumină caldă și acces vizual direct către Tâmpa.",
+        roomComfort:"Confort", bed2Title:"Bedroom 2", bed2Copy:"Pat de 160×200 cm, spațiu de depozitare generos și atmosferă luminoasă.",
+        roomRelax:"Relaxare", livingTitle:"Living Room", livingCopy:"Canapea extensibilă, TV mare și multă lumină naturală.",
+        roomKitchenTag:"Open-space", kitchenTitle:"Kitchen & Dining", kitchenCopy:"Bucătărie complet echipată și zonă de dining pentru mese tihnite.",
+        roomTwoBaths:"Două băi", bathTitle:"Bath & Shower", bathCopy:"O baie cu cadă și o a doua baie completă cu duș.",
+        balconyKicker:"Balconul", balconyTitle:"Un loc simplu pentru momente care rămân.",
+        balconyCopy:"Dimineața pentru cafea, după-amiaza pentru lumină, iar seara pentru liniște. Balconul deschide apartamentul către Tâmpa și către oraș.",
+        galleryKicker:"Galerie", galleryTitle:"Câteva cadre. Restul îl descoperi aici.",
+        amenitiesKicker:"Confort esențial", amenitiesTitle:"Tot ce contează pentru un sejur fără complicații.",
+        amAir:"Aer condiționat", amCoffee:"Aparat automat de cafea", amDish:"Mașină de spălat vase", amWash:"Mașină de spălat",
+        amTv:"TV cu ecran plat", amWifi:"Wi‑Fi gratuit", amParking:"Parcare gratuită", amBalcony:"Balcon / terasă",
+        locationKicker:"Locație", locationTitle:"Central, dar într-o zonă liniștită.",
+        locationCopy:"Apartamentul este aproape de centrul istoric, dar păstrează atmosfera calmă a unei zone rezidențiale.",
+        locationCardTitle:"Aproape de tot ce contează", locOldTown:"Centrul Vechi", locCouncil:"Piața Sfatului", locMarket:"Supermarket", locParking:"Parcare", locParkingValue:"gratuită",
+        reserveKicker:"Planifică sejurul", reserveTitle:"Alege datele. De aici începe Brașovul tău.", reserveCopy:"Selectează perioada și numărul de oaspeți. Calendarul este pregătit pentru conectarea la disponibilitatea reală și fluxul final de rezervare.", reservePanelTitle:"Verifică perioada", reserveBadge:"până la 6 oaspeți", calendarTitle:"Alege perioada", calendarHelp:"Prima dată selectată este check-in; a doua este check-out.", calendarToday:"Astăzi", calendarSelected:"Selectat", calendarPast:"Date trecute indisponibile", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Oaspeți", bookingSummaryEmpty:"Selectează datele pentru a vedea rezumatul sejurului.", reserveButton:"Continuă rezervarea", reserveStatus:"În etapa următoare conectăm acest formular la calendarul real de disponibilitate și canalul de rezervare.", bookingSummaryNights:"nopți", bookingSummaryGuests:"oaspeți", bookingFormMessage:"Perfect. Perioada este selectată; conectarea la rezervarea reală va fi activată înainte de publicare.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Alege datele",
+        bookingKicker:"Central Premium Apartment", bookingTitle:"Brașovul e mai frumos când îl vezi de aici.",
+        bookingCopy:"Pentru un city break, un sejur în familie sau câteva zile de liniște, apartamentul oferă spațiul și priveliștea care fac diferența.",
+        bookingButton:"Verifică disponibilitatea", footerText:"RO · EN · DE · Website concept v5"
+      },
+      en: {
+        navApartment:"Apartment", navGallery:"Gallery", navLocation:"Location", navBook:"Book",
+        eyebrow:"Brașov · close to the Old Town",
+        heroTitle:"Brașov at your window.",
+        heroCopy:"A bright, spacious apartment with spectacular Tâmpa views, a generous balcony and room for up to 6 guests.",
+        checkAvailability:"Check availability", exploreApartment:"Explore the apartment",
+        factGuests:"Up to 6 guests", factGuestsSub:"2 bedrooms + sofa bed",
+        factBedrooms:"2 bedrooms", factBedroomsSub:"160×200 + 180×200 cm",
+        factBathrooms:"2 bathrooms", factBathroomsSub:"bathtub + shower",
+        factView:"Tâmpa view", factViewSub:"from living room, bedroom and balcony",
+        factKitchen:"Fully equipped kitchen", factKitchenSub:"including coffee machine",
+        factParking:"Free parking", factParkingSub:"at the property",
+        factWifi:"Free Wi‑Fi", factWifiSub:"throughout the apartment",
+        introKicker:"Central Premium Apartment",
+        introAside:"Close to the historic centre, yet quiet enough to truly relax.",
+        introTitle:"Space, light and Tâmpa always close.",
+        introCopy:"Around 1 km from the Old Town, in a quiet residential area, the apartment combines generous living space with one of Brașov’s most memorable views.",
+        viewTitle:"A view you remember.",
+        viewCopy:"Tâmpa, Brașov’s rooftops and the changing light throughout the day all become part of the stay.",
+        balconyMiniTitle:"Morning coffee with Tâmpa in front of you.",
+        balconyMiniCopy:"The long, bright balcony is one of the places where the apartment shows its character best.",
+        overviewKicker:"The apartment",
+        overviewTitle:"Made for a comfortable stay, not just for sleeping.",
+        overviewCopy:"Two bedrooms, two bathrooms, a generous living room, a fully equipped kitchen and a balcony with a view — enough space to feel more at home than in a typical rental.",
+        floorTitle:"Clear, practical layout",
+        floorCopy:"2 bedrooms · 2 bathrooms · living room · kitchen & dining · balcony",
+        roomPremium:"Premium bedroom", masterTitle:"Master Bedroom", masterCopy:"180×200 cm bed, warm light and a direct visual connection to Tâmpa.",
+        roomComfort:"Comfort", bed2Title:"Bedroom 2", bed2Copy:"160×200 cm bed, generous storage and a bright, calm atmosphere.",
+        roomRelax:"Relax", livingTitle:"Living Room", livingCopy:"Sofa bed, large TV and plenty of natural light.",
+        roomKitchenTag:"Open-space", kitchenTitle:"Kitchen & Dining", kitchenCopy:"Fully equipped kitchen and a generous dining area.",
+        roomTwoBaths:"Two bathrooms", bathTitle:"Bath & Shower", bathCopy:"One bathroom with bathtub and a second full bathroom with shower.",
+        balconyKicker:"The balcony", balconyTitle:"A simple place for moments that stay with you.",
+        balconyCopy:"Coffee in the morning, sunlight in the afternoon and quiet in the evening. The balcony opens the apartment toward Tâmpa and the city.",
+        galleryKicker:"Gallery", galleryTitle:"A few frames. The rest is waiting here.",
+        amenitiesKicker:"Essential comfort", amenitiesTitle:"Everything that matters for an easy stay.",
+        amAir:"Air conditioning", amCoffee:"Automatic coffee machine", amDish:"Dishwasher", amWash:"Washing machine",
+        amTv:"Flat-screen TV", amWifi:"Free Wi‑Fi", amParking:"Free parking", amBalcony:"Balcony / terrace",
+        locationKicker:"Location", locationTitle:"Central, yet in a quiet residential area.",
+        locationCopy:"The apartment is close to the historic centre while keeping the calm atmosphere of a residential neighbourhood.",
+        locationCardTitle:"Close to what matters", locOldTown:"Old Town", locCouncil:"Council Square", locMarket:"Supermarket", locParking:"Parking", locParkingValue:"free",
+        reserveKicker:"Plan your stay", reserveTitle:"Choose your dates. Your Brașov stay starts here.", reserveCopy:"Select your dates and number of guests. The calendar is ready to be connected to live availability and the final booking flow.", reservePanelTitle:"Check your dates", reserveBadge:"up to 6 guests", calendarTitle:"Choose your dates", calendarHelp:"Your first selection is check-in; the second is check-out.", calendarToday:"Today", calendarSelected:"Selected", calendarPast:"Past dates unavailable", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Guests", bookingSummaryEmpty:"Choose your dates to see a stay summary.", reserveButton:"Continue booking", reserveStatus:"Next, we will connect this form to live availability and the final booking channel.", bookingSummaryNights:"nights", bookingSummaryGuests:"guests", bookingFormMessage:"Great. Your dates are selected; the live booking connection will be activated before publication.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Choose dates",
+        bookingKicker:"Central Premium Apartment", bookingTitle:"Brașov looks even better from here.",
+        bookingCopy:"For a city break, a family stay or a few quiet days, the apartment offers the space and view that make a real difference.",
+        bookingButton:"Check availability", footerText:"RO · EN · DE · Website concept v5"
+      },
+      de: {
+        navApartment:"Apartment", navGallery:"Galerie", navLocation:"Lage", navBook:"Buchen",
+        eyebrow:"Brașov · nahe der Altstadt",
+        heroTitle:"Brașov direkt vor Ihrem Fenster.",
+        heroCopy:"Ein helles, großzügiges Apartment mit spektakulärem Blick auf die Tâmpa, großem Balkon und Platz für bis zu 6 Gäste.",
+        checkAvailability:"Verfügbarkeit prüfen", exploreApartment:"Apartment entdecken",
+        factGuests:"Bis zu 6 Gäste", factGuestsSub:"2 Schlafzimmer + Schlafsofa",
+        factBedrooms:"2 Schlafzimmer", factBedroomsSub:"160×200 + 180×200 cm",
+        factBathrooms:"2 Badezimmer", factBathroomsSub:"Badewanne + Dusche",
+        factView:"Blick auf die Tâmpa", factViewSub:"vom Wohnzimmer, Schlafzimmer und Balkon",
+        factKitchen:"Voll ausgestattete Küche", factKitchenSub:"inklusive Kaffeemaschine",
+        factParking:"Kostenloses Parken", factParkingSub:"an der Unterkunft",
+        factWifi:"Kostenloses Wi‑Fi", factWifiSub:"im Apartment",
+        introKicker:"Central Premium Apartment",
+        introAside:"Nah am historischen Zentrum und dennoch ruhig genug zum Entspannen.",
+        introTitle:"Raum, Licht und die Tâmpa ganz nah.",
+        introCopy:"Etwa 1 km von der Altstadt entfernt, in einer ruhigen Wohngegend, verbindet das Apartment großzügigen Wohnkomfort mit einem der schönsten Ausblicke von Brașov.",
+        viewTitle:"Ein Ausblick, der bleibt.",
+        viewCopy:"Die Tâmpa, die Dächer von Brașov und das wechselnde Licht des Tages werden Teil des Aufenthalts.",
+        balconyMiniTitle:"Morgenkaffee mit Blick auf die Tâmpa.",
+        balconyMiniCopy:"Der lange, helle Balkon ist einer der Orte, an denen das Apartment seinen Charakter besonders gut zeigt.",
+        overviewKicker:"Das Apartment",
+        overviewTitle:"Für einen komfortablen Aufenthalt gemacht, nicht nur zum Übernachten.",
+        overviewCopy:"Zwei Schlafzimmer, zwei Badezimmer, ein großzügiges Wohnzimmer, eine voll ausgestattete Küche und ein Balkon mit Aussicht — genug Raum, um sich fast wie zu Hause zu fühlen.",
+        floorTitle:"Klare und praktische Aufteilung",
+        floorCopy:"2 Schlafzimmer · 2 Badezimmer · Wohnzimmer · Küche & Essbereich · Balkon",
+        roomPremium:"Premium-Schlafzimmer", masterTitle:"Master Bedroom", masterCopy:"180×200 cm Bett, warmes Licht und direkter Blick Richtung Tâmpa.",
+        roomComfort:"Komfort", bed2Title:"Bedroom 2", bed2Copy:"160×200 cm Bett, viel Stauraum und eine helle, ruhige Atmosphäre.",
+        roomRelax:"Entspannen", livingTitle:"Living Room", livingCopy:"Schlafsofa, großer TV und viel Tageslicht.",
+        roomKitchenTag:"Open Space", kitchenTitle:"Kitchen & Dining", kitchenCopy:"Voll ausgestattete Küche und großzügiger Essbereich.",
+        roomTwoBaths:"Zwei Badezimmer", bathTitle:"Bath & Shower", bathCopy:"Ein Badezimmer mit Badewanne und ein zweites voll ausgestattetes Bad mit Dusche.",
+        balconyKicker:"Der Balkon", balconyTitle:"Ein einfacher Ort für besondere Momente.",
+        balconyCopy:"Kaffee am Morgen, Sonne am Nachmittag und Ruhe am Abend. Der Balkon öffnet das Apartment zur Tâmpa und zur Stadt.",
+        galleryKicker:"Galerie", galleryTitle:"Ein paar Eindrücke. Den Rest entdecken Sie hier.",
+        amenitiesKicker:"Wesentlicher Komfort", amenitiesTitle:"Alles, was für einen unkomplizierten Aufenthalt zählt.",
+        amAir:"Klimaanlage", amCoffee:"Automatische Kaffeemaschine", amDish:"Geschirrspüler", amWash:"Waschmaschine",
+        amTv:"Flachbild-TV", amWifi:"Kostenloses Wi‑Fi", amParking:"Kostenloses Parken", amBalcony:"Balkon / Terrasse",
+        locationKicker:"Lage", locationTitle:"Zentral und trotzdem ruhig.",
+        locationCopy:"Das Apartment liegt nahe am historischen Zentrum und bewahrt gleichzeitig die ruhige Atmosphäre eines Wohnviertels.",
+        locationCardTitle:"Nah an allem Wichtigen", locOldTown:"Altstadt", locCouncil:"Rathausplatz", locMarket:"Supermarkt", locParking:"Parken", locParkingValue:"kostenlos",
+        reserveKicker:"Aufenthalt planen", reserveTitle:"Wählen Sie Ihre Daten. Ihr Brașov-Aufenthalt beginnt hier.", reserveCopy:"Wählen Sie Zeitraum und Gästezahl. Der Kalender ist für die Verbindung mit der Live-Verfügbarkeit und dem finalen Buchungsablauf vorbereitet.", reservePanelTitle:"Zeitraum prüfen", reserveBadge:"bis zu 6 Gäste", calendarTitle:"Zeitraum wählen", calendarHelp:"Die erste Auswahl ist Check-in, die zweite Check-out.", calendarToday:"Heute", calendarSelected:"Ausgewählt", calendarPast:"Vergangene Daten nicht verfügbar", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Gäste", bookingSummaryEmpty:"Wählen Sie die Daten, um die Aufenthaltsübersicht zu sehen.", reserveButton:"Buchung fortsetzen", reserveStatus:"Im nächsten Schritt verbinden wir dieses Formular mit der Live-Verfügbarkeit und dem finalen Buchungskanal.", bookingSummaryNights:"Nächte", bookingSummaryGuests:"Gäste", bookingFormMessage:"Perfekt. Ihre Daten sind ausgewählt; die Live-Buchungsverbindung wird vor der Veröffentlichung aktiviert.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Daten wählen",
+        bookingKicker:"Central Premium Apartment", bookingTitle:"Brașov ist von hier aus noch schöner.",
+        bookingCopy:"Für einen Citytrip, einen Familienaufenthalt oder ein paar ruhige Tage bietet das Apartment den Raum und die Aussicht, die den Unterschied machen.",
+        bookingButton:"Verfügbarkeit prüfen", footerText:"RO · EN · DE · Website concept v5"
+      }
+    };
+
+    const languageBtn = document.getElementById("languageBtn");
+    const languageMenu = document.getElementById("languageMenu");
+    const currentLang = document.getElementById("currentLang");
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileNav = document.getElementById("mobileNav");
+    const bookingForm = document.getElementById("bookingForm");
+    const checkIn = document.getElementById("checkIn");
+    const checkOut = document.getElementById("checkOut");
+    const guestCount = document.getElementById("guestCount");
+    const bookingSummary = document.getElementById("bookingSummary");
+    const bookingStatus = document.getElementById("bookingStatus");
+    const calendarMonths = document.getElementById("calendarMonths");
+    const calendarPrev = document.getElementById("calendarPrev");
+    const calendarNext = document.getElementById("calendarNext");
+    let activeLanguage = "ro";
+    let calendarOffset = 0;
+
+    function setLanguage(lang){
+      document.documentElement.lang = lang;
+      activeLanguage = lang;
+      currentLang.textContent = lang.toUpperCase();
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.dataset.i18n;
+        if(translations[lang] && translations[lang][key]){
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      languageMenu.classList.remove("open");
+      languageBtn.setAttribute("aria-expanded","false");
+      localStorage.setItem("cpa-lang", lang);
+      updateBookingSummary();
+      renderCalendar();
+    }
+
+    languageBtn.addEventListener("click", () => {
+      const isOpen = languageMenu.classList.toggle("open");
+      languageBtn.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    languageMenu.querySelectorAll("[data-lang]").forEach(btn => {
+      btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+    });
+
+    menuToggle.addEventListener("click", () => {
+      const open = mobileNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(open));
+      menuToggle.textContent = open ? "×" : "☰";
+    });
+    mobileNav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      mobileNav.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded","false");
+      menuToggle.textContent = "☰";
+    }));
+
+    document.addEventListener("click", (event) => {
+      if(!event.target.closest(".language-wrap")){
+        languageMenu.classList.remove("open");
+        languageBtn.setAttribute("aria-expanded","false");
+      }
+    });
+
+    function isoLocal(date){
+      const y=date.getFullYear(), m=String(date.getMonth()+1).padStart(2,"0"), d=String(date.getDate()).padStart(2,"0");
+      return `${y}-${m}-${d}`;
+    }
+    const today=new Date(); today.setHours(0,0,0,0);
+    checkIn.min=isoLocal(today);
+    checkOut.min=isoLocal(new Date(today.getTime()+86400000));
+
+    function dateOnly(value){
+      if(!value) return null;
+      const d = new Date(value + "T00:00:00");
+      d.setHours(0,0,0,0);
+      return d;
+    }
+
+    function sameDay(a,b){
+      return a && b &&
+        a.getFullYear()===b.getFullYear() &&
+        a.getMonth()===b.getMonth() &&
+        a.getDate()===b.getDate();
+    }
+
+    function calendarLocale(){
+      return activeLanguage === "de" ? "de-DE" : activeLanguage === "en" ? "en-GB" : "ro-RO";
+    }
+
+    function renderMonth(year, month){
+      const locale = calendarLocale();
+      const wrapper = document.createElement("div");
+      wrapper.className = "calendar-month";
+
+      const title = document.createElement("div");
+      title.className = "calendar-month-title";
+      title.textContent = new Intl.DateTimeFormat(locale,{month:"long",year:"numeric"}).format(new Date(year,month,1));
+      wrapper.appendChild(title);
+
+      const weekdays = document.createElement("div");
+      weekdays.className = "calendar-weekdays";
+      const monday = new Date(2026,0,5);
+      for(let i=0;i<7;i++){
+        const day = new Date(monday);
+        day.setDate(monday.getDate()+i);
+        const span = document.createElement("span");
+        span.textContent = new Intl.DateTimeFormat(locale,{weekday:"short"}).format(day).replace(".","");
+        weekdays.appendChild(span);
+      }
+      wrapper.appendChild(weekdays);
+
+      const days = document.createElement("div");
+      days.className = "calendar-days";
+
+      const first = new Date(year,month,1);
+      const leading = (first.getDay()+6)%7;
+      for(let i=0;i<leading;i++){
+        const blank = document.createElement("button");
+        blank.type = "button";
+        blank.className = "calendar-day empty";
+        blank.tabIndex = -1;
+        days.appendChild(blank);
+      }
+
+      const count = new Date(year,month+1,0).getDate();
+      const selectedIn = dateOnly(checkIn.value);
+      const selectedOut = dateOnly(checkOut.value);
+
+      for(let dayNum=1; dayNum<=count; dayNum++){
+        const date = new Date(year,month,dayNum);
+        date.setHours(0,0,0,0);
+
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "calendar-day";
+        button.textContent = dayNum;
+        button.dataset.date = isoLocal(date);
+        button.setAttribute("aria-label", new Intl.DateTimeFormat(locale,{weekday:"long",day:"numeric",month:"long",year:"numeric"}).format(date));
+
+        if(date < today){
+          button.disabled = true;
+          button.classList.add("is-past");
+        }
+        if(sameDay(date,today)) button.classList.add("is-today");
+        if(sameDay(date,selectedIn) || sameDay(date,selectedOut)) button.classList.add("is-selected");
+        if(selectedIn && selectedOut && date > selectedIn && date < selectedOut) button.classList.add("is-in-range");
+
+        button.addEventListener("click",()=>selectCalendarDate(date));
+        days.appendChild(button);
+      }
+
+      wrapper.appendChild(days);
+      return wrapper;
+    }
+
+    function renderCalendar(){
+      if(!calendarMonths) return;
+      calendarMonths.innerHTML = "";
+
+      const firstVisible = new Date(today.getFullYear(), today.getMonth()+calendarOffset, 1);
+      const secondVisible = new Date(firstVisible.getFullYear(), firstVisible.getMonth()+1, 1);
+
+      calendarMonths.appendChild(renderMonth(firstVisible.getFullYear(), firstVisible.getMonth()));
+      calendarMonths.appendChild(renderMonth(secondVisible.getFullYear(), secondVisible.getMonth()));
+
+      calendarPrev.disabled = calendarOffset <= 0;
+    }
+
+    function selectCalendarDate(date){
+      if(date < today) return;
+
+      const selectedIn = dateOnly(checkIn.value);
+      const selectedOut = dateOnly(checkOut.value);
+
+      if(!selectedIn || selectedOut || date <= selectedIn){
+        checkIn.value = isoLocal(date);
+        checkOut.value = "";
+        const next = new Date(date);
+        next.setDate(next.getDate()+1);
+        checkOut.min = isoLocal(next);
+      } else {
+        checkOut.value = isoLocal(date);
+      }
+
+      updateBookingSummary();
+      renderCalendar();
+    }
+
+    calendarPrev.addEventListener("click",()=>{
+      if(calendarOffset>0){
+        calendarOffset--;
+        renderCalendar();
+      }
+    });
+
+    calendarNext.addEventListener("click",()=>{
+      calendarOffset++;
+      renderCalendar();
+    });
+
+    function updateBookingSummary(){
+      if(!bookingSummary) return;
+      const t=translations[activeLanguage];
+      if(!checkIn.value || !checkOut.value){bookingSummary.textContent=t.bookingSummaryEmpty;return;}
+      const start=new Date(checkIn.value+"T00:00:00"), end=new Date(checkOut.value+"T00:00:00");
+      const nights=Math.max(0,Math.round((end-start)/86400000));
+      bookingSummary.textContent=nights>0 ? `${checkIn.value} → ${checkOut.value} · ${nights} ${t.bookingSummaryNights} · ${guestCount.value} ${t.bookingSummaryGuests}` : t.bookingSummaryEmpty;
+    }
+    checkIn.addEventListener("change",()=>{
+      if(checkIn.value){const next=new Date(checkIn.value+"T00:00:00");next.setDate(next.getDate()+1);checkOut.min=isoLocal(next);if(checkOut.value && checkOut.value<checkOut.min)checkOut.value="";}
+      updateBookingSummary();
+      renderCalendar();
+    });
+    checkOut.addEventListener("change",()=>{ updateBookingSummary(); renderCalendar(); });
+    guestCount.addEventListener("change",updateBookingSummary);
+    bookingForm.addEventListener("submit",event=>{
+      event.preventDefault();
+      if(!bookingForm.reportValidity()) return;
+      updateBookingSummary();
+      bookingStatus.textContent=translations[activeLanguage].bookingFormMessage;
+      bookingStatus.style.color="var(--green-deep)";bookingStatus.style.fontWeight="800";
+    });
+
+    const savedLang = localStorage.getItem("cpa-lang");
+    if(savedLang && translations[savedLang]) setLanguage(savedLang); else setLanguage("ro");
+    renderCalendar();
+
+
+    const galleryItems = Array.from(document.querySelectorAll(".gallery-item"));
+    const galleryLightbox = document.getElementById("galleryLightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
+    const lightboxPrev = document.getElementById("lightboxPrev");
+    const lightboxNext = document.getElementById("lightboxNext");
+    const lightboxCount = document.getElementById("lightboxCount");
+    let lightboxIndex = 0;
+
+    function showLightbox(index){
+      if(!galleryItems.length) return;
+      lightboxIndex = (index + galleryItems.length) % galleryItems.length;
+      const img = galleryItems[lightboxIndex].querySelector("img");
+      lightboxImage.src = img.src;
+      lightboxImage.alt = img.alt;
+      lightboxCount.textContent = `${lightboxIndex + 1} / ${galleryItems.length}`;
+      galleryLightbox.classList.add("open");
+      galleryLightbox.setAttribute("aria-hidden","false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox(){
+      galleryLightbox.classList.remove("open");
+      galleryLightbox.setAttribute("aria-hidden","true");
+      document.body.style.overflow = "";
+    }
+
+    galleryItems.forEach((item,index)=>{
+      item.addEventListener("click",()=>showLightbox(index));
+      item.addEventListener("keydown",event=>{
+        if(event.key==="Enter" || event.key===" "){
+          event.preventDefault();
+          showLightbox(index);
+        }
+      });
+    });
+
+    lightboxClose.addEventListener("click",closeLightbox);
+    lightboxPrev.addEventListener("click",()=>showLightbox(lightboxIndex-1));
+    lightboxNext.addEventListener("click",()=>showLightbox(lightboxIndex+1));
+    galleryLightbox.addEventListener("click",event=>{
+      if(event.target===galleryLightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown",event=>{
+      if(!galleryLightbox.classList.contains("open")) return;
+      if(event.key==="Escape") closeLightbox();
+      if(event.key==="ArrowLeft") showLightbox(lightboxIndex-1);
+      if(event.key==="ArrowRight") showLightbox(lightboxIndex+1);
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12});
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
