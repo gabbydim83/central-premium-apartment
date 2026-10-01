@@ -1998,6 +1998,848 @@
       .booking-field select{font-size:10.5px;padding:0 6px}
     }
 
+
+
+    /* Explore Brașov theme aliases copied from the Cucu Residence ecosystem */
+    :root{
+      --white:#ffffff;
+      --forest:#173d31;
+      --forest-dark:#0d2921;
+      --sage:#8ba58f;
+      --teal:#1f7775;
+      --gold:#c5a46d;
+      --text-light:rgba(255,255,255,.92);
+      --text-soft:rgba(255,255,255,.72);
+      --border-light:rgba(255,255,255,.30);
+      --serif:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+      --sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    }
+
+/* =========================================================
+       EXPLORE BRAȘOV — COMPACT MINI-CONCIERGE
+       ========================================================= */
+
+    .eb-section {
+      position: relative;
+      overflow: hidden;
+      background: #f7f4ed;
+      color: #18231e;
+    }
+
+    .eb-city-hero {
+      position: relative;
+      min-height: 470px;
+      display: flex;
+      align-items: flex-end;
+      background: var(--forest-dark) center / cover no-repeat;
+      color: #fff;
+      isolation: isolate;
+    }
+
+    .eb-city-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(0deg, rgba(7,24,18,.84) 0%, rgba(7,24,18,.24) 68%, rgba(7,24,18,.12) 100%);
+    }
+
+    .eb-shell {
+      width: min(1320px, calc(100% - 44px));
+      margin: 0 auto;
+    }
+
+    .eb-city-copy {
+      width: min(790px, 100%);
+      padding: 80px 0 74px;
+    }
+
+    .eb-label {
+      margin-bottom: 14px;
+      color: #e0bd82;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .eb-city-copy h2 {
+      font-family: var(--serif);
+      font-size: clamp(54px, 7vw, 96px);
+      font-weight: 400;
+      line-height: .91;
+      letter-spacing: -.055em;
+    }
+
+    .eb-city-copy p {
+      max-width: 680px;
+      margin-top: 20px;
+      color: rgba(255,255,255,.78);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .eb-weather-wrap {
+      position: relative;
+      z-index: 5;
+      width: min(1180px, calc(100% - 44px));
+      margin: -40px auto 0;
+    }
+
+    .eb-weather {
+      display: grid;
+      grid-template-columns: .85fr 1.65fr;
+      overflow: hidden;
+      border: 1px solid rgba(23,61,49,.08);
+      border-radius: 26px;
+      background: #fff;
+      box-shadow: 0 24px 65px rgba(17,42,32,.11);
+    }
+
+    .eb-weather-now {
+      padding: 28px 30px;
+      background: #fff;
+    }
+
+    .eb-weather-kicker {
+      margin-bottom: 9px;
+      color: #8a6545;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .eb-weather-temp {
+      font-family: var(--serif);
+      font-size: clamp(52px, 5vw, 70px);
+      line-height: 1;
+      letter-spacing: -.055em;
+      color: var(--forest-dark);
+    }
+
+    .eb-weather-meta {
+      margin-top: 7px;
+      color: rgba(24,35,30,.62);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .eb-forecast {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(82px, 1fr));
+      gap: 1px;
+      background: rgba(23,61,49,.09);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .eb-forecast::-webkit-scrollbar {
+      display: none;
+    }
+
+    .eb-day {
+      min-width: 82px;
+      padding: 22px 8px;
+      text-align: center;
+      background: #fbfaf6;
+    }
+
+    .eb-day b {
+      display: block;
+      font-size: 10px;
+      color: rgba(24,35,30,.68);
+    }
+
+    .eb-day .eb-wi {
+      margin: 8px 0 7px;
+      font-size: 20px;
+    }
+
+    .eb-day strong {
+      display: block;
+      font-size: 13px;
+      color: var(--forest-dark);
+    }
+
+    .eb-day small {
+      color: rgba(24,35,30,.52);
+      font-size: 10px;
+    }
+
+    .eb-tips-wrap {
+      width: min(1180px, calc(100% - 44px));
+      margin: 18px auto 0;
+    }
+
+    .eb-tips {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .eb-tip {
+      min-height: 116px;
+      padding: 17px 18px;
+      border: 1px solid rgba(23,61,49,.08);
+      border-radius: 18px;
+      background: rgba(255,255,255,.78);
+    }
+
+    .eb-tip-icon {
+      font-size: 18px;
+    }
+
+    .eb-tip h3 {
+      margin-top: 8px;
+      font-family: var(--serif);
+      font-size: 19px;
+      font-weight: 400;
+      color: var(--forest-dark);
+    }
+
+    .eb-tip p {
+      margin-top: 5px;
+      font-size: 11px;
+      line-height: 1.48;
+      color: rgba(24,35,30,.60);
+    }
+
+    .eb-browser {
+      padding: 68px 0 90px;
+    }
+
+    .eb-browser-head {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(300px, .55fr);
+      gap: 38px;
+      align-items: end;
+      margin-bottom: 26px;
+    }
+
+    .eb-browser-title {
+      margin-top: 11px;
+      font-family: var(--serif);
+      font-size: clamp(42px, 5vw, 68px);
+      font-weight: 400;
+      line-height: .98;
+      letter-spacing: -.04em;
+      color: var(--forest-dark);
+    }
+
+    .eb-browser-lead {
+      font-size: 14px;
+      line-height: 1.65;
+      color: rgba(24,35,30,.65);
+    }
+
+    .eb-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 7px;
+      scrollbar-width: none;
+    }
+
+    .eb-tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .eb-tab {
+      flex: 0 0 auto;
+      min-height: 42px;
+      padding: 0 16px;
+      border: 1px solid rgba(23,61,49,.13);
+      border-radius: 999px;
+      background: rgba(255,255,255,.72);
+      color: #385347;
+      font-size: 11px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: .22s ease;
+    }
+
+    .eb-tab.active {
+      background: var(--forest-dark);
+      border-color: var(--forest-dark);
+      color: #fff;
+    }
+
+    .eb-category-copy {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 22px;
+      margin: 24px 0 16px;
+    }
+
+    .eb-category-copy h3 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3vw, 38px);
+      font-weight: 400;
+      color: var(--forest-dark);
+    }
+
+    .eb-category-copy p {
+      max-width: 560px;
+      font-size: 12px;
+      line-height: 1.55;
+      color: rgba(24,35,30,.60);
+      text-align: right;
+    }
+
+    .eb-carousel-wrap {
+      position: relative;
+    }
+
+    .eb-grid {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding: 2px 1px 14px;
+    }
+
+    .eb-grid::-webkit-scrollbar {
+      display: none;
+    }
+
+    .eb-card {
+      flex: 0 0 min(360px, 31vw);
+      min-width: 290px;
+      overflow: hidden;
+      scroll-snap-align: start;
+      border: 1px solid rgba(23,61,49,.08);
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 12px 34px rgba(17,42,32,.07);
+    }
+
+    .eb-card-image {
+      position: relative;
+      height: 205px;
+      overflow: hidden;
+      background: #dce5df;
+    }
+
+    .eb-card-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform .45s ease;
+    }
+
+    .eb-card:hover .eb-card-image img {
+      transform: scale(1.035);
+    }
+
+    .eb-card-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 2;
+      max-width: calc(100% - 24px);
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.91);
+      color: var(--forest-dark);
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .eb-card-body {
+      display: flex;
+      flex-direction: column;
+      min-height: 220px;
+      padding: 18px;
+    }
+
+    .eb-card-body h4 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.08;
+      color: var(--forest-dark);
+    }
+
+    .eb-card-body p {
+      margin-top: 7px;
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      color: rgba(24,35,30,.62);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .eb-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 11px;
+    }
+
+    .eb-pill {
+      padding: 5px 7px;
+      border-radius: 999px;
+      background: #e7efe9;
+      color: #2e5747;
+      font-size: 9px;
+      font-weight: 800;
+    }
+
+    .eb-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: auto;
+      padding-top: 15px;
+    }
+
+    .eb-detail,
+    .eb-action {
+      min-height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 12px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .eb-detail {
+      border: 1px solid rgba(23,61,49,.15);
+      background: #fff;
+      color: var(--forest-dark);
+    }
+
+    .eb-action {
+      border: 0;
+      background: var(--forest-dark);
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .eb-loading,
+    .eb-error {
+      flex: 0 0 330px;
+      min-height: 180px;
+      display: grid;
+      place-items: center;
+      padding: 22px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.7);
+      border: 1px dashed rgba(23,61,49,.18);
+      color: rgba(24,35,30,.60);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .eb-error {
+      background: #f3e6e0;
+      color: #7a4938;
+    }
+
+    .eb-carousel-nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 7px;
+      margin-top: 4px;
+    }
+
+    .eb-carousel-nav button {
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(23,61,49,.13);
+      border-radius: 50%;
+      background: #fff;
+      color: var(--forest-dark);
+      cursor: pointer;
+    }
+
+    .eb-source-note {
+      margin-top: 18px;
+      color: rgba(24,35,30,.46);
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    .eb-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2500;
+      display: none;
+      place-items: center;
+      padding: 20px;
+      background: rgba(7,20,14,.72);
+    }
+
+    .eb-modal.open {
+      display: grid;
+    }
+
+    .eb-modal-card {
+      width: min(590px, 100%);
+      max-height: 90vh;
+      overflow: auto;
+      padding: 26px;
+      border-radius: 24px;
+      background: #fffdf9;
+      box-shadow: 0 30px 100px rgba(0,0,0,.30);
+    }
+
+    .eb-modal-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .eb-modal-top h3 {
+      margin-top: 6px;
+      font-family: var(--serif);
+      font-size: 30px;
+      font-weight: 400;
+      color: var(--forest-dark);
+    }
+
+    .eb-modal-close {
+      width: 40px;
+      height: 40px;
+      flex: 0 0 40px;
+      border: 1px solid rgba(23,61,49,.12);
+      border-radius: 50%;
+      background: #fff;
+      color: var(--forest-dark);
+      cursor: pointer;
+    }
+
+    .eb-modal-note {
+      margin-top: 9px;
+      color: rgba(24,35,30,.60);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .eb-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .eb-field {
+      display: grid;
+      gap: 6px;
+    }
+
+    .eb-field.full {
+      grid-column: 1 / -1;
+    }
+
+    .eb-field label {
+      color: rgba(24,35,30,.58);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .eb-field input,
+    .eb-field textarea {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid rgba(23,61,49,.12);
+      border-radius: 13px;
+      background: #fff;
+      outline: none;
+    }
+
+    .eb-field textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    .eb-send {
+      width: 100%;
+      min-height: 46px;
+      margin-top: 12px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--forest-dark);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    @media (max-width: 980px) {
+      .eb-weather {
+        grid-template-columns: 1fr;
+      }
+
+      .eb-browser-head {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .eb-tips {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .eb-card {
+        flex-basis: 42vw;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .eb-city-hero {
+        min-height: 390px;
+      }
+
+      .eb-shell,
+      .eb-weather-wrap,
+      .eb-tips-wrap {
+        width: calc(100% - 40px);
+      }
+
+      .eb-city-copy {
+        padding: 62px 0 54px;
+      }
+
+      .eb-city-copy h2 {
+        font-size: clamp(46px, 14vw, 64px);
+      }
+
+      .eb-city-copy p {
+        font-size: 14px;
+        line-height: 1.58;
+      }
+
+      .eb-weather-wrap {
+        margin-top: -26px;
+      }
+
+      .eb-weather {
+        border-radius: 21px;
+      }
+
+      .eb-weather-now {
+        padding: 20px;
+      }
+
+      .eb-forecast {
+        grid-template-columns: repeat(7, 74px);
+      }
+
+      .eb-day {
+        min-width: 74px;
+        padding: 15px 5px;
+      }
+
+      .eb-tips {
+        display: flex;
+        overflow-x: auto;
+        gap: 9px;
+        scrollbar-width: none;
+        scroll-snap-type: x mandatory;
+      }
+
+      .eb-tips::-webkit-scrollbar {
+        display: none;
+      }
+
+      .eb-tip {
+        flex: 0 0 72vw;
+        min-height: 105px;
+        scroll-snap-align: start;
+      }
+
+      .eb-browser {
+        padding: 52px 0 72px;
+      }
+
+      .eb-browser-title {
+        font-size: clamp(39px, 11vw, 54px);
+      }
+
+      .eb-category-copy {
+        display: block;
+      }
+
+      .eb-category-copy p {
+        margin-top: 7px;
+        text-align: left;
+      }
+
+      .eb-card {
+        flex: 0 0 78vw;
+        min-width: 0;
+        max-width: 310px;
+      }
+
+      .eb-card-image {
+        height: 165px;
+      }
+
+      .eb-card-body {
+        min-height: 200px;
+        padding: 15px;
+      }
+
+      .eb-carousel-nav {
+        display: none;
+      }
+
+      .eb-form {
+        grid-template-columns: 1fr;
+      }
+
+      .eb-field.full {
+        grid-column: auto;
+      }
+    }
+
+  
+    /* =========================================================
+       EXPLORE BRAȘOV — ALL CATEGORIES VISIBLE
+       ========================================================= */
+
+    .eb-strip {
+      margin-top: 28px;
+      padding: 28px 0 18px;
+      border-top: 1px solid rgba(23,61,49,.10);
+    }
+
+    .eb-strip:first-of-type { margin-top: 14px; }
+
+    .eb-strip-head {
+      display: grid;
+      grid-template-columns: minmax(0,.9fr) minmax(280px,.55fr);
+      align-items: end;
+      gap: 28px;
+      margin-bottom: 16px;
+    }
+
+    .eb-strip-kicker {
+      margin-bottom: 8px;
+      color: #8a6545;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .eb-strip-head h3 {
+      font-family: var(--serif);
+      font-size: clamp(30px,3.2vw,44px);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -.035em;
+      color: var(--forest-dark);
+    }
+
+    .eb-strip-head p {
+      max-width: 560px;
+      justify-self: end;
+      color: rgba(24,35,30,.60);
+      font-size: 12px;
+      line-height: 1.55;
+      text-align: right;
+    }
+
+    .eb-strip-grid { padding-bottom: 6px; }
+
+    .eb-strip-alt { position: relative; }
+
+    .eb-strip-alt::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 100vw;
+      height: 100%;
+      transform: translateX(-50%);
+      background: rgba(232,238,232,.34);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .eb-strip-alt > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width:760px) {
+      .eb-strip {
+        margin-top: 20px;
+        padding: 23px 0 13px;
+      }
+
+      .eb-strip-head {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        margin-bottom: 13px;
+      }
+
+      .eb-strip-head p {
+        justify-self: start;
+        text-align: left;
+      }
+
+      .eb-strip-head h3 {
+        font-size: clamp(28px,9vw,39px);
+      }
+    }
+
+  
+    
+
+    .location-explore-bridge{
+      margin-top:18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:14px 16px;
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:16px;
+      background:rgba(255,255,255,.07);
+    }
+    .location-explore-bridge span{
+      color:rgba(255,255,255,.76);
+      font-size:12px;
+      line-height:1.45;
+    }
+    .location-explore-bridge a{
+      flex:0 0 auto;
+      min-height:38px;
+      padding:0 14px;
+      display:inline-flex;
+      align-items:center;
+      border-radius:999px;
+      background:#fff;
+      color:var(--green-deep);
+      font-size:11px;
+      font-weight:900;
+    }
+    @media(max-width:760px){
+      .location-explore-bridge{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+    }
+
   </style>
 </head>
 
@@ -2013,6 +2855,7 @@
         <a href="#apartment" data-i18n="navApartment">Apartamentul</a>
         <a href="#gallery" data-i18n="navGallery">Galerie</a>
         <a href="#location" data-i18n="navLocation">Locație</a>
+        <a href="#explore">Explore Brașov</a>
         <a href="#booking" data-i18n="navBook">Rezervare</a>
       </nav>
 
@@ -2034,6 +2877,7 @@
         <a href="#apartment" data-i18n="navApartment">Apartamentul</a>
         <a href="#gallery" data-i18n="navGallery">Galerie</a>
         <a href="#location" data-i18n="navLocation">Locație</a>
+        <a href="#explore">Explore Brașov</a>
         <a href="#booking" data-i18n="navBook">Rezervare</a>
       </nav>
     </div>
@@ -2292,9 +3136,220 @@
               <strong data-i18n="locParkingValue">gratuită</strong>
             </div>
           </div>
+
+          <div class="location-explore-bridge">
+            <span>Vreme, restaurante, activități, locuri de vizitat, excursii și servicii pentru oaspeți.</span>
+            <a href="#explore">Explore Brașov →</a>
+          </div>
         </div>
       </div>
     </section>
+
+<section class="eb-section" id="explore">
+
+    <div class="eb-city-hero" id="ebCityHero">
+      <div class="eb-shell">
+        <div class="eb-city-copy">
+          <div class="eb-label">EXPLORE BRAȘOV</div>
+          <div class="section-kicker" style="color:#e0bd82" id="ebCityEyebrow">
+            DESCOPERĂ BRAȘOVUL
+          </div>
+          <h2 id="ebCityTitle">Descoperă Brașovul</h2>
+          <p id="ebCitySubtitle">
+            Oraș medieval, munți, gastronomie și experiențe la îndemână în timpul sejurului.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="eb-weather-wrap">
+      <div class="eb-weather">
+
+        <div class="eb-weather-now">
+          <div class="eb-weather-kicker" data-eb-i18n="ebWeatherKicker">
+            Vreme live · Brașov
+          </div>
+          <div class="eb-weather-temp" id="ebCurrentTemp">—°</div>
+          <div class="eb-weather-meta" id="ebWeatherMeta">
+            Se încarcă vremea...
+          </div>
+        </div>
+
+        <div class="eb-forecast" id="ebForecast"></div>
+
+      </div>
+    </div>
+
+
+    <div class="eb-tips-wrap">
+      <div class="eb-tips" id="ebQuickTips">
+        <div class="eb-loading" data-eb-i18n="ebLoadingTips">Se încarcă recomandările...</div>
+      </div>
+    </div>
+
+
+    <div class="eb-browser">
+      <div class="eb-shell">
+
+        <div class="eb-browser-head">
+          <div>
+            <div class="section-kicker" data-eb-i18n="ebConciergeKicker">Mini-concierge</div>
+            <h2 class="eb-browser-title" data-eb-i18n="ebConciergeTitle">
+              Brașovul, într-un singur loc.
+            </h2>
+          </div>
+
+          <p class="eb-browser-lead" data-eb-i18n="ebConciergeLead">
+            Activități, restaurante, locuri de vizitat, excursii și servicii pentru oaspeți,
+            toate încărcate direct din baza centrală Explore Brașov.
+          </p>
+        </div>
+
+        <section class="eb-strip" id="activities">
+          <div class="eb-strip-head">
+            <div>
+              <div class="eb-strip-kicker">ACTIVITIES</div>
+              <h3 data-eb-i18n="ebActivitiesTitle">Experiențe în Brașov.</h3>
+            </div>
+            <p data-eb-i18n="ebActivitiesLead">
+              Activități reale din baza Explore Brașov, într-un singur rând compact.
+            </p>
+          </div>
+          <div class="eb-grid eb-strip-grid" id="ebActivitiesGrid">
+            <div class="eb-loading">Loading activities…</div>
+          </div>
+        </section>
+
+        <section class="eb-strip eb-strip-alt" id="restaurants">
+          <div class="eb-strip-head">
+            <div>
+              <div class="eb-strip-kicker">RESTAURANTS NEAR YOUR STAY</div>
+              <h3 data-eb-i18n="ebRestaurantsTitle">Restaurante aproape de Central Premium Apartment.</h3>
+            </div>
+            <p data-eb-i18n="ebRestaurantsLead">
+              Sortate automat după distanța față de proprietate.
+            </p>
+          </div>
+          <div class="eb-grid eb-strip-grid" id="ebRestaurantsGrid">
+            <div class="eb-loading">Loading restaurants…</div>
+          </div>
+        </section>
+
+        <section class="eb-strip" id="places">
+          <div class="eb-strip-head">
+            <div>
+              <div class="eb-strip-kicker">PLACES TO VISIT</div>
+              <h3 data-eb-i18n="ebPlacesTitle">Locuri de vizitat.</h3>
+            </div>
+            <p data-eb-i18n="ebPlacesLead">
+              Atracții și obiective încărcate direct din baza centrală.
+            </p>
+          </div>
+          <div class="eb-grid eb-strip-grid" id="ebPlacesGrid">
+            <div class="eb-loading">Loading places…</div>
+          </div>
+        </section>
+
+        <section class="eb-strip eb-strip-alt" id="destinations">
+          <div class="eb-strip-head">
+            <div>
+              <div class="eb-strip-kicker">TOP DESTINATIONS</div>
+              <h3 data-eb-i18n="ebDestinationsTitle">Excursii din Brașov.</h3>
+            </div>
+            <p data-eb-i18n="ebDestinationsLead">
+              Destinații pentru o zi de explorare, cu solicitare de transport unde este disponibilă.
+            </p>
+          </div>
+          <div class="eb-grid eb-strip-grid" id="ebDestinationsGrid">
+            <div class="eb-loading">Loading destinations…</div>
+          </div>
+        </section>
+
+        <section class="eb-strip" id="services">
+          <div class="eb-strip-head">
+            <div>
+              <div class="eb-strip-kicker">GUEST SERVICES</div>
+              <h3 data-eb-i18n="ebServicesTitle">Servicii utile pentru sejur.</h3>
+            </div>
+            <p data-eb-i18n="ebServicesLead">
+              Transferuri, transport, rent a car, biciclete și alte servicii disponibile în ecosistem.
+            </p>
+          </div>
+          <div class="eb-grid eb-strip-grid" id="ebServicesGrid">
+            <div class="eb-loading">Loading guest services…</div>
+          </div>
+        </section>
+
+        <p class="eb-source-note" data-eb-i18n="ebSourceNote">
+          Informațiile sunt încărcate din ecosistemul central Explore Brașov și pot fi actualizate fără modificarea acestei pagini.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <div class="eb-modal" id="ebTransportModal" aria-hidden="true">
+    <div class="eb-modal-card">
+
+      <div class="eb-modal-top">
+        <div>
+          <div class="eb-weather-kicker" data-eb-i18n="ebTransportKicker">SOLICITARE TRANSPORT</div>
+          <h3 id="ebTransportTitle">—</h3>
+          <p class="eb-modal-note" data-eb-i18n="ebTransportIntro">
+            Completează cererea. Mesajul va fi pregătit pentru furnizorul disponibil în Explore Brașov.
+          </p>
+        </div>
+
+        <button class="eb-modal-close" id="ebTransportClose" type="button" aria-label="Close">×</button>
+      </div>
+
+      <div class="eb-form">
+        <div class="eb-field full">
+          <label data-eb-i18n="ebName">Nume</label>
+          <input id="ebTrName">
+        </div>
+
+        <div class="eb-field">
+          <label data-eb-i18n="ebDate">Data</label>
+          <input id="ebTrDate" type="date">
+        </div>
+
+        <div class="eb-field">
+          <label data-eb-i18n="ebTime">Ora</label>
+          <input id="ebTrTime" type="time">
+        </div>
+
+        <div class="eb-field">
+          <label data-eb-i18n="ebGuests">Persoane</label>
+          <input id="ebTrGuests" type="number" min="1" value="2">
+        </div>
+
+        <div class="eb-field">
+          <label data-eb-i18n="ebPickup">Preluare</label>
+          <input id="ebTrPickup" value="Central Premium Apartment">
+        </div>
+
+        <div class="eb-field full">
+          <label data-eb-i18n="ebDetails">Detalii</label>
+          <textarea id="ebTrDetails"></textarea>
+        </div>
+      </div>
+
+      <button class="eb-send" id="ebSendTransport" type="button" data-eb-i18n="ebSendTransport">
+        Trimite cererea pe WhatsApp
+      </button>
+
+    </div>
+  </div>
+
+
+
+
+
+  
+  
 
     <section class="reservation-section" id="booking">
       <div class="reservation-inner">
@@ -2368,7 +3423,7 @@
         <strong>Central Premium Apartment</strong>
         <span>Brașov, România</span>
       </div>
-      <div data-i18n="footerText">RO · EN · DE · Website concept v6</div>
+      <div data-i18n="footerText">RO · EN · DE · Website concept v7 · Explore Brașov</div>
     </div>
   </footer>
 
@@ -2422,7 +3477,7 @@
         reserveKicker:"Planifică sejurul", reserveTitle:"Alege datele. De aici începe Brașovul tău.", reserveCopy:"Selectează perioada și numărul de oaspeți. Calendarul este pregătit pentru conectarea la disponibilitatea reală și fluxul final de rezervare.", reservePanelTitle:"Verifică perioada", reserveBadge:"până la 6 oaspeți", calendarTitle:"Alege perioada", calendarHelp:"Prima dată selectată este check-in; a doua este check-out.", calendarToday:"Astăzi", calendarSelected:"Selectat", calendarPast:"Date trecute indisponibile", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Oaspeți", bookingSummaryEmpty:"Selectează datele pentru a vedea rezumatul sejurului.", reserveButton:"Continuă rezervarea", reserveStatus:"În etapa următoare conectăm acest formular la calendarul real de disponibilitate și canalul de rezervare.", bookingSummaryNights:"nopți", bookingSummaryGuests:"oaspeți", bookingFormMessage:"Perfect. Perioada este selectată; conectarea la rezervarea reală va fi activată înainte de publicare.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Alege datele",
         bookingKicker:"Central Premium Apartment", bookingTitle:"Brașovul e mai frumos când îl vezi de aici.",
         bookingCopy:"Pentru un city break, un sejur în familie sau câteva zile de liniște, apartamentul oferă spațiul și priveliștea care fac diferența.",
-        bookingButton:"Verifică disponibilitatea", footerText:"RO · EN · DE · Website concept v6"
+        bookingButton:"Verifică disponibilitatea", footerText:"RO · EN · DE · Website concept v7 · Explore Brașov"
       },
       en: {
         navApartment:"Apartment", navGallery:"Gallery", navLocation:"Location", navBook:"Book",
@@ -2467,7 +3522,7 @@
         reserveKicker:"Plan your stay", reserveTitle:"Choose your dates. Your Brașov stay starts here.", reserveCopy:"Select your dates and number of guests. The calendar is ready to be connected to live availability and the final booking flow.", reservePanelTitle:"Check your dates", reserveBadge:"up to 6 guests", calendarTitle:"Choose your dates", calendarHelp:"Your first selection is check-in; the second is check-out.", calendarToday:"Today", calendarSelected:"Selected", calendarPast:"Past dates unavailable", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Guests", bookingSummaryEmpty:"Choose your dates to see a stay summary.", reserveButton:"Continue booking", reserveStatus:"Next, we will connect this form to live availability and the final booking channel.", bookingSummaryNights:"nights", bookingSummaryGuests:"guests", bookingFormMessage:"Great. Your dates are selected; the live booking connection will be activated before publication.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Choose dates",
         bookingKicker:"Central Premium Apartment", bookingTitle:"Brașov looks even better from here.",
         bookingCopy:"For a city break, a family stay or a few quiet days, the apartment offers the space and view that make a real difference.",
-        bookingButton:"Check availability", footerText:"RO · EN · DE · Website concept v6"
+        bookingButton:"Check availability", footerText:"RO · EN · DE · Website concept v7 · Explore Brașov"
       },
       de: {
         navApartment:"Apartment", navGallery:"Galerie", navLocation:"Lage", navBook:"Buchen",
@@ -2512,7 +3567,7 @@
         reserveKicker:"Aufenthalt planen", reserveTitle:"Wählen Sie Ihre Daten. Ihr Brașov-Aufenthalt beginnt hier.", reserveCopy:"Wählen Sie Zeitraum und Gästezahl. Der Kalender ist für die Verbindung mit der Live-Verfügbarkeit und dem finalen Buchungsablauf vorbereitet.", reservePanelTitle:"Zeitraum prüfen", reserveBadge:"bis zu 6 Gäste", calendarTitle:"Zeitraum wählen", calendarHelp:"Die erste Auswahl ist Check-in, die zweite Check-out.", calendarToday:"Heute", calendarSelected:"Ausgewählt", calendarPast:"Vergangene Daten nicht verfügbar", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Gäste", bookingSummaryEmpty:"Wählen Sie die Daten, um die Aufenthaltsübersicht zu sehen.", reserveButton:"Buchung fortsetzen", reserveStatus:"Im nächsten Schritt verbinden wir dieses Formular mit der Live-Verfügbarkeit und dem finalen Buchungskanal.", bookingSummaryNights:"Nächte", bookingSummaryGuests:"Gäste", bookingFormMessage:"Perfekt. Ihre Daten sind ausgewählt; die Live-Buchungsverbindung wird vor der Veröffentlichung aktiviert.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Daten wählen",
         bookingKicker:"Central Premium Apartment", bookingTitle:"Brașov ist von hier aus noch schöner.",
         bookingCopy:"Für einen Citytrip, einen Familienaufenthalt oder ein paar ruhige Tage bietet das Apartment den Raum und die Aussicht, die den Unterschied machen.",
-        bookingButton:"Verfügbarkeit prüfen", footerText:"RO · EN · DE · Website concept v6"
+        bookingButton:"Verfügbarkeit prüfen", footerText:"RO · EN · DE · Website concept v7 · Explore Brașov"
       }
     };
 
@@ -2564,12 +3619,10 @@
     menuToggle.addEventListener("click", () => {
       const open = mobileNav.classList.toggle("open");
       menuToggle.setAttribute("aria-expanded", String(open));
-      menuToggle.textContent = open ? "×" : "☰";
     });
     mobileNav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
       mobileNav.classList.remove("open");
       menuToggle.setAttribute("aria-expanded","false");
-      menuToggle.textContent = "☰";
     }));
 
     document.addEventListener("click", (event) => {
@@ -2805,6 +3858,1663 @@
     }, {threshold:.12});
 
     document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  
+
+    /* =========================================================
+       EXPLORE BRAȘOV
+       ========================================================= */
+
+    const EXPLORE_DATA =
+      "https://raw.githubusercontent.com/gabridim18-lab/explore-brasov-data/main";
+
+    let CENTRAL_PREMIUM_PROPERTY = {
+      // Safe fallback near central Brașov. The exact property position is resolved
+      // automatically once and cached in the browser.
+      lat: 45.6427,
+      lon: 25.5887
+    };
+
+    let ebPropertyLocationReady = false;
+
+    async function ebResolvePropertyLocation() {
+      if (ebPropertyLocationReady) return;
+
+      const cached = localStorage.getItem("cpa-property-location");
+      if (cached) {
+        try {
+          const parsed = JSON.parse(cached);
+          if (Number.isFinite(parsed.lat) && Number.isFinite(parsed.lon)) {
+            CENTRAL_PREMIUM_PROPERTY = parsed;
+            ebPropertyLocationReady = true;
+            return;
+          }
+        } catch (error) {}
+      }
+
+      try {
+        const address = encodeURIComponent(
+          "Strada Doctor Ion Marinescu 17, Brașov, Romania"
+        );
+        const response = await fetch(
+          `https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&q=${address}`,
+          { headers: { "Accept-Language": "ro,en,de" } }
+        );
+        const result = await response.json();
+
+        if (Array.isArray(result) && result[0]) {
+          const lat = Number(result[0].lat);
+          const lon = Number(result[0].lon);
+
+          if (Number.isFinite(lat) && Number.isFinite(lon)) {
+            CENTRAL_PREMIUM_PROPERTY = { lat, lon };
+            localStorage.setItem(
+              "cpa-property-location",
+              JSON.stringify(CENTRAL_PREMIUM_PROPERTY)
+            );
+          }
+        }
+      } catch (error) {
+        console.warn("Property geocoding unavailable; using Brașov fallback.", error);
+      }
+
+      ebPropertyLocationReady = true;
+    }
+
+    let ebCityData = null;
+    let ebProviders = [];
+    let ebCategory = "restaurants";
+    let ebCategoryItems = {};
+    let ebTransportDestination = "";
+
+
+    const ebStaticTranslations = {
+      ro: {
+        ebWeatherKicker: "Vreme live · Brașov",
+        ebLoadingTips: "Se încarcă recomandările...",
+        ebConciergeKicker: "Mini-concierge",
+        ebConciergeTitle: "Brașovul, într-un singur loc.",
+        ebConciergeLead: "Activități, restaurante, locuri de vizitat, excursii și servicii pentru oaspeți, toate încărcate direct din baza centrală Explore Brașov.",
+        ebActivitiesTitle: "Experiențe în Brașov.",
+        ebActivitiesLead: "Activități reale din baza Explore Brașov, într-un singur rând compact.",
+        ebRestaurantsTitle: "Restaurante aproape de Central Premium Apartment.",
+        ebRestaurantsLead: "Sortate automat după distanța față de proprietate.",
+        ebPlacesTitle: "Locuri de vizitat.",
+        ebPlacesLead: "Atracții și obiective încărcate direct din baza centrală.",
+        ebDestinationsTitle: "Excursii din Brașov.",
+        ebDestinationsLead: "Destinații pentru o zi de explorare, cu solicitare de transport unde este disponibilă.",
+        ebServicesTitle: "Servicii utile pentru sejur.",
+        ebServicesLead: "Transferuri, transport, rent a car, biciclete și alte servicii disponibile în ecosistem.",
+        ebSourceNote: "Informațiile sunt încărcate din ecosistemul central Explore Brașov și pot fi actualizate fără modificarea acestei pagini.",
+        ebTransportKicker: "SOLICITARE TRANSPORT",
+        ebTransportIntro: "Completează cererea. Mesajul va fi pregătit pentru furnizorul disponibil în Explore Brașov.",
+        ebName: "Nume",
+        ebDate: "Data",
+        ebTime: "Ora",
+        ebGuests: "Persoane",
+        ebPickup: "Preluare",
+        ebDetails: "Detalii",
+        ebSendTransport: "Trimite cererea pe WhatsApp"
+      },
+      en: {
+        ebWeatherKicker: "Live weather · Brașov",
+        ebLoadingTips: "Loading recommendations...",
+        ebConciergeKicker: "Mini-concierge",
+        ebConciergeTitle: "Brașov, all in one place.",
+        ebConciergeLead: "Activities, restaurants, places to visit, day trips and guest services, all loaded directly from the central Explore Brașov database.",
+        ebActivitiesTitle: "Experiences in Brașov.",
+        ebActivitiesLead: "Real activities from the Explore Brașov database, presented in one compact row.",
+        ebRestaurantsTitle: "Restaurants near Central Premium Apartment.",
+        ebRestaurantsLead: "Automatically sorted by distance from the property.",
+        ebPlacesTitle: "Places to visit.",
+        ebPlacesLead: "Attractions and sights loaded directly from the central database.",
+        ebDestinationsTitle: "Day trips from Brașov.",
+        ebDestinationsLead: "Destinations for a day of exploring, with transport requests where available.",
+        ebServicesTitle: "Useful guest services.",
+        ebServicesLead: "Transfers, transport, rent a car, bicycles and other services available in the ecosystem.",
+        ebSourceNote: "Information loads from the central Explore Brașov ecosystem and can be updated without changing this page.",
+        ebTransportKicker: "TRANSPORT REQUEST",
+        ebTransportIntro: "Complete the request. The message will be prepared for the available Explore Brașov provider.",
+        ebName: "Name",
+        ebDate: "Date",
+        ebTime: "Time",
+        ebGuests: "Guests",
+        ebPickup: "Pickup",
+        ebDetails: "Details",
+        ebSendTransport: "Send request on WhatsApp"
+      },
+      de: {
+        ebWeatherKicker: "Live-Wetter · Brașov",
+        ebLoadingTips: "Empfehlungen werden geladen...",
+        ebConciergeKicker: "Mini-Concierge",
+        ebConciergeTitle: "Brașov an einem Ort.",
+        ebConciergeLead: "Aktivitäten, Restaurants, Sehenswürdigkeiten, Ausflüge und Gästeservices werden direkt aus der zentralen Explore-Brașov-Datenbank geladen.",
+        ebActivitiesTitle: "Erlebnisse in Brașov.",
+        ebActivitiesLead: "Echte Aktivitäten aus der Explore-Brașov-Datenbank in einer kompakten Reihe.",
+        ebRestaurantsTitle: "Restaurants nahe Central Premium Apartment.",
+        ebRestaurantsLead: "Automatisch nach Entfernung zur Unterkunft sortiert.",
+        ebPlacesTitle: "Sehenswürdigkeiten.",
+        ebPlacesLead: "Attraktionen direkt aus der zentralen Datenbank.",
+        ebDestinationsTitle: "Tagesausflüge ab Brașov.",
+        ebDestinationsLead: "Ziele für einen Ausflugstag, mit Transportanfrage wo verfügbar.",
+        ebServicesTitle: "Nützliche Gästeservices.",
+        ebServicesLead: "Transfers, Transport, Mietwagen, Fahrräder und weitere Services aus dem Ökosystem.",
+        ebSourceNote: "Die Informationen werden aus dem zentralen Explore-Brașov-System geladen und können aktualisiert werden, ohne diese Seite zu ändern.",
+        ebTransportKicker: "TRANSPORTANFRAGE",
+        ebTransportIntro: "Füllt die Anfrage aus. Die Nachricht wird für den verfügbaren Explore-Brașov-Anbieter vorbereitet.",
+        ebName: "Name",
+        ebDate: "Datum",
+        ebTime: "Uhrzeit",
+        ebGuests: "Personen",
+        ebPickup: "Abholung",
+        ebDetails: "Details",
+        ebSendTransport: "Anfrage per WhatsApp senden"
+      }
+    };
+
+    function ebApplyStaticTranslations() {
+      const language = ebLang();
+      const dictionary = ebStaticTranslations[language] || ebStaticTranslations.ro;
+
+      document.querySelectorAll("[data-eb-i18n]").forEach(element => {
+        const key = element.dataset.ebI18n;
+        if (dictionary[key] !== undefined) {
+          element.textContent = dictionary[key];
+        }
+      });
+    }
+
+
+
+    function ebLang() {
+      const stored =
+        localStorage.getItem("cpa-lang");
+
+      return ["ro", "en", "de"].includes(stored)
+        ? stored
+        : (["ro", "en", "de"].includes(document.documentElement.lang)
+            ? document.documentElement.lang
+            : "ro");
+    }
+
+
+    function ebLoc(value) {
+
+      if (
+        value &&
+        typeof value === "object" &&
+        !Array.isArray(value)
+      ) {
+
+        const language = ebLang();
+
+        return (
+          value[language] ||
+          value.ro ||
+          value.en ||
+          value.de ||
+          ""
+        );
+
+      }
+
+      return value ?? "";
+
+    }
+
+
+    function ebEsc(value) {
+
+      return String(value ?? "").replace(
+        /[&<>"']/g,
+        character => ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;"
+        })[character]
+      );
+
+    }
+
+
+    function ebLabelize(value) {
+
+      return String(value || "")
+        .replace(/([a-z])([A-Z])/g, "$1 $2")
+        .replace(/[_-]+/g, " ")
+        .replace(/\b\w/g, char => char.toUpperCase());
+
+    }
+
+
+    async function ebGetJson(path) {
+
+      const response =
+        await fetch(
+          `${EXPLORE_DATA}/${path}`,
+          { cache: "no-store" }
+        );
+
+      if (!response.ok) {
+        throw new Error(
+          `${response.status} ${path}`
+        );
+      }
+
+      return response.json();
+
+    }
+
+
+    function ebHaversine(a, b) {
+
+      const R = 6371;
+      const toRad =
+        value => value * Math.PI / 180;
+
+      const dLat =
+        toRad(b.lat - a.lat);
+
+      const dLon =
+        toRad(b.lon - a.lon);
+
+      const lat1 =
+        toRad(a.lat);
+
+      const lat2 =
+        toRad(b.lat);
+
+      const h =
+        Math.sin(dLat / 2) ** 2 +
+        Math.cos(lat1) *
+        Math.cos(lat2) *
+        Math.sin(dLon / 2) ** 2;
+
+      return (
+        R *
+        2 *
+        Math.atan2(
+          Math.sqrt(h),
+          Math.sqrt(1 - h)
+        )
+      );
+
+    }
+
+
+    function ebDistanceFor(item) {
+
+      if (
+        !item?.location?.latitude ||
+        !item?.location?.longitude
+      ) {
+        return null;
+      }
+
+      return ebHaversine(
+        CENTRAL_PREMIUM_PROPERTY,
+        {
+          lat: Number(item.location.latitude),
+          lon: Number(item.location.longitude)
+        }
+      );
+
+    }
+
+
+    function ebFmtDistance(km) {
+
+      if (km == null) {
+        return "";
+      }
+
+      return km < 1
+        ? `${Math.round(km * 1000)} m`
+        : `${km.toFixed(1)} km`;
+
+    }
+
+
+    function ebImageUrl(section, item) {
+
+      return (
+        `${EXPLORE_DATA}/${section}/${item.cover}`
+      );
+
+    }
+
+
+    function ebDetailsHref(section, item) {
+
+      return (
+        `explore.html?section=${encodeURIComponent(section)}` +
+        `&id=${encodeURIComponent(item.id || item.slug)}` +
+        `&lang=${encodeURIComponent(ebLang())}`
+      );
+
+    }
+
+
+    const ebWeatherCodes = {
+      0: ["☀️", "Senin", "Clear", "Klar"],
+      1: ["🌤️", "Mai mult senin", "Mainly clear", "Überwiegend klar"],
+      2: ["⛅", "Parțial noros", "Partly cloudy", "Teilweise bewölkt"],
+      3: ["☁️", "Noros", "Overcast", "Bewölkt"],
+      45: ["🌫️", "Ceață", "Fog", "Nebel"],
+      51: ["🌦️", "Burniță", "Drizzle", "Nieselregen"],
+      61: ["🌧️", "Ploaie", "Rain", "Regen"],
+      71: ["🌨️", "Ninsoare", "Snow", "Schnee"],
+      80: ["🌦️", "Averse", "Showers", "Schauer"],
+      95: ["⛈️", "Furtună", "Thunderstorm", "Gewitter"]
+    };
+
+
+    function ebWeatherDesc(code) {
+
+      const result =
+        ebWeatherCodes[code] ||
+        ["🌤️", "Condiții variabile", "Variable weather", "Wechselhaft"];
+
+      const language =
+        ebLang();
+
+      const index =
+        language === "ro"
+          ? 1
+          : language === "en"
+            ? 2
+            : 3;
+
+      return [
+        result[0],
+        result[index]
+      ];
+
+    }
+
+
+    async function ebLoadWeather() {
+
+      const meta =
+        document.getElementById("ebWeatherMeta");
+
+      try {
+
+        const cityLat =
+          ebCityData?.weather?.location?.latitude ||
+          45.6427;
+
+        const cityLon =
+          ebCityData?.weather?.location?.longitude ||
+          25.5887;
+
+        const url =
+          "https://api.open-meteo.com/v1/forecast" +
+          `?latitude=${cityLat}` +
+          `&longitude=${cityLon}` +
+          "&current=temperature_2m,apparent_temperature,weather_code" +
+          "&daily=weather_code,temperature_2m_max,temperature_2m_min" +
+          "&timezone=Europe%2FBucharest" +
+          "&forecast_days=7";
+
+        const response =
+          await fetch(url);
+
+        const data =
+          await response.json();
+
+        const weather =
+          ebWeatherDesc(
+            data.current.weather_code
+          );
+
+        document.getElementById(
+          "ebCurrentTemp"
+        ).textContent =
+          `${Math.round(data.current.temperature_2m)}°`;
+
+        const language =
+          ebLang();
+
+        const feels =
+          language === "ro"
+            ? "Se simte ca"
+            : language === "de"
+              ? "Gefühlt"
+              : "Feels like";
+
+        meta.textContent =
+          `${weather[0]} ${weather[1]} · ` +
+          `${feels} ` +
+          `${Math.round(data.current.apparent_temperature)}°C`;
+
+        const dayLabels = {
+          ro: ["Du", "Lu", "Ma", "Mi", "Jo", "Vi", "Sâ"],
+          en: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+          de: ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"]
+        };
+
+        document.getElementById(
+          "ebForecast"
+        ).innerHTML =
+          data.daily.time.map(
+            (date, index) => {
+
+              const dt =
+                new Date(
+                  `${date}T12:00:00`
+                );
+
+              const info =
+                ebWeatherDesc(
+                  data.daily.weather_code[index]
+                );
+
+              return `
+                <div class="eb-day">
+                  <b>${dayLabels[language][dt.getDay()]}</b>
+                  <div class="eb-wi">${info[0]}</div>
+                  <strong>${Math.round(data.daily.temperature_2m_max[index])}°</strong>
+                  <small>${Math.round(data.daily.temperature_2m_min[index])}°</small>
+                </div>
+              `;
+
+            }
+          ).join("");
+
+      }
+      catch (error) {
+
+        const language =
+          ebLang();
+
+        meta.textContent =
+          language === "ro"
+            ? "Vremea live nu este disponibilă momentan."
+            : language === "de"
+              ? "Live-Wetter ist momentan nicht verfügbar."
+              : "Live weather is temporarily unavailable.";
+
+      }
+
+    }
+
+
+    const ebTipIcons = {
+      walking: "🚶",
+      parking: "🅿️",
+      weather: "🌦️",
+      mountain: "⛰️"
+    };
+
+
+    function ebRenderCity() {
+
+      if (!ebCityData) {
+        return;
+      }
+
+      const hero =
+        ebCityData.hero || {};
+
+      document.getElementById(
+        "ebCityEyebrow"
+      ).textContent =
+        ebLoc(hero.eyebrow) ||
+        "EXPLORE BRAȘOV";
+
+      document.getElementById(
+        "ebCityTitle"
+      ).textContent =
+        ebLoc(hero.title) ||
+        "Brașov";
+
+      document.getElementById(
+        "ebCitySubtitle"
+      ).textContent =
+        ebLoc(hero.subtitle) || "";
+
+      if (hero.image) {
+
+        document.getElementById(
+          "ebCityHero"
+        ).style.backgroundImage =
+          `url("${EXPLORE_DATA}/city/brasov/${hero.image}")`;
+
+      }
+
+
+      const tips =
+        ebCityData.quickTips || [];
+
+      document.getElementById(
+        "ebQuickTips"
+      ).innerHTML =
+        tips.map(
+          tip => `
+            <article class="eb-tip">
+              <div class="eb-tip-icon">${ebTipIcons[tip.icon] || "•"}</div>
+              <h3>${ebEsc(ebLoc(tip.title))}</h3>
+              <p>${ebEsc(ebLoc(tip.text))}</p>
+            </article>
+          `
+        ).join("");
+
+    }
+
+
+    const ebCategoryText = {
+
+      ro: {
+        restaurants: [
+          "Restaurante aproape de cazare",
+          "Sortate automat după distanța în linie dreaptă față de Central Premium Apartment."
+        ],
+        activities: [
+          "Experiențe și activități",
+          "Idei pentru timpul petrecut în Brașov și împrejurimi."
+        ],
+        places: [
+          "Locuri de vizitat",
+          "Atracții și obiective din baza centrală Explore Brașov."
+        ],
+        "top-destinations": [
+          "Excursii din Brașov",
+          "Destinații potrivite pentru o zi de explorare, cu opțiune de solicitare transport unde este disponibilă."
+        ],
+        "guest-services": [
+          "Servicii pentru oaspeți",
+          "Transferuri, transport și alte servicii utile integrate în sejur."
+        ]
+      },
+
+      en: {
+        restaurants: [
+          "Restaurants near your stay",
+          "Automatically sorted by straight-line distance from Central Premium Apartment."
+        ],
+        activities: [
+          "Experiences and activities",
+          "Ideas for your time in Brașov and the surrounding area."
+        ],
+        places: [
+          "Places to visit",
+          "Attractions loaded from the central Explore Brașov database."
+        ],
+        "top-destinations": [
+          "Day trips from Brașov",
+          "Destinations for a day of exploring, with transport requests where available."
+        ],
+        "guest-services": [
+          "Guest services",
+          "Transfers, transport and other useful services integrated into your stay."
+        ]
+      },
+
+      de: {
+        restaurants: [
+          "Restaurants in der Nähe",
+          "Automatisch nach Luftlinienentfernung zur Central Premium Apartment sortiert."
+        ],
+        activities: [
+          "Erlebnisse und Aktivitäten",
+          "Ideen für eure Zeit in Brașov und Umgebung."
+        ],
+        places: [
+          "Sehenswürdigkeiten",
+          "Attraktionen direkt aus der zentralen Explore-Brașov-Datenbank."
+        ],
+        "top-destinations": [
+          "Tagesausflüge ab Brașov",
+          "Ziele für einen Ausflugstag, mit Transportanfrage wo verfügbar."
+        ],
+        "guest-services": [
+          "Services für Gäste",
+          "Transfers, Transport und weitere nützliche Services für euren Aufenthalt."
+        ]
+      }
+
+    };
+
+
+    function ebRenderCategoryCopy() {
+
+      const language =
+        ebLang();
+
+      const copy =
+        ebCategoryText[language][ebCategory] ||
+        ebCategoryText.ro[ebCategory];
+
+      document.getElementById(
+        "ebCategoryTitle"
+      ).textContent =
+        copy[0];
+
+      document.getElementById(
+        "ebCategoryLead"
+      ).textContent =
+        copy[1];
+
+    }
+
+
+    function ebTransportAction(item) {
+
+      const language =
+        ebLang();
+
+      const label =
+        language === "ro"
+          ? "Solicită transport"
+          : language === "de"
+            ? "Transport anfragen"
+            : "Request transport";
+
+      return `
+        <button
+          class="eb-action eb-transport-action"
+          type="button"
+          data-destination="${encodeURIComponent(ebLoc(item.name))}"
+        >
+          ${label}
+        </button>
+      `;
+
+    }
+
+
+    function ebCard(section, item, options = {}) {
+
+      const distance =
+        options.distance ??
+        ebDistanceFor(item);
+
+      const description =
+        ebLoc(item.shortDescription) || "";
+
+      const meta = [];
+
+      if (item.rating) {
+        meta.push(`★ ${item.rating}`);
+      }
+
+      if (distance != null) {
+        meta.push(
+          ebFmtDistance(distance)
+        );
+      }
+
+      if (
+        item.cuisine &&
+        item.cuisine.length
+      ) {
+
+        meta.push(
+          item.cuisine
+            .slice(0, 2)
+            .map(ebLabelize)
+            .join(" · ")
+        );
+
+      }
+
+      if (
+        item.distanceFromBrasov?.approxKm
+      ) {
+
+        meta.push(
+          `≈ ${item.distanceFromBrasov.approxKm} km`
+        );
+
+      }
+
+      if (item.freeEntry === true) {
+
+        const language =
+          ebLang();
+
+        meta.push(
+          language === "ro"
+            ? "Intrare liberă"
+            : language === "de"
+              ? "Freier Eintritt"
+              : "Free entry"
+        );
+
+      }
+
+      const language =
+        ebLang();
+
+      const detailsLabel =
+        language === "ro"
+          ? "Vezi detalii"
+          : language === "de"
+            ? "Details"
+            : "View details";
+
+      const details =
+        `
+          <a
+            class="eb-detail"
+            href="${ebDetailsHref(section, item)}"
+          >
+            ${detailsLabel} →
+          </a>
+        `;
+
+      return `
+        <article class="eb-card">
+
+          <div class="eb-card-image">
+            <a href="${ebDetailsHref(section, item)}">
+              <img
+                loading="lazy"
+                src="${ebEsc(ebImageUrl(section, item))}"
+                alt="${ebEsc(ebLoc(item.name))}"
+              >
+            </a>
+
+            <span class="eb-card-badge">
+              ${ebEsc(ebLabelize(item.category || item.type || section))}
+            </span>
+          </div>
+
+          <div class="eb-card-body">
+
+            <h4>
+              <a href="${ebDetailsHref(section, item)}">
+                ${ebEsc(ebLoc(item.name))}
+              </a>
+            </h4>
+
+            ${
+              description
+                ? `<p>${ebEsc(description)}</p>`
+                : ""
+            }
+
+            <div class="eb-meta">
+              ${
+                meta.map(
+                  value =>
+                    `<span class="eb-pill">${ebEsc(value)}</span>`
+                ).join("")
+              }
+            </div>
+
+            <div class="eb-actions">
+              ${details}
+              ${options.action || ""}
+            </div>
+
+          </div>
+
+        </article>
+      `;
+
+    }
+
+
+    function ebServiceCard(item, detail) {
+
+      const current =
+        detail &&
+        detail.id === item.id
+          ? detail
+          : item;
+
+      const description =
+        ebLoc(current.shortDescription) || "";
+
+      const language =
+        ebLang();
+
+      const detailsLabel =
+        language === "ro"
+          ? "Vezi detalii"
+          : language === "de"
+            ? "Details"
+            : "View details";
+
+      let extraAction = "";
+
+      if (
+        ["airport_transfer", "custom_transport"]
+          .includes(item.category)
+      ) {
+
+        const label =
+          language === "ro"
+            ? "Solicită"
+            : language === "de"
+              ? "Anfragen"
+              : "Request";
+
+        extraAction =
+          `
+            <button
+              class="eb-action eb-transport-action"
+              type="button"
+              data-destination="${encodeURIComponent(ebLoc(item.name))}"
+            >
+              ${label}
+            </button>
+          `;
+
+      }
+      else if (current.primaryAction?.url) {
+
+        extraAction =
+          `
+            <a
+              class="eb-action"
+              target="_blank"
+              rel="noopener"
+              href="${ebEsc(current.primaryAction.url)}"
+            >
+              ${ebEsc(ebLoc(current.primaryAction.buttonLabel) || "Website")}
+            </a>
+          `;
+
+      }
+
+      return `
+        <article class="eb-card">
+
+          <div class="eb-card-image">
+            <a href="${ebDetailsHref("guest-services", item)}">
+              <img
+                loading="lazy"
+                src="${ebEsc(ebImageUrl("guest-services", item))}"
+                alt="${ebEsc(ebLoc(item.name))}"
+              >
+            </a>
+
+            <span class="eb-card-badge">
+              ${ebEsc(ebLabelize(item.category || "service"))}
+            </span>
+          </div>
+
+          <div class="eb-card-body">
+
+            <h4>
+              <a href="${ebDetailsHref("guest-services", item)}">
+                ${ebEsc(ebLoc(item.name))}
+              </a>
+            </h4>
+
+            ${
+              description
+                ? `<p>${ebEsc(description)}</p>`
+                : ""
+            }
+
+            <div class="eb-meta">
+              ${
+                item.rating
+                  ? `<span class="eb-pill">★ ${item.rating}</span>`
+                  : ""
+              }
+              ${
+                item.nonStop
+                  ? `<span class="eb-pill">24/7</span>`
+                  : ""
+              }
+            </div>
+
+            <div class="eb-actions">
+
+              <a
+                class="eb-detail"
+                href="${ebDetailsHref("guest-services", item)}"
+              >
+                ${detailsLabel} →
+              </a>
+
+              ${extraAction}
+
+            </div>
+
+          </div>
+
+        </article>
+      `;
+
+    }
+
+
+    function ebBindTransportButtons() {
+
+      document
+        .querySelectorAll(".eb-transport-action")
+        .forEach(button => {
+
+          button.addEventListener(
+            "click",
+            () => {
+
+              ebTransportDestination =
+                decodeURIComponent(
+                  button.dataset.destination
+                );
+
+              document.getElementById(
+                "ebTransportTitle"
+              ).textContent =
+                ebTransportDestination;
+
+              document.getElementById(
+                "ebTransportModal"
+              ).classList.add("open");
+
+              document.getElementById(
+                "ebTransportModal"
+              ).setAttribute(
+                "aria-hidden",
+                "false"
+              );
+
+              document.body.style.overflow =
+                "hidden";
+
+            }
+          );
+
+        });
+
+    }
+
+
+    function ebRenderCategory() {
+
+      ebRenderCategoryCopy();
+
+      document
+        .querySelectorAll(".eb-tab")
+        .forEach(button => {
+
+          button.classList.toggle(
+            "active",
+            button.dataset.category === ebCategory
+          );
+
+        });
+
+
+      const grid =
+        document.getElementById("ebGrid");
+
+      const stored =
+        ebCategoryItems[ebCategory];
+
+      if (!stored) {
+        return;
+      }
+
+
+      if (ebCategory === "guest-services") {
+
+        grid.innerHTML =
+          stored.items.map(
+            (item, index) =>
+              ebServiceCard(
+                item,
+                stored.details[index]
+              )
+          ).join("");
+
+      }
+      else {
+
+        grid.innerHTML =
+          stored.map(
+            item => {
+
+              const options = {};
+
+              if (
+                ebCategory === "restaurants"
+              ) {
+                options.distance =
+                  item._distance;
+              }
+
+              if (
+                ebCategory === "top-destinations"
+              ) {
+                options.action =
+                  ebTransportAction(item);
+              }
+
+              return ebCard(
+                ebCategory,
+                item,
+                options
+              );
+
+            }
+          ).join("");
+
+      }
+
+      grid.scrollTo({
+        left: 0,
+        behavior: "instant"
+      });
+
+      ebBindTransportButtons();
+
+    }
+
+
+    async function ebLoadCategory(category) {
+
+      if (ebCategoryItems[category]) {
+        ebRenderCategory();
+        return;
+      }
+
+      const grid =
+        document.getElementById("ebGrid");
+
+      grid.innerHTML =
+        `<div class="eb-loading">Loading Explore Brașov…</div>`;
+
+      try {
+
+        if (category === "restaurants") {
+
+          await ebResolvePropertyLocation();
+
+          const data =
+            await ebGetJson(
+              "restaurants/index.json"
+            );
+
+          ebCategoryItems[category] =
+            (data.items || [])
+              .filter(
+                item =>
+                  item.active !== false
+              )
+              .map(
+                item => ({
+                  ...item,
+                  _distance:
+                    ebDistanceFor(item)
+                })
+              )
+              .sort(
+                (a, b) =>
+                  (a._distance ?? 999) -
+                  (b._distance ?? 999)
+              );
+
+        }
+        else if (category === "activities") {
+
+          const data =
+            await ebGetJson(
+              "activities/index.json"
+            );
+
+          ebCategoryItems[category] =
+            (data.items || [])
+              .filter(
+                item =>
+                  item.active !== false
+              );
+
+        }
+        else if (category === "places") {
+
+          const data =
+            await ebGetJson(
+              "places/index.json"
+            );
+
+          ebCategoryItems[category] =
+            (data.items || [])
+              .filter(
+                item =>
+                  item.active !== false
+              );
+
+        }
+        else if (
+          category === "top-destinations"
+        ) {
+
+          const [
+            data,
+            tour
+          ] =
+            await Promise.all([
+              ebGetJson(
+                "top-destinations/index.json"
+              ),
+              ebGetJson(
+                "top-destinations/four-fortifications-day-tour/index.json"
+              ).catch(
+                () => null
+              )
+            ]);
+
+          const items =
+            (data.items || [])
+              .filter(
+                item =>
+                  item.active !== false
+              );
+
+          if (
+            tour &&
+            tour.active !== false &&
+            !items.some(
+              item =>
+                item.id === tour.id
+            )
+          ) {
+
+            items.push({
+              ...tour,
+              cover:
+                "four-fortifications-day-tour/cover.webp"
+            });
+
+          }
+
+          ebCategoryItems[category] =
+            items;
+
+        }
+        else if (
+          category === "guest-services"
+        ) {
+
+          const data =
+            await ebGetJson(
+              "guest-services/index.json"
+            );
+
+          let items =
+            (data.items || [])
+              .filter(
+                item =>
+                  item.active !== false
+              );
+
+          try {
+
+            const nicoli =
+              await ebGetJson(
+                "guest-services/nicoli/index.json"
+              );
+
+            const item =
+              Array.isArray(nicoli.items)
+                ? nicoli.items.find(
+                    value =>
+                      value.id === "nicoli"
+                  )
+                : nicoli?.id === "nicoli"
+                  ? nicoli
+                  : null;
+
+            if (
+              item &&
+              !items.some(
+                value =>
+                  value.id === "nicoli"
+              )
+            ) {
+              items.push(item);
+            }
+
+          }
+          catch (error) {}
+
+
+          const details =
+            await Promise.all(
+              items.map(
+                item =>
+                  ebGetJson(
+                    `guest-services/${item.id}/index.json`
+                  ).catch(
+                    () => null
+                  )
+              )
+            );
+
+          ebCategoryItems[category] = {
+            items,
+            details
+          };
+
+        }
+
+        ebRenderCategory();
+
+      }
+      catch (error) {
+
+        console.error(error);
+
+        const language =
+          ebLang();
+
+        grid.innerHTML =
+          `
+            <div class="eb-error">
+              ${
+                language === "ro"
+                  ? "Această categorie Explore Brașov nu este disponibilă momentan."
+                  : language === "de"
+                    ? "Diese Explore-Brașov-Kategorie ist momentan nicht verfügbar."
+                    : "This Explore Brașov category is temporarily unavailable."
+              }
+            </div>
+          `;
+
+      }
+
+    }
+
+
+    async function ebLoadCity() {
+
+      try {
+
+        ebCityData =
+          await ebGetJson(
+            "city/brasov/index.json"
+          );
+
+        ebRenderCity();
+        ebLoadWeather();
+
+      }
+      catch (error) {
+
+        console.error(error);
+
+      }
+
+    }
+
+
+    async function ebLoadProviders() {
+
+      try {
+
+        const data =
+          await ebGetJson(
+            "transport/providers.json"
+          );
+
+        ebProviders =
+          (data.providers || [])
+            .filter(
+              provider =>
+                provider.active !== false
+            )
+            .sort(
+              (a, b) =>
+                (a.priority || 99) -
+                (b.priority || 99)
+            );
+
+      }
+      catch (error) {
+
+        ebProviders = [];
+
+      }
+
+    }
+
+
+    function ebCloseTransport() {
+
+      const modal =
+        document.getElementById(
+          "ebTransportModal"
+        );
+
+      modal.classList.remove("open");
+
+      modal.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
+      document.body.style.overflow =
+        "";
+
+    }
+
+
+    document.getElementById(
+      "ebTransportClose"
+    ).addEventListener(
+      "click",
+      ebCloseTransport
+    );
+
+
+    document.getElementById(
+      "ebTransportModal"
+    ).addEventListener(
+      "click",
+      event => {
+
+        if (
+          event.target.id ===
+          "ebTransportModal"
+        ) {
+          ebCloseTransport();
+        }
+
+      }
+    );
+
+
+    document.getElementById(
+      "ebSendTransport"
+    ).addEventListener(
+      "click",
+      () => {
+
+        const provider =
+          ebProviders[0];
+
+        const number =
+          (
+            provider?.whatsapp ||
+            provider?.phone ||
+            ""
+          ).replace(/\D/g, "");
+
+        const language =
+          ebLang();
+
+        if (!number) {
+
+          alert(
+            language === "ro"
+              ? "Nu există momentan un furnizor de transport disponibil."
+              : language === "de"
+                ? "Momentan ist kein Transportanbieter verfügbar."
+                : "No transport provider is currently available."
+          );
+
+          return;
+
+        }
+
+
+        const name =
+          document.getElementById(
+            "ebTrName"
+          ).value || "-";
+
+        const date =
+          document.getElementById(
+            "ebTrDate"
+          ).value || "-";
+
+        const time =
+          document.getElementById(
+            "ebTrTime"
+          ).value || "-";
+
+        const guests =
+          document.getElementById(
+            "ebTrGuests"
+          ).value || "-";
+
+        const pickup =
+          document.getElementById(
+            "ebTrPickup"
+          ).value ||
+          "Central Premium Apartment";
+
+        const details =
+          document.getElementById(
+            "ebTrDetails"
+          ).value || "-";
+
+
+        const intro = {
+          ro:
+            "Bună ziua! Doresc o solicitare de transport prin Central Premium Apartment / Explore Brașov.",
+          en:
+            "Hello! I would like to request transport through Central Premium Apartment / Explore Brașov.",
+          de:
+            "Guten Tag! Ich möchte einen Transport über Central Premium Apartment / Explore Brașov anfragen."
+        }[language];
+
+
+        const message =
+          `${intro}\n\n` +
+          `Destinație / Destination: ${ebTransportDestination}\n` +
+          `Name: ${name}\n` +
+          `Date: ${date}\n` +
+          `Time: ${time}\n` +
+          `Guests: ${guests}\n` +
+          `Pickup: ${pickup}\n` +
+          `Details: ${details}`;
+
+
+        window.open(
+          `https://wa.me/${number}?text=${encodeURIComponent(message)}`,
+          "_blank",
+          "noopener"
+        );
+
+      }
+    );
+
+
+
+    /* =========================================================
+       EXPLORE BRAȘOV — LOAD ALL CATEGORIES
+       ========================================================= */
+
+    async function ebLoadActivitiesStrip() {
+      const grid = document.getElementById("ebActivitiesGrid");
+
+      try {
+        const data = await ebGetJson("activities/index.json");
+        const preferred = [
+          "paradisul-acvatic",
+          "parapanta-brasov",
+          "obscuria-escape-rooms"
+        ];
+
+        let items = preferred
+          .map(id => (data.items || []).find(item => item.id === id && item.active !== false))
+          .filter(Boolean);
+
+        if (!items.length) {
+          items = (data.items || []).filter(item => item.active !== false);
+        }
+
+        grid.innerHTML = items.map(item => ebCard("activities", item)).join("");
+      }
+      catch (error) {
+        grid.innerHTML = `<div class="eb-error">Explore Brașov activities are temporarily unavailable.</div>`;
+      }
+    }
+
+
+    async function ebLoadRestaurantsStrip() {
+      const grid = document.getElementById("ebRestaurantsGrid");
+
+      try {
+        await ebResolvePropertyLocation();
+        const data = await ebGetJson("restaurants/index.json");
+        const items = (data.items || [])
+          .filter(item => item.active !== false)
+          .map(item => ({ ...item, _distance: ebDistanceFor(item) }))
+          .sort((a, b) => (a._distance ?? 999) - (b._distance ?? 999));
+
+        grid.innerHTML = items
+          .map(item => ebCard("restaurants", item, { distance: item._distance }))
+          .join("");
+      }
+      catch (error) {
+        grid.innerHTML = `<div class="eb-error">Explore Brașov restaurants are temporarily unavailable.</div>`;
+      }
+    }
+
+
+    async function ebLoadPlacesStrip() {
+      const grid = document.getElementById("ebPlacesGrid");
+
+      try {
+        const data = await ebGetJson("places/index.json");
+        grid.innerHTML = (data.items || [])
+          .filter(item => item.active !== false)
+          .map(item => ebCard("places", item))
+          .join("");
+      }
+      catch (error) {
+        grid.innerHTML = `<div class="eb-error">Explore Brașov places are temporarily unavailable.</div>`;
+      }
+    }
+
+
+    async function ebLoadDestinationsStrip() {
+      const grid = document.getElementById("ebDestinationsGrid");
+
+      try {
+        const [data, tour] = await Promise.all([
+          ebGetJson("top-destinations/index.json"),
+          ebGetJson("top-destinations/four-fortifications-day-tour/index.json").catch(() => null)
+        ]);
+
+        const items = [
+          ...(data.items || []).filter(item => item.active !== false)
+        ];
+
+        if (
+          tour &&
+          tour.active !== false &&
+          !items.some(item => item.id === tour.id)
+        ) {
+          items.push({
+            ...tour,
+            cover: "four-fortifications-day-tour/cover.webp"
+          });
+        }
+
+        grid.innerHTML = items
+          .map(item => ebCard("top-destinations", item, {
+            action: ebTransportAction(item)
+          }))
+          .join("");
+
+        ebBindTransportButtons();
+      }
+      catch (error) {
+        grid.innerHTML = `<div class="eb-error">Explore Brașov top destinations are temporarily unavailable.</div>`;
+      }
+    }
+
+
+    async function ebLoadServicesStrip() {
+      const grid = document.getElementById("ebServicesGrid");
+
+      try {
+        const data = await ebGetJson("guest-services/index.json");
+        let items = (data.items || []).filter(item => item.active !== false);
+
+        try {
+          const nicoli = await ebGetJson("guest-services/nicoli/index.json");
+          const item = Array.isArray(nicoli.items)
+            ? nicoli.items.find(value => value.id === "nicoli")
+            : nicoli?.id === "nicoli"
+              ? nicoli
+              : null;
+
+          if (item && !items.some(value => value.id === "nicoli")) {
+            items.push(item);
+          }
+        }
+        catch (error) {}
+
+        const details = await Promise.all(
+          items.map(item =>
+            ebGetJson(`guest-services/${item.id}/index.json`).catch(() => null)
+          )
+        );
+
+        grid.innerHTML = items
+          .map((item, index) => ebServiceCard(item, details[index]))
+          .join("");
+
+        ebBindTransportButtons();
+      }
+      catch (error) {
+        grid.innerHTML = `<div class="eb-error">Explore Brașov guest services are temporarily unavailable.</div>`;
+      }
+    }
+
+
+    function ebLoadAllStrips() {
+      return Promise.allSettled([
+        ebLoadActivitiesStrip(),
+        ebLoadRestaurantsStrip(),
+        ebLoadPlacesStrip(),
+        ebLoadDestinationsStrip(),
+        ebLoadServicesStrip()
+      ]);
+    }
+
+
+    document
+      .querySelectorAll(".language-menu [data-lang]")
+      .forEach(button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            window.setTimeout(
+              () => {
+                ebApplyStaticTranslations();
+                ebRenderCity();
+                ebLoadWeather();
+                ebLoadAllStrips();
+              },
+              0
+            );
+
+          }
+        );
+
+      });
+
+
+    ebApplyStaticTranslations();
+
+    Promise.allSettled([
+      ebResolvePropertyLocation(),
+      ebLoadCity(),
+      ebLoadProviders(),
+      ebLoadAllStrips()
+    ]);
+
+
+
+
+    
+
   </script>
 </body>
 </html>
