@@ -873,6 +873,26 @@
       cursor:not-allowed;
       background:transparent;
     }
+
+    .calendar-day.is-unavailable{
+      color:#a6afab;
+      cursor:not-allowed;
+      background:
+        repeating-linear-gradient(
+          -45deg,
+          #f0f2f1,
+          #f0f2f1 4px,
+          #e7eae8 4px,
+          #e7eae8 8px
+        );
+      box-shadow:inset 0 0 0 1px rgba(23,52,45,.05);
+    }
+
+    .calendar-day.is-loading{
+      color:#c8cecb;
+      cursor:wait;
+      background:#f7f8f7;
+    }
     .calendar-day.is-today{
       box-shadow:inset 0 0 0 1.5px var(--blush);
     }
@@ -3427,7 +3447,7 @@
         <strong>Central Premium Apartment</strong>
         <span>Brașov, România</span>
       </div>
-      <div data-i18n="footerText">RO · EN · DE · Website concept v8 · Explore Brașov</div>
+      <div data-i18n="footerText">RO · EN · DE · Website concept v9 · Live Calendar · Explore Brașov</div>
     </div>
   </footer>
 
@@ -3435,6 +3455,8 @@
     <span data-i18n="mobileBookText">Central Premium Apartment</span>
     <a href="#booking" data-i18n="mobileBookButton">Alege datele</a>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
   <script>
     const translations = {
@@ -3478,7 +3500,7 @@
         locationKicker:"Locație", locationTitle:"Central, dar într-o zonă liniștită.",
         locationCopy:"Apartamentul este aproape de centrul istoric, dar păstrează atmosfera calmă a unei zone rezidențiale.",
         locationCardTitle:"Aproape de tot ce contează", locOldTown:"Centrul Vechi", locCouncil:"Piața Sfatului", locMarket:"Supermarket", locParking:"Parcare", locParkingValue:"gratuită",
-        reserveKicker:"Planifică sejurul", reserveTitle:"Alege datele. De aici începe Brașovul tău.", reserveCopy:"Selectează perioada și numărul de oaspeți. Calendarul este pregătit pentru conectarea la disponibilitatea reală și fluxul final de rezervare.", reservePanelTitle:"Verifică perioada", reserveBadge:"până la 6 oaspeți", calendarTitle:"Alege perioada", calendarHelp:"Prima dată selectată este check-in; a doua este check-out.", calendarToday:"Astăzi", calendarSelected:"Selectat", calendarPast:"Date trecute indisponibile", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Oaspeți", bookingSummaryEmpty:"Selectează datele pentru a vedea rezumatul sejurului.", reserveButton:"Continuă rezervarea", reserveStatus:"În etapa următoare conectăm acest formular la calendarul real de disponibilitate și canalul de rezervare.", bookingSummaryNights:"nopți", bookingSummaryGuests:"oaspeți", bookingFormMessage:"Perfect. Perioada este selectată; conectarea la rezervarea reală va fi activată înainte de publicare.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Alege datele",
+        reserveKicker:"Planifică sejurul", reserveTitle:"Alege datele. De aici începe Brașovul tău.", reserveCopy:"Selectează perioada și numărul de oaspeți. Calendarul verifică disponibilitatea live din același sistem folosit în panoul proprietarului.", reservePanelTitle:"Verifică perioada", reserveBadge:"până la 6 oaspeți", calendarTitle:"Alege perioada", calendarHelp:"Prima dată selectată este check-in; a doua este check-out.", calendarToday:"Astăzi", calendarSelected:"Selectat", calendarPast:"Date indisponibile", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Oaspeți", bookingSummaryEmpty:"Selectează datele pentru a vedea rezumatul sejurului.", reserveButton:"Continuă rezervarea", reserveStatus:"Disponibilitatea este sincronizată cu calendarul proprietății. Datele ocupate nu pot fi selectate.", bookingSummaryNights:"nopți", bookingSummaryGuests:"oaspeți", bookingFormMessage:"Perioada selectată este disponibilă în calendarul live.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Alege datele",
         bookingKicker:"Central Premium Apartment", bookingTitle:"Brașovul e mai frumos când îl vezi de aici.",
         bookingCopy:"Pentru un city break, un sejur în familie sau câteva zile de liniște, apartamentul oferă spațiul și priveliștea care fac diferența.",
         bookingButton:"Verifică disponibilitatea", footerText:"RO · EN · DE · Website concept v7 · Explore Brașov"
@@ -3523,7 +3545,7 @@
         locationKicker:"Location", locationTitle:"Central, yet in a quiet residential area.",
         locationCopy:"The apartment is close to the historic centre while keeping the calm atmosphere of a residential neighbourhood.",
         locationCardTitle:"Close to what matters", locOldTown:"Old Town", locCouncil:"Council Square", locMarket:"Supermarket", locParking:"Parking", locParkingValue:"free",
-        reserveKicker:"Plan your stay", reserveTitle:"Choose your dates. Your Brașov stay starts here.", reserveCopy:"Select your dates and number of guests. The calendar is ready to be connected to live availability and the final booking flow.", reservePanelTitle:"Check your dates", reserveBadge:"up to 6 guests", calendarTitle:"Choose your dates", calendarHelp:"Your first selection is check-in; the second is check-out.", calendarToday:"Today", calendarSelected:"Selected", calendarPast:"Past dates unavailable", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Guests", bookingSummaryEmpty:"Choose your dates to see a stay summary.", reserveButton:"Continue booking", reserveStatus:"Next, we will connect this form to live availability and the final booking channel.", bookingSummaryNights:"nights", bookingSummaryGuests:"guests", bookingFormMessage:"Great. Your dates are selected; the live booking connection will be activated before publication.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Choose dates",
+        reserveKicker:"Plan your stay", reserveTitle:"Choose your dates. Your Brașov stay starts here.", reserveCopy:"Choose your dates and number of guests. The calendar checks live availability from the same system used in the owner dashboard.", reservePanelTitle:"Check your dates", reserveBadge:"up to 6 guests", calendarTitle:"Choose your dates", calendarHelp:"Your first selection is check-in; the second is check-out.", calendarToday:"Today", calendarSelected:"Selected", calendarPast:"Unavailable dates", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Guests", bookingSummaryEmpty:"Choose your dates to see a stay summary.", reserveButton:"Continue booking", reserveStatus:"Availability is synced with the property calendar. Occupied dates cannot be selected.", bookingSummaryNights:"nights", bookingSummaryGuests:"guests", bookingFormMessage:"The selected period is available in the live calendar.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Choose dates",
         bookingKicker:"Central Premium Apartment", bookingTitle:"Brașov looks even better from here.",
         bookingCopy:"For a city break, a family stay or a few quiet days, the apartment offers the space and view that make a real difference.",
         bookingButton:"Check availability", footerText:"RO · EN · DE · Website concept v7 · Explore Brașov"
@@ -3568,7 +3590,7 @@
         locationKicker:"Lage", locationTitle:"Zentral und trotzdem ruhig.",
         locationCopy:"Das Apartment liegt nahe am historischen Zentrum und bewahrt gleichzeitig die ruhige Atmosphäre eines Wohnviertels.",
         locationCardTitle:"Nah an allem Wichtigen", locOldTown:"Altstadt", locCouncil:"Rathausplatz", locMarket:"Supermarkt", locParking:"Parken", locParkingValue:"kostenlos",
-        reserveKicker:"Aufenthalt planen", reserveTitle:"Wählen Sie Ihre Daten. Ihr Brașov-Aufenthalt beginnt hier.", reserveCopy:"Wählen Sie Zeitraum und Gästezahl. Der Kalender ist für die Verbindung mit der Live-Verfügbarkeit und dem finalen Buchungsablauf vorbereitet.", reservePanelTitle:"Zeitraum prüfen", reserveBadge:"bis zu 6 Gäste", calendarTitle:"Zeitraum wählen", calendarHelp:"Die erste Auswahl ist Check-in, die zweite Check-out.", calendarToday:"Heute", calendarSelected:"Ausgewählt", calendarPast:"Vergangene Daten nicht verfügbar", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Gäste", bookingSummaryEmpty:"Wählen Sie die Daten, um die Aufenthaltsübersicht zu sehen.", reserveButton:"Buchung fortsetzen", reserveStatus:"Im nächsten Schritt verbinden wir dieses Formular mit der Live-Verfügbarkeit und dem finalen Buchungskanal.", bookingSummaryNights:"Nächte", bookingSummaryGuests:"Gäste", bookingFormMessage:"Perfekt. Ihre Daten sind ausgewählt; die Live-Buchungsverbindung wird vor der Veröffentlichung aktiviert.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Daten wählen",
+        reserveKicker:"Aufenthalt planen", reserveTitle:"Wählen Sie Ihre Daten. Ihr Brașov-Aufenthalt beginnt hier.", reserveCopy:"Wählen Sie Zeitraum und Gästezahl. Der Kalender prüft die Live-Verfügbarkeit aus demselben System wie das Eigentümer-Dashboard.", reservePanelTitle:"Zeitraum prüfen", reserveBadge:"bis zu 6 Gäste", calendarTitle:"Zeitraum wählen", calendarHelp:"Die erste Auswahl ist Check-in, die zweite Check-out.", calendarToday:"Heute", calendarSelected:"Ausgewählt", calendarPast:"Nicht verfügbare Daten", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Gäste", bookingSummaryEmpty:"Wählen Sie die Daten, um die Aufenthaltsübersicht zu sehen.", reserveButton:"Buchung fortsetzen", reserveStatus:"Die Verfügbarkeit ist mit dem Unterkunftskalender synchronisiert. Belegte Daten können nicht ausgewählt werden.", bookingSummaryNights:"Nächte", bookingSummaryGuests:"Gäste", bookingFormMessage:"Der gewählte Zeitraum ist im Live-Kalender verfügbar.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Daten wählen",
         bookingKicker:"Central Premium Apartment", bookingTitle:"Brașov ist von hier aus noch schöner.",
         bookingCopy:"Für einen Citytrip, einen Familienaufenthalt oder ein paar ruhige Tage bietet das Apartment den Raum und die Aussicht, die den Unterschied machen.",
         bookingButton:"Verfügbarkeit prüfen", footerText:"RO · EN · DE · Website concept v7 · Explore Brașov"
@@ -3591,6 +3613,32 @@
     const calendarNext = document.getElementById("calendarNext");
     let activeLanguage = "ro";
     let calendarOffset = 0;
+
+    const PUBLIC_SUPABASE_URL =
+      "https://cimdefypgbkfizyykhkm.supabase.co";
+
+    const PUBLIC_SUPABASE_PUBLISHABLE_KEY =
+      "sb_publishable_Ps8bDeuKhgf2NY4lNdGoOA_fQP15uAD";
+
+    const PUBLIC_PROPERTY_SLUG =
+      "central-premium-apartment";
+
+    const publicCalendarClient =
+      window.supabase.createClient(
+        PUBLIC_SUPABASE_URL,
+        PUBLIC_SUPABASE_PUBLISHABLE_KEY,
+        {
+          auth: {
+            persistSession: false,
+            autoRefreshToken: false,
+            detectSessionInUrl: false
+          }
+        }
+      );
+
+    let liveAvailabilityReady = false;
+    let liveAvailabilityError = false;
+    let occupiedRanges = [];
 
     function setLanguage(lang){
       document.documentElement.lang = lang;
@@ -3662,6 +3710,179 @@
       return activeLanguage === "de" ? "de-DE" : activeLanguage === "en" ? "en-GB" : "ro-RO";
     }
 
+    function availabilityText(key){
+      const copy = {
+        loading: {
+          ro: "Se încarcă disponibilitatea live...",
+          en: "Loading live availability...",
+          de: "Live-Verfügbarkeit wird geladen..."
+        },
+        error: {
+          ro: "Disponibilitatea live nu poate fi verificată momentan. Reîncearcă în câteva momente.",
+          en: "Live availability cannot be checked right now. Please try again in a moment.",
+          de: "Die Live-Verfügbarkeit kann momentan nicht geprüft werden. Bitte versuchen Sie es gleich erneut."
+        },
+        occupied: {
+          ro: "Data selectată este ocupată.",
+          en: "The selected date is unavailable.",
+          de: "Das gewählte Datum ist nicht verfügbar."
+        },
+        conflict: {
+          ro: "Perioada selectată include cel puțin o noapte ocupată. Alege alt interval.",
+          en: "The selected stay includes at least one unavailable night. Please choose another period.",
+          de: "Der gewählte Aufenthalt enthält mindestens eine belegte Nacht. Bitte wählen Sie einen anderen Zeitraum."
+        }
+      };
+
+      return copy[key]?.[activeLanguage] || copy[key]?.ro || "";
+    }
+
+    function isOccupiedNight(date){
+      const key = isoLocal(date);
+
+      return occupiedRanges.some(
+        range =>
+          key >= range.check_in &&
+          key < range.check_out
+      );
+    }
+
+    function isStayIntervalAvailable(start, end){
+      if(!start || !end || end <= start) return false;
+
+      const cursor = new Date(start);
+      cursor.setHours(0,0,0,0);
+
+      while(cursor < end){
+        if(isOccupiedNight(cursor)){
+          return false;
+        }
+        cursor.setDate(cursor.getDate()+1);
+      }
+
+      return true;
+    }
+
+    function isCalendarDateSelectable(date){
+      if(date < today || !liveAvailabilityReady){
+        return false;
+      }
+
+      const selectedIn = dateOnly(checkIn.value);
+      const selectedOut = dateOnly(checkOut.value);
+
+      // No active range, or a completed range: this click starts a new stay.
+      if(!selectedIn || selectedOut || date <= selectedIn){
+        return !isOccupiedNight(date);
+      }
+
+      // During check-out selection, the check-out date itself can be the
+      // arrival date of the next guest. Only the nights before it must be free.
+      return isStayIntervalAvailable(selectedIn, date);
+    }
+
+    function resetInvalidSelection(message){
+      checkIn.value = "";
+      checkOut.value = "";
+      checkOut.min = isoLocal(new Date(today.getTime()+86400000));
+      bookingStatus.textContent = message;
+      bookingStatus.style.color = "#9a4f43";
+      bookingStatus.style.fontWeight = "800";
+      updateBookingSummary();
+      renderCalendar();
+    }
+
+    function validateSelectedDates(){
+      if(!liveAvailabilityReady){
+        bookingStatus.textContent =
+          liveAvailabilityError
+            ? availabilityText("error")
+            : availabilityText("loading");
+        return false;
+      }
+
+      const start = dateOnly(checkIn.value);
+      const end = dateOnly(checkOut.value);
+
+      if(start && isOccupiedNight(start)){
+        resetInvalidSelection(availabilityText("occupied"));
+        return false;
+      }
+
+      if(start && end && !isStayIntervalAvailable(start, end)){
+        resetInvalidSelection(availabilityText("conflict"));
+        return false;
+      }
+
+      return true;
+    }
+
+    async function loadLiveAvailability(){
+      liveAvailabilityReady = false;
+      liveAvailabilityError = false;
+      occupiedRanges = [];
+
+      bookingStatus.textContent = availabilityText("loading");
+      bookingStatus.style.color = "var(--muted)";
+      bookingStatus.style.fontWeight = "700";
+      renderCalendar();
+
+      try{
+        const { data, error } =
+          await publicCalendarClient.rpc(
+            "public_property_availability",
+            {
+              p_property_slug:
+                PUBLIC_PROPERTY_SLUG
+            }
+          );
+
+        if(error){
+          throw error;
+        }
+
+        occupiedRanges =
+          (data || [])
+            .filter(
+              row =>
+                row.check_in &&
+                row.check_out
+            )
+            .map(
+              row => ({
+                check_in: row.check_in,
+                check_out: row.check_out
+              })
+            );
+
+        liveAvailabilityReady = true;
+        liveAvailabilityError = false;
+
+        bookingStatus.textContent =
+          translations[activeLanguage].reserveStatus;
+        bookingStatus.style.color = "var(--muted)";
+        bookingStatus.style.fontWeight = "600";
+      }
+      catch(error){
+        console.error(
+          "Could not load live property availability.",
+          error
+        );
+
+        liveAvailabilityReady = false;
+        liveAvailabilityError = true;
+        occupiedRanges = [];
+
+        bookingStatus.textContent =
+          availabilityText("error");
+        bookingStatus.style.color = "#9a4f43";
+        bookingStatus.style.fontWeight = "800";
+      }
+
+      validateSelectedDates();
+      renderCalendar();
+    }
+
     function renderMonth(year, month){
       const locale = calendarLocale();
       const wrapper = document.createElement("div");
@@ -3716,6 +3937,16 @@
           button.disabled = true;
           button.classList.add("is-past");
         }
+        else if(!liveAvailabilityReady){
+          button.disabled = true;
+          button.classList.add("is-loading");
+        }
+        else if(!isCalendarDateSelectable(date)){
+          button.disabled = true;
+          button.classList.add("is-unavailable");
+          button.title = availabilityText("occupied");
+        }
+
         if(sameDay(date,today)) button.classList.add("is-today");
         if(sameDay(date,selectedIn) || sameDay(date,selectedOut)) button.classList.add("is-selected");
         if(selectedIn && selectedOut && date > selectedIn && date < selectedOut) button.classList.add("is-in-range");
@@ -3742,7 +3973,13 @@
     }
 
     function selectCalendarDate(date){
-      if(date < today) return;
+      if(
+        date < today ||
+        !liveAvailabilityReady ||
+        !isCalendarDateSelectable(date)
+      ){
+        return;
+      }
 
       const selectedIn = dateOnly(checkIn.value);
       const selectedOut = dateOnly(checkOut.value);
@@ -3757,6 +3994,7 @@
         checkOut.value = isoLocal(date);
       }
 
+      validateSelectedDates();
       updateBookingSummary();
       renderCalendar();
     }
@@ -3782,23 +4020,42 @@
       bookingSummary.textContent=nights>0 ? `${checkIn.value} → ${checkOut.value} · ${nights} ${t.bookingSummaryNights} · ${guestCount.value} ${t.bookingSummaryGuests}` : t.bookingSummaryEmpty;
     }
     checkIn.addEventListener("change",()=>{
-      if(checkIn.value){const next=new Date(checkIn.value+"T00:00:00");next.setDate(next.getDate()+1);checkOut.min=isoLocal(next);if(checkOut.value && checkOut.value<checkOut.min)checkOut.value="";}
+      if(checkIn.value){
+        const next=new Date(checkIn.value+"T00:00:00");
+        next.setDate(next.getDate()+1);
+        checkOut.min=isoLocal(next);
+        if(checkOut.value && checkOut.value<checkOut.min)checkOut.value="";
+      }
+
+      validateSelectedDates();
       updateBookingSummary();
       renderCalendar();
     });
-    checkOut.addEventListener("change",()=>{ updateBookingSummary(); renderCalendar(); });
+
+    checkOut.addEventListener("change",()=>{
+      validateSelectedDates();
+      updateBookingSummary();
+      renderCalendar();
+    });
+
     guestCount.addEventListener("change",updateBookingSummary);
+
     bookingForm.addEventListener("submit",event=>{
       event.preventDefault();
+
       if(!bookingForm.reportValidity()) return;
+      if(!validateSelectedDates()) return;
+
       updateBookingSummary();
       bookingStatus.textContent=translations[activeLanguage].bookingFormMessage;
-      bookingStatus.style.color="var(--green-deep)";bookingStatus.style.fontWeight="800";
+      bookingStatus.style.color="var(--green-deep)";
+      bookingStatus.style.fontWeight="800";
     });
 
     const savedLang = localStorage.getItem("cpa-lang");
     if(savedLang && translations[savedLang]) setLanguage(savedLang); else setLanguage("ro");
-    renderCalendar();
+
+    loadLiveAvailability();
 
 
     const galleryItems = Array.from(document.querySelectorAll(".gallery-item"));
