@@ -1882,6 +1882,218 @@
         }
 
     
+
+/* =========================================
+   FOUR-MONTH RESERVATION OVERVIEW
+========================================= */
+
+.reservation-overview {
+    margin-bottom: 32px;
+}
+
+.overview-heading {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.overview-heading small {
+    display: block;
+    margin-bottom: 6px;
+    color: #c99a3d;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.overview-heading h3 {
+    margin: 0 0 7px;
+}
+
+.overview-heading p {
+    max-width: 700px;
+    color: #748391;
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.overview-navigation {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.overview-navigation strong {
+    min-width: 170px;
+    color: #173853;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.overview-legend {
+    padding: 11px 13px;
+    border: 1px solid #e5ebef;
+    border-radius: 11px;
+    background: #f8fafb;
+}
+
+.overview-months {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.overview-month-card {
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #e1e8ed;
+    border-radius: 15px;
+    background: #ffffff;
+}
+
+.overview-month-title {
+    margin-bottom: 11px;
+    color: #082d50;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.overview-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 3px;
+}
+
+.overview-day-name {
+    padding: 3px 0 5px;
+    color: #9aa5ae;
+    text-align: center;
+    font-size: 7px;
+    font-weight: 800;
+}
+
+.overview-day {
+    min-width: 0;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e5eaed;
+    border-radius: 6px;
+    background: #edf8f1;
+    color: #34774d;
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.overview-day.empty {
+    visibility: hidden;
+}
+
+.overview-day.reserved {
+    cursor: pointer;
+}
+
+.overview-day.reserved:hover {
+    transform: scale(1.08);
+    box-shadow: 0 5px 12px rgba(8,45,80,.12);
+}
+
+.overview-day.source-direct {
+    background: #e6f7ee;
+    color: #247048;
+    border-color: #c8ead8;
+}
+
+.overview-day.source-booking_com {
+    background: #e8f3fc;
+    color: #145d97;
+    border-color: #c7e1f5;
+}
+
+.overview-day.source-airbnb {
+    background: #fff0f0;
+    color: #b5454a;
+    border-color: #f4d0d2;
+}
+
+.overview-day.source-vrbo {
+    background: #f0ecfb;
+    color: #5e49aa;
+    border-color: #dcd3f5;
+}
+
+.overview-day.source-manual {
+    background: #edf0f2;
+    color: #66727c;
+    border-color: #d8dfe3;
+}
+
+.overview-day.pending {
+    background: #fff6dd !important;
+    color: #956d13 !important;
+    border-color: #f0e0ae !important;
+}
+
+.overview-day.today {
+    outline: 2px solid #c99a3d;
+    outline-offset: -2px;
+}
+
+.overview-stay-rule {
+    margin-top: 14px;
+    padding: 11px 13px;
+    border-radius: 10px;
+    background: #f7fafc;
+    color: #71808c;
+    font-size: 9px;
+    line-height: 1.55;
+}
+
+.overview-stay-rule strong {
+    color: #173853;
+}
+
+@media (max-width: 1100px) {
+    .overview-months {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .overview-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .overview-navigation {
+        justify-content: space-between;
+    }
+
+    .overview-navigation strong {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .overview-months {
+        grid-template-columns: 1fr;
+    }
+
+    .overview-day {
+        min-height: 38px;
+        aspect-ratio: auto;
+        font-size: 10px;
+    }
+}
+
+
 /* =========================================
    CENTRAL PREMIUM — SOURCE COLOURS
 ========================================= */
@@ -2153,77 +2365,66 @@
 
 
 
-        <section class="stats-grid">
+        <section class="reservation-overview dashboard-card">
 
-            <div class="stat-card">
+            <div class="overview-heading">
 
-                <span>
-                    Upcoming bookings
-                </span>
+                <div>
+                    <small>RESERVATION OVERVIEW</small>
+                    <h3>Four-month calendar</h3>
+                    <p>
+                        Last month, this month and the next two months at a glance.
+                        Use the arrows to move through the calendar.
+                    </p>
+                </div>
 
-                <strong>
-                    4
-                </strong>
+                <div class="overview-navigation">
 
-                <small>
-                    Demo data
-                </small>
+                    <button
+                        type="button"
+                        class="calendar-nav-button"
+                        id="overviewPrev"
+                        aria-label="Previous month"
+                    >
+                        ‹
+                    </button>
 
-            </div>
+                    <strong id="overviewRange"></strong>
 
+                    <button
+                        type="button"
+                        class="calendar-nav-button"
+                        id="overviewNext"
+                        aria-label="Next month"
+                    >
+                        ›
+                    </button>
 
-            <div class="stat-card">
-
-                <span>
-                    Nights booked
-                </span>
-
-                <strong>
-                    18
-                </strong>
-
-                <small>
-                    This month
-                </small>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <span>
-                    Occupancy
-                </span>
-
-                <strong>
-                    60%
-                </strong>
-
-                <small>
-                    September
-                </small>
+                </div>
 
             </div>
 
+            <div class="owner-calendar-legend overview-legend">
 
-            <div class="stat-card">
+                <div><span class="legend-circle available"></span>Available</div>
+                <div><span class="legend-circle direct"></span>Direct website</div>
+                <div><span class="legend-circle booking-source"></span>Booking.com</div>
+                <div><span class="legend-circle airbnb-source"></span>Airbnb</div>
+                <div><span class="legend-circle vrbo-source"></span>Vrbo / Stayz / Bookabach</div>
+                <div><span class="legend-circle manual-source"></span>Manual</div>
+                <div><span class="legend-circle pending"></span>Pending</div>
 
-                <span>
-                    Guests arriving
-                </span>
+            </div>
 
-                <strong>
-                    11
-                </strong>
+            <div class="overview-months" id="overviewMonths"></div>
 
-                <small>
-                    Upcoming stays
-                </small>
-
+            <div class="overview-stay-rule">
+                <strong>Stay rule:</strong>
+                check-in from 12:00 · check-out by 11:00.
+                The check-out date becomes available again for a new check-in from 12:00.
             </div>
 
         </section>
-
 
 
         <section class="main-grid">
@@ -2670,7 +2871,7 @@
         <div>
 
             <span class="print-sheet-kicker">
-                KLEO HOUSE · OWNER REPORT
+                CENTRAL PREMIUM APARTMENT · OWNER REPORT
             </span>
 
             <h1 id="printMonthTitle">
@@ -2684,8 +2885,8 @@
         </div>
 
         <div class="print-sheet-property">
-            KLEO HOUSE<br>
-            KALYVES · HALKIDIKI
+            CENTRAL PREMIUM APARTMENT<br>
+            BRAȘOV · ROMANIA
         </div>
 
     </div>
@@ -2836,7 +3037,7 @@
                         type="number"
                         id="modalGuests"
                         min="1"
-                        max="5"
+                        max="6"
                     >
 
                 </label>
@@ -3300,6 +3501,51 @@ const printRevenue =
 
 let ownerCalendarDate =
     new Date();
+
+const overviewMonths =
+    document.getElementById(
+        "overviewMonths"
+    );
+
+const overviewRange =
+    document.getElementById(
+        "overviewRange"
+    );
+
+const overviewPrev =
+    document.getElementById(
+        "overviewPrev"
+    );
+
+const overviewNext =
+    document.getElementById(
+        "overviewNext"
+    );
+
+const overviewToday =
+    new Date();
+
+const overviewMinDate =
+    new Date(
+        overviewToday.getFullYear() - 5,
+        overviewToday.getMonth(),
+        1
+    );
+
+const overviewMaxDate =
+    new Date(
+        overviewToday.getFullYear() + 5,
+        overviewToday.getMonth() - 3,
+        1
+    );
+
+let overviewStartDate =
+    new Date(
+        overviewToday.getFullYear(),
+        overviewToday.getMonth() - 1,
+        1
+    );
+
 
 
 /*
@@ -4626,6 +4872,8 @@ async function refreshReservationData() {
 
     await loadReservationsFromSupabase();
 
+    renderOverviewCalendar();
+
     renderOwnerCalendar();
 
     renderBookingList();
@@ -4804,6 +5052,289 @@ function getOwnerDayInfo(
     };
 
 }
+
+
+/* =========================================
+   FOUR-MONTH OVERVIEW
+========================================= */
+
+function clampOverviewStart(date) {
+
+    if (date < overviewMinDate) {
+        return new Date(overviewMinDate);
+    }
+
+    if (date > overviewMaxDate) {
+        return new Date(overviewMaxDate);
+    }
+
+    return date;
+}
+
+
+function renderOverviewCalendar() {
+
+    if (
+        !overviewMonths ||
+        !overviewRange
+    ) {
+        return;
+    }
+
+    overviewMonths.innerHTML = "";
+
+    const firstMonth =
+        new Date(
+            overviewStartDate.getFullYear(),
+            overviewStartDate.getMonth(),
+            1
+        );
+
+    const lastMonth =
+        new Date(
+            overviewStartDate.getFullYear(),
+            overviewStartDate.getMonth() + 3,
+            1
+        );
+
+    const shortFormatter =
+        new Intl.DateTimeFormat(
+            "en",
+            {
+                month: "short",
+                year: "numeric"
+            }
+        );
+
+    overviewRange.textContent =
+        shortFormatter.format(firstMonth) +
+        " — " +
+        shortFormatter.format(lastMonth);
+
+    const weekDays =
+        ["M", "T", "W", "T", "F", "S", "S"];
+
+    const today =
+        new Date();
+
+    for (
+        let monthOffset = 0;
+        monthOffset < 4;
+        monthOffset++
+    ) {
+
+        const monthDate =
+            new Date(
+                overviewStartDate.getFullYear(),
+                overviewStartDate.getMonth() + monthOffset,
+                1
+            );
+
+        const year = monthDate.getFullYear();
+        const month = monthDate.getMonth();
+
+        const card =
+            document.createElement("article");
+
+        card.className =
+            "overview-month-card";
+
+        const title =
+            document.createElement("h4");
+
+        title.className =
+            "overview-month-title";
+
+        title.textContent =
+            new Intl.DateTimeFormat(
+                "en",
+                {
+                    month: "long",
+                    year: "numeric"
+                }
+            ).format(monthDate);
+
+        card.appendChild(title);
+
+        const grid =
+            document.createElement("div");
+
+        grid.className =
+            "overview-calendar-grid";
+
+        weekDays.forEach(
+            day => {
+                const name =
+                    document.createElement("div");
+
+                name.className =
+                    "overview-day-name";
+
+                name.textContent =
+                    day;
+
+                grid.appendChild(name);
+            }
+        );
+
+        const firstDay =
+            new Date(
+                year,
+                month,
+                1
+            );
+
+        const startOffset =
+            (firstDay.getDay() + 6) % 7;
+
+        for (
+            let i = 0;
+            i < startOffset;
+            i++
+        ) {
+            const empty =
+                document.createElement("div");
+
+            empty.className =
+                "overview-day empty";
+
+            grid.appendChild(empty);
+        }
+
+        const totalDays =
+            new Date(
+                year,
+                month + 1,
+                0
+            ).getDate();
+
+        for (
+            let day = 1;
+            day <= totalDays;
+            day++
+        ) {
+
+            const dateKey =
+                ownerDateKey(
+                    year,
+                    month,
+                    day
+                );
+
+            const info =
+                getOwnerDayInfo(
+                    dateKey
+                );
+
+            const cell =
+                document.createElement("div");
+
+            cell.className =
+                "overview-day " +
+                info.status +
+                (
+                    info.source &&
+                    info.source !== "available"
+                        ? " source-" + info.source
+                        : ""
+                );
+
+            cell.textContent =
+                day;
+
+            if (info.reservation) {
+
+                cell.classList.add(
+                    "reserved"
+                );
+
+                const sourceLabels = {
+                    direct: "Direct website",
+                    booking_com: "Booking.com",
+                    airbnb: "Airbnb",
+                    vrbo: "Vrbo / Stayz / Bookabach",
+                    manual: "Manual"
+                };
+
+                cell.title =
+                    (
+                        sourceLabels[info.source] ||
+                        "Reservation"
+                    ) +
+                    " · " +
+                    info.reservation.checkIn +
+                    " → " +
+                    info.reservation.checkOut;
+
+                cell.addEventListener(
+                    "click",
+                    function () {
+                        openBookingModal(
+                            info.reservation
+                        );
+                    }
+                );
+            }
+
+            if (
+                year === today.getFullYear() &&
+                month === today.getMonth() &&
+                day === today.getDate()
+            ) {
+                cell.classList.add(
+                    "today"
+                );
+            }
+
+            grid.appendChild(cell);
+        }
+
+        card.appendChild(grid);
+        overviewMonths.appendChild(card);
+    }
+
+    overviewPrev.disabled =
+        overviewStartDate <= overviewMinDate;
+
+    overviewNext.disabled =
+        overviewStartDate >= overviewMaxDate;
+}
+
+
+overviewPrev.addEventListener(
+    "click",
+    function () {
+
+        overviewStartDate =
+            clampOverviewStart(
+                new Date(
+                    overviewStartDate.getFullYear(),
+                    overviewStartDate.getMonth() - 1,
+                    1
+                )
+            );
+
+        renderOverviewCalendar();
+    }
+);
+
+
+overviewNext.addEventListener(
+    "click",
+    function () {
+
+        overviewStartDate =
+            clampOverviewStart(
+                new Date(
+                    overviewStartDate.getFullYear(),
+                    overviewStartDate.getMonth() + 1,
+                    1
+                )
+            );
+
+        renderOverviewCalendar();
+    }
+);
 
 
 /* =========================================
@@ -5582,6 +6113,7 @@ ownerNextMonth.addEventListener(
 );
 
 
+renderOverviewCalendar();
 renderOwnerCalendar();
 
 /* =========================================
@@ -5856,12 +6388,24 @@ function renderBookingList() {
         "";
 
 
+    const todayForList =
+        new Date();
+
+    const todayKeyForList =
+        ownerDateKey(
+            todayForList.getFullYear(),
+            todayForList.getMonth(),
+            todayForList.getDate()
+        );
+
     const activeReservations =
         ownerReservations
             .filter(
                 reservation =>
                     reservation.status !==
-                    "cancelled"
+                    "cancelled" &&
+                    reservation.checkOut >
+                    todayKeyForList
             )
             .sort(
                 (a, b) =>
@@ -6049,7 +6593,7 @@ saveBookingButton.addEventListener(
             Math.max(
                 1,
                 Math.min(
-                    5,
+                    6,
                     Number(
                         modalGuests.value
                     ) || 1
