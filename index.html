@@ -3051,6 +3051,54 @@
         </article>
       </div>
 
+    </section>
+
+    <section class="reservation-section" id="booking">
+      <div class="reservation-inner">
+        <div class="reservation-copy reveal">
+          <div class="section-kicker" data-i18n="reserveKicker">Planifică sejurul</div>
+          <h2 class="section-title" data-i18n="reserveTitle">Alege datele. De aici începe Brașovul tău.</h2>
+          <p class="section-copy" data-i18n="reserveCopy">Selectează perioada și numărul de oaspeți. Calendarul este pregătit pentru conectarea la disponibilitatea reală și fluxul final de rezervare.</p>
+        </div>
+        <form class="booking-panel reveal" id="bookingForm">
+          <div class="booking-panel-head">
+            <strong data-i18n="reservePanelTitle">Verifică perioada</strong>
+            <span class="booking-badge" data-i18n="reserveBadge">până la 6 oaspeți</span>
+          </div>
+
+          <div class="calendar-shell" id="availabilityCalendar">
+            <div class="calendar-toolbar">
+              <div class="calendar-toolbar-copy">
+                <strong data-i18n="calendarTitle">Alege perioada</strong>
+                <span data-i18n="calendarHelp">Prima dată selectată este check-in; a doua este check-out.</span>
+              </div>
+              <div class="calendar-nav">
+                <button type="button" id="calendarPrev" aria-label="Previous month">‹</button>
+                <button type="button" id="calendarNext" aria-label="Next month">›</button>
+              </div>
+            </div>
+            <div class="calendar-months" id="calendarMonths"></div>
+            <div class="calendar-legend">
+              <span><i class="calendar-dot today"></i><span data-i18n="calendarToday">Astăzi</span></span>
+              <span><i class="calendar-dot"></i><span data-i18n="calendarSelected">Selectat</span></span>
+              <span><i class="calendar-dot disabled"></i><span data-i18n="calendarPast">Date trecute indisponibile</span></span>
+            </div>
+          </div>
+
+          <div class="booking-fields">
+            <div class="booking-field"><label for="checkIn" data-i18n="checkInLabel">Check-in</label><input id="checkIn" type="date" required></div>
+            <div class="booking-field"><label for="checkOut" data-i18n="checkOutLabel">Check-out</label><input id="checkOut" type="date" required></div>
+            <div class="booking-field full"><label for="guestCount" data-i18n="guestsLabel">Oaspeți</label><select id="guestCount" required><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select></div>
+          </div>
+          <div class="booking-summary" id="bookingSummary" data-i18n="bookingSummaryEmpty">Selectează datele pentru a vedea rezumatul sejurului.</div>
+          <button class="btn" type="submit" data-i18n="reserveButton">Continuă rezervarea</button>
+          <div class="booking-status" id="bookingStatus" data-i18n="reserveStatus">În etapa următoare conectăm acest formular la calendarul real de disponibilitate și canalul de rezervare.</div>
+        </form>
+      </div>
+    </section>
+
+
+    <section class="section">
       <div class="balcony-section reveal">
         <div class="balcony-copy">
           <div class="section-kicker" data-i18n="balconyKicker">Balconul</div>
@@ -3351,50 +3399,6 @@
   
   
 
-    <section class="reservation-section" id="booking">
-      <div class="reservation-inner">
-        <div class="reservation-copy reveal">
-          <div class="section-kicker" data-i18n="reserveKicker">Planifică sejurul</div>
-          <h2 class="section-title" data-i18n="reserveTitle">Alege datele. De aici începe Brașovul tău.</h2>
-          <p class="section-copy" data-i18n="reserveCopy">Selectează perioada și numărul de oaspeți. Calendarul este pregătit pentru conectarea la disponibilitatea reală și fluxul final de rezervare.</p>
-        </div>
-        <form class="booking-panel reveal" id="bookingForm">
-          <div class="booking-panel-head">
-            <strong data-i18n="reservePanelTitle">Verifică perioada</strong>
-            <span class="booking-badge" data-i18n="reserveBadge">până la 6 oaspeți</span>
-          </div>
-
-          <div class="calendar-shell" id="availabilityCalendar">
-            <div class="calendar-toolbar">
-              <div class="calendar-toolbar-copy">
-                <strong data-i18n="calendarTitle">Alege perioada</strong>
-                <span data-i18n="calendarHelp">Prima dată selectată este check-in; a doua este check-out.</span>
-              </div>
-              <div class="calendar-nav">
-                <button type="button" id="calendarPrev" aria-label="Previous month">‹</button>
-                <button type="button" id="calendarNext" aria-label="Next month">›</button>
-              </div>
-            </div>
-            <div class="calendar-months" id="calendarMonths"></div>
-            <div class="calendar-legend">
-              <span><i class="calendar-dot today"></i><span data-i18n="calendarToday">Astăzi</span></span>
-              <span><i class="calendar-dot"></i><span data-i18n="calendarSelected">Selectat</span></span>
-              <span><i class="calendar-dot disabled"></i><span data-i18n="calendarPast">Date trecute indisponibile</span></span>
-            </div>
-          </div>
-
-          <div class="booking-fields">
-            <div class="booking-field"><label for="checkIn" data-i18n="checkInLabel">Check-in</label><input id="checkIn" type="date" required></div>
-            <div class="booking-field"><label for="checkOut" data-i18n="checkOutLabel">Check-out</label><input id="checkOut" type="date" required></div>
-            <div class="booking-field full"><label for="guestCount" data-i18n="guestsLabel">Oaspeți</label><select id="guestCount" required><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select></div>
-          </div>
-          <div class="booking-summary" id="bookingSummary" data-i18n="bookingSummaryEmpty">Selectează datele pentru a vedea rezumatul sejurului.</div>
-          <button class="btn" type="submit" data-i18n="reserveButton">Continuă rezervarea</button>
-          <div class="booking-status" id="bookingStatus" data-i18n="reserveStatus">În etapa următoare conectăm acest formular la calendarul real de disponibilitate și canalul de rezervare.</div>
-        </form>
-      </div>
-    </section>
-
     <section class="booking" id="final-cta">
       <div class="booking-inner reveal">
         <div class="section-kicker" style="color:#fff" data-i18n="bookingKicker">Central Premium Apartment</div>
@@ -3423,7 +3427,7 @@
         <strong>Central Premium Apartment</strong>
         <span>Brașov, România</span>
       </div>
-      <div data-i18n="footerText">RO · EN · DE · Website concept v7 · Explore Brașov</div>
+      <div data-i18n="footerText">RO · EN · DE · Website concept v8 · Explore Brașov</div>
     </div>
   </footer>
 
