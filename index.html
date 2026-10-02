@@ -168,7 +168,7 @@
       background:
         linear-gradient(90deg, rgba(8,28,22,.72) 0%, rgba(8,28,22,.28) 44%, rgba(8,28,22,.08) 78%),
         linear-gradient(0deg, rgba(8,24,19,.72) 0%, rgba(8,24,19,.08) 50%, rgba(8,24,19,.18) 100%),
-        url("assets/images/living_room_02.webp") center center / cover no-repeat;
+        url("assets/images/Galerie/4.webp") center center / cover no-repeat;
       transform:scale(1.01);
     }
 
@@ -1080,7 +1080,7 @@
       .hero::before{
         background:
           linear-gradient(0deg, rgba(8,24,19,.8) 0%, rgba(8,24,19,.18) 64%, rgba(8,24,19,.22) 100%),
-          url("assets/images/living_room_02.webp") 58% center / cover no-repeat;
+          url("assets/images/Galerie/4.webp") 58% center / cover no-repeat;
       }
 
       .hero-inner{
@@ -1289,7 +1289,7 @@
       .hero::before{
         background:
           linear-gradient(0deg,rgba(7,23,18,.78) 0%,rgba(7,23,18,.48) 24%,rgba(7,23,18,.08) 58%,rgba(7,23,18,.05) 100%),
-          url("assets/images/living_room_02.webp") 8% center / cover no-repeat;
+          url("assets/images/Galerie/4.webp") 8% center / cover no-repeat;
         transform:none;
       }
       .hero::after{height:110px}
@@ -1654,7 +1654,7 @@
             rgba(7,20,16,.34) 62%,
             rgba(7,20,16,.80) 100%
           ),
-          url("assets/images/living_room_02.webp") 10% center / cover no-repeat;
+          url("assets/images/Galerie/4.webp") 10% center / cover no-repeat;
         transform:none;
       }
 
@@ -2860,6 +2860,171 @@
       }
     }
 
+  
+
+    /* =========================================================
+       MOBILE V10 — slightly larger text, cleaner quick facts
+       Desktop remains unchanged.
+       ========================================================= */
+    @media (max-width:760px){
+
+      .hero .btn{
+        font-size:13px;
+        font-weight:850;
+      }
+
+      .fact strong{
+        font-size:13.2px;
+        line-height:1.18;
+      }
+
+      .fact:nth-child(n+5) strong{
+        font-size:11.6px;
+        line-height:1.18;
+      }
+
+      .fact:first-child small{
+        display:none;
+      }
+
+      .booking-panel-head strong{
+        font-size:23px;
+      }
+
+      .booking-badge{
+        font-size:9.5px;
+      }
+
+      .calendar-toolbar-copy strong{
+        font-size:18px;
+      }
+
+      .calendar-month-title{
+        font-size:14px;
+      }
+
+      .calendar-weekdays span{
+        font-size:9.5px;
+      }
+
+      .calendar-day{
+        font-size:12.5px;
+        font-weight:850;
+      }
+
+      .booking-field label{
+        font-size:10.5px;
+      }
+
+      .booking-field input,
+      .booking-field select{
+        font-size:12px;
+      }
+
+      .booking-summary{
+        font-size:11.5px;
+      }
+
+      .booking-panel .btn{
+        font-size:13px;
+      }
+
+      .mobile-booking-bar span{
+        font-size:11.5px;
+      }
+
+      .mobile-booking-bar a{
+        font-size:11.5px;
+      }
+    }
+
+    @media (max-width:430px){
+      .fact strong{
+        font-size:12.6px;
+      }
+
+      .fact:nth-child(n+5) strong{
+        font-size:11.2px;
+      }
+
+      .hero .btn{
+        font-size:12.4px;
+      }
+
+      .calendar-day{
+        font-size:12px;
+      }
+
+      .booking-field input,
+      .booking-field select{
+        font-size:11.5px;
+      }
+    }
+
+  
+
+    /* =========================================================
+       GALLERY V11 — 10-image preview + 30-image fullscreen gallery
+       Images live in assets/images/Galerie/
+       ========================================================= */
+    #gallery .gallery-strip{
+      margin-top:32px;
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      grid-auto-rows:190px;
+      gap:12px;
+    }
+    #gallery .gallery-item{
+      position:relative;margin:0;min-width:0;overflow:hidden;border-radius:20px;
+      background:#e9e5de;box-shadow:var(--shadow-soft);cursor:zoom-in;isolation:isolate;
+    }
+    #gallery .gallery-item::after{
+      content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(7,22,17,.12),transparent 48%);
+      pointer-events:none;transition:background .25s ease;
+    }
+    #gallery .gallery-item:hover::after{background:linear-gradient(to top,rgba(7,22,17,.22),transparent 52%)}
+    #gallery .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+    #gallery .gallery-item:hover img{transform:scale(1.035)}
+    #gallery .gallery-feature{grid-column:span 2;grid-row:span 2}
+    #gallery .gallery-wide{grid-column:span 2}
+    #gallery .gallery-tall{grid-row:span 2}
+    .gallery-more-row{display:flex;justify-content:center;margin-top:22px}
+    .gallery-open-all{
+      min-height:46px;padding:0 20px;border:1px solid rgba(23,52,45,.14);border-radius:999px;background:#fff;
+      color:var(--green-deep);font-weight:850;font-size:12px;cursor:pointer;box-shadow:0 8px 24px rgba(23,52,45,.07);transition:.2s ease;
+    }
+    .gallery-open-all:hover{transform:translateY(-1px);background:var(--green-deep);color:#fff}
+    .gallery-count-chip{
+      position:absolute;z-index:3;right:12px;bottom:12px;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.92);
+      color:var(--green-deep);font-size:10px;font-weight:900;letter-spacing:.04em;box-shadow:0 5px 18px rgba(0,0,0,.12);pointer-events:none;
+    }
+    .lightbox{z-index:3000;background:rgba(4,11,9,.96);padding:24px 70px;touch-action:pan-y}
+    .lightbox img{max-width:min(1500px,92vw);max-height:88vh;border-radius:14px;object-fit:contain;user-select:none;-webkit-user-drag:none}
+    .lightbox-close{z-index:4;top:18px;right:18px;width:46px;height:46px;font-size:30px}
+    .lightbox-nav{z-index:4;width:50px;height:64px;border-radius:16px;font-size:36px}
+    .lightbox-count{bottom:18px;font-size:12px;letter-spacing:.06em}
+    @media (max-width:900px){
+      #gallery .gallery-strip{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:170px}
+      #gallery .gallery-feature{grid-column:span 2;grid-row:span 2}
+    }
+    @media (max-width:760px){
+      #gallery{padding-bottom:52px}
+      #gallery .gallery-strip{margin-top:24px;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:128px;gap:8px}
+      #gallery .gallery-item{border-radius:14px}
+      #gallery .gallery-feature{grid-column:1 / -1;grid-row:span 2}
+      #gallery .gallery-wide{grid-column:1 / -1}
+      #gallery .gallery-tall{grid-row:span 2}
+      .gallery-more-row{margin-top:17px}
+      .gallery-open-all{min-height:43px;padding:0 17px;font-size:11.5px}
+      .gallery-count-chip{right:9px;bottom:9px;padding:6px 8px;font-size:9px}
+      .lightbox{padding:58px 8px 54px}
+      .lightbox img{max-width:96vw;max-height:82vh;border-radius:9px}
+      .lightbox-nav{width:40px;height:52px;border-radius:12px;font-size:30px;background:rgba(255,255,255,.16)}
+      .lightbox-prev{left:7px}.lightbox-next{right:7px}
+      .lightbox-close{top:max(10px,env(safe-area-inset-top));right:10px;width:40px;height:40px;font-size:27px}
+      .lightbox-count{bottom:max(12px,env(safe-area-inset-bottom));font-size:11px}
+    }
+
   </style>
 </head>
 
@@ -3010,7 +3175,7 @@
 
       <div class="overview-grid">
         <div class="overview-card reveal">
-          <img src="assets/images/living_room_open_space.webp" alt="Living open-space Central Premium Apartment">
+          <img src="assets/images/Galerie/1.webp" alt="Living open-space Central Premium Apartment">
         </div>
         <div class="overview-card floorplan-card reveal">
           <img src="assets/images/apartment_floor_plan.webp" alt="Planul apartamentului">
@@ -3026,7 +3191,7 @@
 
       <div class="rooms-grid">
         <article class="room-card large reveal">
-          <img src="assets/images/master_bedroom_01.webp" alt="Master Bedroom">
+          <img src="assets/images/Galerie/3.webp" alt="Master Bedroom">
           <div class="room-content">
             <span data-i18n="roomPremium">Dormitor premium</span>
             <h3 data-i18n="masterTitle">Master Bedroom</h3>
@@ -3044,7 +3209,7 @@
         </article>
 
         <article class="room-card third reveal">
-          <img src="assets/images/living_room_01.webp" alt="Living Room">
+          <img src="assets/images/Galerie/10.1.webp" alt="Living Room">
           <div class="room-content">
             <span data-i18n="roomRelax">Relaxare</span>
             <h3 data-i18n="livingTitle">Living Room</h3>
@@ -3053,7 +3218,7 @@
         </article>
 
         <article class="room-card third reveal">
-          <img src="assets/images/kitchen_dining_01.webp" alt="Kitchen and dining">
+          <img src="assets/images/Galerie/10.webp" alt="Kitchen and dining">
           <div class="room-content">
             <span data-i18n="roomKitchenTag">Open-space</span>
             <h3 data-i18n="kitchenTitle">Kitchen & Dining</h3>
@@ -3140,13 +3305,20 @@
       </div>
 
       <div class="gallery-strip" id="galleryGrid">
-        <figure class="gallery-item gallery-feature reveal" tabindex="0"><img src="assets/images/living_room_02.webp" alt="Living cu vedere spre Tâmpa"></figure>
-        <figure class="gallery-item gallery-tall reveal" tabindex="0"><img src="assets/images/master_bedroom_tampa_view.webp" alt="Master bedroom cu vedere spre Tâmpa"></figure>
-        <figure class="gallery-item reveal" tabindex="0"><img src="assets/images/kitchen_01.webp" alt="Bucătărie complet echipată"></figure>
-        <figure class="gallery-item reveal" tabindex="0"><img src="assets/images/bathroom_bathtub_01.webp" alt="Baie cu cadă"></figure>
-        <figure class="gallery-item gallery-wide reveal" tabindex="0"><img src="assets/images/balcony_tampa_view.webp" alt="Balcon cu vedere spre Tâmpa"></figure>
-        <figure class="gallery-item reveal" tabindex="0"><img src="assets/images/bedroom_2_02.webp" alt="Detaliu dormitor"></figure>
-        <figure class="gallery-item reveal" tabindex="0"><img src="assets/images/building_exterior_01.webp" alt="Exteriorul clădirii"></figure>
+        <figure class="gallery-item gallery-feature reveal" tabindex="0" data-gallery-index="0"><img src="assets/images/Galerie/1.webp" alt="Central Premium Apartment — galerie 1" loading="lazy"></figure>
+        <figure class="gallery-item gallery-tall reveal" tabindex="0" data-gallery-index="1"><img src="assets/images/Galerie/2.webp" alt="Central Premium Apartment — galerie 2" loading="lazy"></figure>
+        <figure class="gallery-item reveal" tabindex="0" data-gallery-index="2"><img src="assets/images/Galerie/3.webp" alt="Central Premium Apartment — galerie 3" loading="lazy"></figure>
+        <figure class="gallery-item gallery-wide reveal" tabindex="0" data-gallery-index="3"><img src="assets/images/Galerie/4.1.webp" alt="Central Premium Apartment — galerie 4" loading="lazy"></figure>
+        <figure class="gallery-item reveal" tabindex="0" data-gallery-index="4"><img src="assets/images/Galerie/4.webp" alt="Central Premium Apartment — galerie 5" loading="lazy"></figure>
+        <figure class="gallery-item reveal" tabindex="0" data-gallery-index="5"><img src="assets/images/Galerie/5.webp" alt="Central Premium Apartment — galerie 6" loading="lazy"></figure>
+        <figure class="gallery-item gallery-wide reveal" tabindex="0" data-gallery-index="6"><img src="assets/images/Galerie/6.1.webp" alt="Central Premium Apartment — galerie 7" loading="lazy"></figure>
+        <figure class="gallery-item reveal" tabindex="0" data-gallery-index="7"><img src="assets/images/Galerie/6.webp" alt="Central Premium Apartment — galerie 8" loading="lazy"></figure>
+        <figure class="gallery-item gallery-tall reveal" tabindex="0" data-gallery-index="8"><img src="assets/images/Galerie/7.0.webp" alt="Central Premium Apartment — galerie 9" loading="lazy"></figure>
+        <figure class="gallery-item reveal" tabindex="0" data-gallery-index="9"><img src="assets/images/Galerie/7.1.0.webp" alt="Central Premium Apartment — galerie 10" loading="lazy"><span class="gallery-count-chip">30 fotografii</span></figure>
+      </div>
+
+      <div class="gallery-more-row reveal">
+        <button class="gallery-open-all" id="galleryOpenAll" type="button" data-i18n="galleryAllPhotos">Vezi toate cele 30 de fotografii</button>
       </div>
     </section>
 
@@ -3493,7 +3665,7 @@
         roomTwoBaths:"Două băi", bathTitle:"Bath & Shower", bathCopy:"O baie cu cadă și o a doua baie completă cu duș.",
         balconyKicker:"Balconul", balconyTitle:"Un loc simplu pentru momente care rămân.",
         balconyCopy:"Dimineața pentru cafea, după-amiaza pentru lumină, iar seara pentru liniște. Balconul deschide apartamentul către Tâmpa și către oraș.",
-        galleryKicker:"Galerie", galleryTitle:"Câteva cadre. Restul îl descoperi aici.",
+        galleryKicker:"Galerie", galleryTitle:"Câteva cadre. Restul îl descoperi aici.", galleryAllPhotos:"Vezi toate cele 30 de fotografii",
         amenitiesKicker:"Confort esențial", amenitiesTitle:"Tot ce contează pentru un sejur fără complicații.",
         amAir:"Aer condiționat", amCoffee:"Aparat automat de cafea", amDish:"Mașină de spălat vase", amWash:"Mașină de spălat",
         amTv:"TV cu ecran plat", amWifi:"Wi‑Fi gratuit", amParking:"Parcare gratuită", amBalcony:"Balcon / terasă",
@@ -3538,7 +3710,7 @@
         roomTwoBaths:"Two bathrooms", bathTitle:"Bath & Shower", bathCopy:"One bathroom with bathtub and a second full bathroom with shower.",
         balconyKicker:"The balcony", balconyTitle:"A simple place for moments that stay with you.",
         balconyCopy:"Coffee in the morning, sunlight in the afternoon and quiet in the evening. The balcony opens the apartment toward Tâmpa and the city.",
-        galleryKicker:"Gallery", galleryTitle:"A few frames. The rest is waiting here.",
+        galleryKicker:"Gallery", galleryTitle:"A few frames. The rest is waiting here.", galleryAllPhotos:"View all 30 photos",
         amenitiesKicker:"Essential comfort", amenitiesTitle:"Everything that matters for an easy stay.",
         amAir:"Air conditioning", amCoffee:"Automatic coffee machine", amDish:"Dishwasher", amWash:"Washing machine",
         amTv:"Flat-screen TV", amWifi:"Free Wi‑Fi", amParking:"Free parking", amBalcony:"Balcony / terrace",
@@ -3583,7 +3755,7 @@
         roomTwoBaths:"Zwei Badezimmer", bathTitle:"Bath & Shower", bathCopy:"Ein Badezimmer mit Badewanne und ein zweites voll ausgestattetes Bad mit Dusche.",
         balconyKicker:"Der Balkon", balconyTitle:"Ein einfacher Ort für besondere Momente.",
         balconyCopy:"Kaffee am Morgen, Sonne am Nachmittag und Ruhe am Abend. Der Balkon öffnet das Apartment zur Tâmpa und zur Stadt.",
-        galleryKicker:"Galerie", galleryTitle:"Ein paar Eindrücke. Den Rest entdecken Sie hier.",
+        galleryKicker:"Galerie", galleryTitle:"Ein paar Eindrücke. Den Rest entdecken Sie hier.", galleryAllPhotos:"Alle 30 Fotos ansehen",
         amenitiesKicker:"Wesentlicher Komfort", amenitiesTitle:"Alles, was für einen unkomplizierten Aufenthalt zählt.",
         amAir:"Klimaanlage", amCoffee:"Automatische Kaffeemaschine", amDish:"Geschirrspüler", amWash:"Waschmaschine",
         amTv:"Flachbild-TV", amWifi:"Kostenloses Wi‑Fi", amParking:"Kostenloses Parken", amBalcony:"Balkon / Terrasse",
@@ -4058,7 +4230,41 @@
     loadLiveAvailability();
 
 
-    const galleryItems = Array.from(document.querySelectorAll(".gallery-item"));
+    const gallerySources = [
+      "assets/images/Galerie/1.webp",
+      "assets/images/Galerie/2.webp",
+      "assets/images/Galerie/3.webp",
+      "assets/images/Galerie/4.1.webp",
+      "assets/images/Galerie/4.webp",
+      "assets/images/Galerie/5.webp",
+      "assets/images/Galerie/6.1.webp",
+      "assets/images/Galerie/6.webp",
+      "assets/images/Galerie/7.0.webp",
+      "assets/images/Galerie/7.1.0.webp",
+      "assets/images/Galerie/7.1.webp",
+      "assets/images/Galerie/7.2.0.webp",
+      "assets/images/Galerie/7.2.1.0.webp",
+      "assets/images/Galerie/7.2.1.webp",
+      "assets/images/Galerie/7.2.webp",
+      "assets/images/Galerie/7.4.webp",
+      "assets/images/Galerie/10.1.webp",
+      "assets/images/Galerie/10.2.webp",
+      "assets/images/Galerie/10.3.webp",
+      "assets/images/Galerie/10.webp",
+      "assets/images/Galerie/11.1.webp",
+      "assets/images/Galerie/11.webp",
+      "assets/images/Galerie/12.webp",
+      "assets/images/Galerie/13.0.webp",
+      "assets/images/Galerie/13.1.webp",
+      "assets/images/Galerie/14.webp",
+      "assets/images/Galerie/15.webp",
+      "assets/images/Galerie/16.webp",
+      "assets/images/Galerie/17.webp",
+      "assets/images/Galerie/27.webp"
+    ];
+
+    const galleryPreviewItems = Array.from(document.querySelectorAll(".gallery-item[data-gallery-index]"));
+    const galleryOpenAll = document.getElementById("galleryOpenAll");
     const galleryLightbox = document.getElementById("galleryLightbox");
     const lightboxImage = document.getElementById("lightboxImage");
     const lightboxClose = document.getElementById("lightboxClose");
@@ -4066,17 +4272,25 @@
     const lightboxNext = document.getElementById("lightboxNext");
     const lightboxCount = document.getElementById("lightboxCount");
     let lightboxIndex = 0;
+    let lightboxTouchStartX = null;
+
+    function preloadGalleryNeighbor(index){
+      const src = gallerySources[(index + gallerySources.length) % gallerySources.length];
+      const preload = new Image();
+      preload.src = src;
+    }
 
     function showLightbox(index){
-      if(!galleryItems.length) return;
-      lightboxIndex = (index + galleryItems.length) % galleryItems.length;
-      const img = galleryItems[lightboxIndex].querySelector("img");
-      lightboxImage.src = img.src;
-      lightboxImage.alt = img.alt;
-      lightboxCount.textContent = `${lightboxIndex + 1} / ${galleryItems.length}`;
+      if(!gallerySources.length) return;
+      lightboxIndex = (Number(index) + gallerySources.length) % gallerySources.length;
+      lightboxImage.src = gallerySources[lightboxIndex];
+      lightboxImage.alt = `Central Premium Apartment — galerie ${lightboxIndex + 1}`;
+      lightboxCount.textContent = `${lightboxIndex + 1} / ${gallerySources.length}`;
       galleryLightbox.classList.add("open");
       galleryLightbox.setAttribute("aria-hidden","false");
       document.body.style.overflow = "hidden";
+      preloadGalleryNeighbor(lightboxIndex + 1);
+      preloadGalleryNeighbor(lightboxIndex - 1);
     }
 
     function closeLightbox(){
@@ -4085,28 +4299,47 @@
       document.body.style.overflow = "";
     }
 
-    galleryItems.forEach((item,index)=>{
-      item.addEventListener("click",()=>showLightbox(index));
-      item.addEventListener("keydown",event=>{
-        if(event.key==="Enter" || event.key===" "){
+    galleryPreviewItems.forEach(item => {
+      const index = Number(item.dataset.galleryIndex);
+      item.addEventListener("click", () => showLightbox(index));
+      item.addEventListener("keydown", event => {
+        if(event.key === "Enter" || event.key === " "){
           event.preventDefault();
           showLightbox(index);
         }
       });
     });
 
-    lightboxClose.addEventListener("click",closeLightbox);
-    lightboxPrev.addEventListener("click",()=>showLightbox(lightboxIndex-1));
-    lightboxNext.addEventListener("click",()=>showLightbox(lightboxIndex+1));
-    galleryLightbox.addEventListener("click",event=>{
-      if(event.target===galleryLightbox) closeLightbox();
+    if(galleryOpenAll){
+      galleryOpenAll.addEventListener("click", () => showLightbox(0));
+    }
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightboxPrev.addEventListener("click", () => showLightbox(lightboxIndex - 1));
+    lightboxNext.addEventListener("click", () => showLightbox(lightboxIndex + 1));
+    galleryLightbox.addEventListener("click", event => {
+      if(event.target === galleryLightbox) closeLightbox();
     });
 
-    document.addEventListener("keydown",event=>{
+    galleryLightbox.addEventListener("touchstart", event => {
+      lightboxTouchStartX = event.changedTouches?.[0]?.clientX ?? null;
+    }, {passive:true});
+
+    galleryLightbox.addEventListener("touchend", event => {
+      if(lightboxTouchStartX === null) return;
+      const endX = event.changedTouches?.[0]?.clientX ?? lightboxTouchStartX;
+      const deltaX = endX - lightboxTouchStartX;
+      lightboxTouchStartX = null;
+      if(Math.abs(deltaX) < 45) return;
+      if(deltaX < 0) showLightbox(lightboxIndex + 1);
+      else showLightbox(lightboxIndex - 1);
+    }, {passive:true});
+
+    document.addEventListener("keydown", event => {
       if(!galleryLightbox.classList.contains("open")) return;
-      if(event.key==="Escape") closeLightbox();
-      if(event.key==="ArrowLeft") showLightbox(lightboxIndex-1);
-      if(event.key==="ArrowRight") showLightbox(lightboxIndex+1);
+      if(event.key === "Escape") closeLightbox();
+      if(event.key === "ArrowLeft") showLightbox(lightboxIndex - 1);
+      if(event.key === "ArrowRight") showLightbox(lightboxIndex + 1);
     });
 
     const observer = new IntersectionObserver(entries => {
