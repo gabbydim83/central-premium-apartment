@@ -1080,7 +1080,7 @@
       .hero::before{
         background:
           linear-gradient(0deg, rgba(8,24,19,.8) 0%, rgba(8,24,19,.18) 64%, rgba(8,24,19,.22) 100%),
-          url("assets/images/Galerie/4.webp") 58% center / cover no-repeat;
+          url("assets/images/Galerie/4.webp") 45% center / cover no-repeat;
       }
 
       .hero-inner{
@@ -1654,7 +1654,7 @@
             rgba(7,20,16,.34) 62%,
             rgba(7,20,16,.80) 100%
           ),
-          url("assets/images/Galerie/4.webp") 10% center / cover no-repeat;
+          url("assets/images/Galerie/4.webp") 45% center / cover no-repeat;
         transform:none;
       }
 
@@ -3025,6 +3025,106 @@
       .lightbox-count{bottom:max(12px,env(safe-area-inset-bottom));font-size:11px}
     }
 
+  
+
+    /* =========================================================
+       MOBILE V13 — owner-requested refinements
+       Desktop layout remains unchanged.
+       ========================================================= */
+    @media (max-width:760px){
+
+      .hero::before{
+        background-position:45% center;
+      }
+
+      .quick-facts .fact{
+        justify-content:center;
+      }
+
+      .quick-facts .fact strong{
+        margin:0;
+      }
+
+      .view-side{
+        position:relative;
+        overflow:hidden;
+        background:transparent;
+      }
+
+      .view-side-photo{
+        min-height:330px;
+      }
+
+      .view-side-photo h3{
+        left:18px;
+        right:18px;
+        bottom:112px;
+        font-size:23px;
+        line-height:1.03;
+      }
+
+      .view-side .view-card-copy{
+        position:absolute;
+        z-index:4;
+        left:14px;
+        right:14px;
+        bottom:14px;
+        padding:12px 14px 13px;
+        border:1px solid rgba(255,255,255,.18);
+        border-radius:14px;
+        background:rgba(18,38,31,.38);
+        backdrop-filter:blur(10px);
+        -webkit-backdrop-filter:blur(10px);
+        box-shadow:0 8px 28px rgba(0,0,0,.14);
+      }
+
+      .view-side .view-card-copy p{
+        margin:0;
+        color:rgba(255,255,255,.94);
+        font-size:12.8px;
+        line-height:1.46;
+        text-shadow:0 2px 12px rgba(0,0,0,.22);
+      }
+
+      .booking-field input,
+      .booking-field select{
+        min-height:49px;
+        padding-left:10px;
+        padding-right:10px;
+        font-size:12.8px;
+        border-radius:12px;
+      }
+
+      .booking-field input[type="date"]{
+        padding-right:6px;
+      }
+
+      .mobile-booking-bar{
+        display:none !important;
+      }
+
+      .footer{
+        padding-bottom:42px;
+      }
+
+      .gallery-count-chip{
+        font-size:9.5px;
+        letter-spacing:.02em;
+      }
+    }
+
+    @media (max-width:430px){
+      .booking-field input,
+      .booking-field select{
+        min-height:49px;
+        font-size:12.5px;
+      }
+
+      .view-side-photo h3{
+        bottom:116px;
+      }
+    }
+
   </style>
 </head>
 
@@ -3088,37 +3188,30 @@
         <div class="fact">
           <div class="fact-icon">👥</div>
           <strong data-i18n="factGuests">Până la 6 oaspeți</strong>
-          <small data-i18n="factGuestsSub">2 dormitoare + canapea extensibilă</small>
         </div>
         <div class="fact">
           <div class="fact-icon">🛏️</div>
           <strong data-i18n="factBedrooms">2 dormitoare</strong>
-          <small data-i18n="factBedroomsSub">160×200 + 180×200 cm</small>
         </div>
         <div class="fact">
           <div class="fact-icon">🛁</div>
           <strong data-i18n="factBathrooms">2 băi</strong>
-          <small data-i18n="factBathroomsSub">cadă + duș</small>
         </div>
         <div class="fact">
           <div class="fact-icon">⛰️</div>
           <strong data-i18n="factView">Vedere spre Tâmpa</strong>
-          <small data-i18n="factViewSub">din living, dormitor și balcon</small>
         </div>
         <div class="fact">
           <div class="fact-icon">☕</div>
           <strong data-i18n="factKitchen">Bucătărie completă</strong>
-          <small data-i18n="factKitchenSub">inclusiv aparat de cafea</small>
         </div>
         <div class="fact">
           <div class="fact-icon">🚗</div>
           <strong data-i18n="factParking">Parcare gratuită</strong>
-          <small data-i18n="factParkingSub">la proprietate</small>
         </div>
         <div class="fact">
           <div class="fact-icon">📶</div>
           <strong data-i18n="factWifi">Wi‑Fi gratuit</strong>
-          <small data-i18n="factWifiSub">în apartament</small>
         </div>
       </div>
     </section>
@@ -3314,11 +3407,11 @@
         <figure class="gallery-item gallery-wide reveal" tabindex="0" data-gallery-index="6"><img src="assets/images/Galerie/6.1.webp" alt="Central Premium Apartment — galerie 7" loading="lazy"></figure>
         <figure class="gallery-item reveal" tabindex="0" data-gallery-index="7"><img src="assets/images/Galerie/6.webp" alt="Central Premium Apartment — galerie 8" loading="lazy"></figure>
         <figure class="gallery-item gallery-tall reveal" tabindex="0" data-gallery-index="8"><img src="assets/images/Galerie/7.0.webp" alt="Central Premium Apartment — galerie 9" loading="lazy"></figure>
-        <figure class="gallery-item reveal" tabindex="0" data-gallery-index="9"><img src="assets/images/Galerie/7.1.0.webp" alt="Central Premium Apartment — galerie 10" loading="lazy"><span class="gallery-count-chip">30 fotografii</span></figure>
+        <figure class="gallery-item reveal" tabindex="0" data-gallery-index="9"><img src="assets/images/Galerie/7.1.0.webp" alt="Central Premium Apartment — galerie 10" loading="lazy"><span class="gallery-count-chip" data-i18n="galleryMore">Vezi mai mult</span></figure>
       </div>
 
       <div class="gallery-more-row reveal">
-        <button class="gallery-open-all" id="galleryOpenAll" type="button" data-i18n="galleryAllPhotos">Vezi toate cele 30 de fotografii</button>
+        <button class="gallery-open-all" id="galleryOpenAll" type="button" data-i18n="galleryAllPhotos">Vezi toată galeria</button>
       </div>
     </section>
 
@@ -3622,12 +3715,6 @@
       <div data-i18n="footerText">RO · EN · DE · Website concept v9 · Live Calendar · Explore Brașov</div>
     </div>
   </footer>
-
-  <div class="mobile-booking-bar">
-    <span data-i18n="mobileBookText">Central Premium Apartment</span>
-    <a href="#booking" data-i18n="mobileBookButton">Alege datele</a>
-  </div>
-
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
   <script>
@@ -3665,7 +3752,7 @@
         roomTwoBaths:"Două băi", bathTitle:"Bath & Shower", bathCopy:"O baie cu cadă și o a doua baie completă cu duș.",
         balconyKicker:"Balconul", balconyTitle:"Un loc simplu pentru momente care rămân.",
         balconyCopy:"Dimineața pentru cafea, după-amiaza pentru lumină, iar seara pentru liniște. Balconul deschide apartamentul către Tâmpa și către oraș.",
-        galleryKicker:"Galerie", galleryTitle:"Câteva cadre. Restul îl descoperi aici.", galleryAllPhotos:"Vezi toate cele 30 de fotografii",
+        galleryKicker:"Galerie", galleryTitle:"Câteva cadre. Restul îl descoperi aici.", galleryMore:"Vezi mai mult", galleryAllPhotos:"Vezi toată galeria",
         amenitiesKicker:"Confort esențial", amenitiesTitle:"Tot ce contează pentru un sejur fără complicații.",
         amAir:"Aer condiționat", amCoffee:"Aparat automat de cafea", amDish:"Mașină de spălat vase", amWash:"Mașină de spălat",
         amTv:"TV cu ecran plat", amWifi:"Wi‑Fi gratuit", amParking:"Parcare gratuită", amBalcony:"Balcon / terasă",
@@ -3710,7 +3797,7 @@
         roomTwoBaths:"Two bathrooms", bathTitle:"Bath & Shower", bathCopy:"One bathroom with bathtub and a second full bathroom with shower.",
         balconyKicker:"The balcony", balconyTitle:"A simple place for moments that stay with you.",
         balconyCopy:"Coffee in the morning, sunlight in the afternoon and quiet in the evening. The balcony opens the apartment toward Tâmpa and the city.",
-        galleryKicker:"Gallery", galleryTitle:"A few frames. The rest is waiting here.", galleryAllPhotos:"View all 30 photos",
+        galleryKicker:"Gallery", galleryTitle:"A few frames. The rest is waiting here.", galleryMore:"View more", galleryAllPhotos:"View full gallery",
         amenitiesKicker:"Essential comfort", amenitiesTitle:"Everything that matters for an easy stay.",
         amAir:"Air conditioning", amCoffee:"Automatic coffee machine", amDish:"Dishwasher", amWash:"Washing machine",
         amTv:"Flat-screen TV", amWifi:"Free Wi‑Fi", amParking:"Free parking", amBalcony:"Balcony / terrace",
@@ -3755,7 +3842,7 @@
         roomTwoBaths:"Zwei Badezimmer", bathTitle:"Bath & Shower", bathCopy:"Ein Badezimmer mit Badewanne und ein zweites voll ausgestattetes Bad mit Dusche.",
         balconyKicker:"Der Balkon", balconyTitle:"Ein einfacher Ort für besondere Momente.",
         balconyCopy:"Kaffee am Morgen, Sonne am Nachmittag und Ruhe am Abend. Der Balkon öffnet das Apartment zur Tâmpa und zur Stadt.",
-        galleryKicker:"Galerie", galleryTitle:"Ein paar Eindrücke. Den Rest entdecken Sie hier.", galleryAllPhotos:"Alle 30 Fotos ansehen",
+        galleryKicker:"Galerie", galleryTitle:"Ein paar Eindrücke. Den Rest entdecken Sie hier.", galleryMore:"Mehr anzeigen", galleryAllPhotos:"Gesamte Galerie ansehen",
         amenitiesKicker:"Wesentlicher Komfort", amenitiesTitle:"Alles, was für einen unkomplizierten Aufenthalt zählt.",
         amAir:"Klimaanlage", amCoffee:"Automatische Kaffeemaschine", amDish:"Geschirrspüler", amWash:"Waschmaschine",
         amTv:"Flachbild-TV", amWifi:"Kostenloses Wi‑Fi", amParking:"Kostenloses Parken", amBalcony:"Balkon / Terrasse",
