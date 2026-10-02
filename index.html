@@ -3125,6 +3125,229 @@
       }
     }
 
+  
+
+    /* =========================================================
+       V14 — sister property bridge + contact footer
+       ========================================================= */
+    .sister-property{
+      position:relative;
+      width:100%;
+      min-height:570px;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+      isolation:isolate;
+      color:#fff;
+      background:#173b31;
+    }
+
+    .sister-property::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-3;
+      background:
+        linear-gradient(90deg,rgba(7,24,18,.86) 0%,rgba(7,24,18,.62) 44%,rgba(7,24,18,.26) 72%,rgba(7,24,18,.18) 100%),
+        linear-gradient(0deg,rgba(7,24,18,.54),rgba(7,24,18,.05) 65%),
+        url("assets/images/central_brasov_apartment_hero.webp") center / cover no-repeat;
+    }
+
+    .sister-property::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-2;
+      background:linear-gradient(0deg,rgba(9,29,22,.34),transparent 50%);
+    }
+
+    .sister-inner{
+      width:min(var(--max),90vw);
+      margin:0 auto;
+      padding:82px 0;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(280px,.55fr);
+      gap:70px;
+      align-items:center;
+    }
+
+    .sister-copy{max-width:700px}
+
+    .sister-kicker{
+      margin-bottom:15px;
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.76);
+    }
+
+    .sister-copy h2{
+      margin:0;
+      max-width:680px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(44px,5vw,70px);
+      line-height:.98;
+      letter-spacing:-.035em;
+      font-weight:500;
+    }
+
+    .sister-copy p{
+      max-width:620px;
+      margin:20px 0 0;
+      color:rgba(255,255,255,.86);
+      font-size:17px;
+      line-height:1.65;
+    }
+
+    .sister-actions{margin-top:26px}
+
+    .sister-actions a{
+      min-height:50px;
+      padding:0 20px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:999px;
+      background:#fff;
+      color:var(--green-deep);
+      font-size:13px;
+      font-weight:900;
+      box-shadow:0 14px 35px rgba(0,0,0,.18);
+      transition:.2s ease;
+    }
+
+    .sister-actions a:hover{transform:translateY(-2px)}
+
+    .sister-preview{
+      position:relative;
+      overflow:hidden;
+      min-height:360px;
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:26px;
+      background:rgba(255,255,255,.08);
+      box-shadow:0 22px 60px rgba(0,0,0,.28);
+      backdrop-filter:blur(8px);
+      -webkit-backdrop-filter:blur(8px);
+    }
+
+    .sister-preview img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .sister-preview::after{
+      content:"Central Brasov Apartment";
+      position:absolute;
+      left:16px;
+      right:16px;
+      bottom:16px;
+      padding:11px 13px;
+      border-radius:14px;
+      background:rgba(10,34,27,.58);
+      color:#fff;
+      font-size:12px;
+      font-weight:850;
+      letter-spacing:.02em;
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+    }
+
+    .footer-contact{
+      display:flex;
+      align-items:center;
+      gap:10px 16px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .footer-contact-label{
+      color:rgba(255,255,255,.58);
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .footer-contact a{
+      display:inline-flex;
+      align-items:center;
+      min-height:38px;
+      padding:0 13px;
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:999px;
+      color:#fff;
+      font-weight:800;
+      transition:.2s ease;
+    }
+
+    .footer-contact a:hover{background:rgba(255,255,255,.10)}
+
+    @media (max-width:760px){
+      .sister-property{
+        min-height:650px;
+        align-items:flex-end;
+      }
+
+      .sister-property::before{
+        background:
+          linear-gradient(0deg,rgba(7,24,18,.92) 0%,rgba(7,24,18,.62) 38%,rgba(7,24,18,.10) 72%,rgba(7,24,18,.16) 100%),
+          url("assets/images/central_brasov_apartment_hero.webp") 52% center / cover no-repeat;
+      }
+
+      .sister-inner{
+        width:calc(100% - 32px);
+        padding:58px 0 48px;
+        grid-template-columns:1fr;
+        gap:22px;
+      }
+
+      .sister-copy h2{font-size:clamp(38px,11.5vw,52px)}
+
+      .sister-copy p{
+        margin-top:14px;
+        font-size:14px;
+        line-height:1.58;
+      }
+
+      .sister-actions{margin-top:18px}
+
+      .sister-actions a{
+        width:100%;
+        min-height:48px;
+        font-size:12px;
+      }
+
+      .sister-preview{
+        width:min(72vw,300px);
+        min-height:190px;
+        border-radius:20px;
+      }
+
+      .footer-inner{align-items:flex-start}
+      .footer-contact{justify-content:flex-start}
+    }
+
+  
+    .footer-legal-links{
+      width:min(var(--max),100%);
+      margin:24px auto 0;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.12);
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 18px;
+      color:rgba(255,255,255,.68);
+      font-size:11px;
+    }
+    .footer-legal-links a:hover{color:#fff}
+    @media(max-width:760px){
+      .footer-legal-links{gap:10px 14px}
+    }
+
   </style>
 </head>
 
@@ -3478,6 +3701,34 @@
       </div>
     </section>
 
+
+    <section class="sister-property" id="other-apartment">
+      <div class="sister-inner">
+        <div class="sister-copy reveal">
+          <div class="sister-kicker" data-i18n="sisterKicker">Încă o opțiune în Brașov</div>
+          <h2 data-i18n="sisterTitle">Nu ai găsit datele potrivite?</h2>
+          <p data-i18n="sisterCopy">
+            Dacă perioada dorită nu este disponibilă sau călătorești cu prietenii și ai nevoie de mai mult spațiu, descoperă și Central Brasov Apartment.
+          </p>
+          <div class="sister-actions">
+            <a href="https://www.central-brasov-apartment.com" target="_blank" rel="noopener" data-i18n="sisterButton">
+              Descoperă Central Brasov Apartment
+            </a>
+          </div>
+        </div>
+
+        <a class="sister-preview reveal"
+           href="https://www.central-brasov-apartment.com"
+           target="_blank"
+           rel="noopener"
+           aria-label="Central Brasov Apartment">
+          <img src="assets/images/central_brasov_apartment_preview.webp"
+               alt="Central Brasov Apartment"
+               loading="lazy">
+        </a>
+      </div>
+    </section>
+
 <section class="eb-section" id="explore">
 
     <div class="eb-city-hero" id="ebCityHero">
@@ -3706,14 +3957,25 @@
     <div class="lightbox-count" id="lightboxCount"></div>
   </div>
 
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <div class="footer-inner">
       <div>
         <strong>Central Premium Apartment</strong>
         <span>Brașov, România</span>
       </div>
-      <div data-i18n="footerText">RO · EN · DE · Website concept v9 · Live Calendar · Explore Brașov</div>
+
+      <div class="footer-contact">
+        <span class="footer-contact-label" data-i18n="contactTitle">Contact</span>
+        <a href="tel:+40747172553" aria-label="Call Central Premium Apartment">+40 747 172 553</a>
+        <a href="https://wa.me/40747172553" target="_blank" rel="noopener" data-i18n="contactWhatsapp">WhatsApp</a>
+      </div>
     </div>
+
+      <div class="footer-legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="cookies.html">Cookie Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -3752,14 +4014,14 @@
         roomTwoBaths:"Două băi", bathTitle:"Bath & Shower", bathCopy:"O baie cu cadă și o a doua baie completă cu duș.",
         balconyKicker:"Balconul", balconyTitle:"Un loc simplu pentru momente care rămân.",
         balconyCopy:"Dimineața pentru cafea, după-amiaza pentru lumină, iar seara pentru liniște. Balconul deschide apartamentul către Tâmpa și către oraș.",
-        galleryKicker:"Galerie", galleryTitle:"Câteva cadre. Restul îl descoperi aici.", galleryMore:"Vezi mai mult", galleryAllPhotos:"Vezi toată galeria",
+        galleryKicker:"Galerie", galleryTitle:"Câteva cadre. Restul îl descoperi aici.", galleryMore:"Vezi mai mult", galleryAllPhotos:"Vezi toată galeria", sisterKicker:"Încă o opțiune în Brașov", sisterTitle:"Nu ai găsit datele potrivite?", sisterCopy:"Dacă perioada dorită nu este disponibilă sau călătorești cu prietenii și ai nevoie de mai mult spațiu, descoperă și Central Brasov Apartment.", sisterButton:"Descoperă Central Brasov Apartment", contactTitle:"Contact", contactWhatsapp:"WhatsApp",
         amenitiesKicker:"Confort esențial", amenitiesTitle:"Tot ce contează pentru un sejur fără complicații.",
         amAir:"Aer condiționat", amCoffee:"Aparat automat de cafea", amDish:"Mașină de spălat vase", amWash:"Mașină de spălat",
         amTv:"TV cu ecran plat", amWifi:"Wi‑Fi gratuit", amParking:"Parcare gratuită", amBalcony:"Balcon / terasă",
         locationKicker:"Locație", locationTitle:"Central, dar într-o zonă liniștită.",
         locationCopy:"Apartamentul este aproape de centrul istoric, dar păstrează atmosfera calmă a unei zone rezidențiale.",
         locationCardTitle:"Aproape de tot ce contează", locOldTown:"Centrul Vechi", locCouncil:"Piața Sfatului", locMarket:"Supermarket", locParking:"Parcare", locParkingValue:"gratuită",
-        reserveKicker:"Planifică sejurul", reserveTitle:"Alege datele. De aici începe Brașovul tău.", reserveCopy:"Selectează perioada și numărul de oaspeți. Calendarul verifică disponibilitatea live din același sistem folosit în panoul proprietarului.", reservePanelTitle:"Verifică perioada", reserveBadge:"până la 6 oaspeți", calendarTitle:"Alege perioada", calendarHelp:"Prima dată selectată este check-in; a doua este check-out.", calendarToday:"Astăzi", calendarSelected:"Selectat", calendarPast:"Date indisponibile", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Oaspeți", bookingSummaryEmpty:"Selectează datele pentru a vedea rezumatul sejurului.", reserveButton:"Continuă rezervarea", reserveStatus:"Disponibilitatea este sincronizată cu calendarul proprietății. Datele ocupate nu pot fi selectate.", bookingSummaryNights:"nopți", bookingSummaryGuests:"oaspeți", bookingFormMessage:"Perioada selectată este disponibilă în calendarul live.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Alege datele",
+        reserveKicker:"Planifică sejurul", reserveTitle:"Alege datele. De aici începe Brașovul tău.", reserveCopy:"Selectează perioada și numărul de oaspeți. Calendarul verifică disponibilitatea live din același sistem folosit în panoul proprietarului.", reservePanelTitle:"Verifică perioada", reserveBadge:"până la 6 oaspeți", calendarTitle:"Alege perioada", calendarHelp:"Prima dată selectată este check-in; a doua este check-out.", calendarToday:"Astăzi", calendarSelected:"Selectat", calendarPast:"Date indisponibile", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Oaspeți", bookingSummaryEmpty:"Selectează datele pentru a vedea rezumatul sejurului.", reserveButton:"Trimite cererea pe WhatsApp", reserveStatus:"Disponibilitatea este sincronizată cu calendarul proprietății. Datele ocupate nu pot fi selectate.", bookingSummaryNights:"nopți", bookingSummaryGuests:"oaspeți", bookingFormMessage:"Perioada selectată este disponibilă în calendarul live.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Alege datele",
         bookingKicker:"Central Premium Apartment", bookingTitle:"Brașovul e mai frumos când îl vezi de aici.",
         bookingCopy:"Pentru un city break, un sejur în familie sau câteva zile de liniște, apartamentul oferă spațiul și priveliștea care fac diferența.",
         bookingButton:"Verifică disponibilitatea", footerText:"RO · EN · DE · Website concept v7 · Explore Brașov"
@@ -3797,14 +4059,14 @@
         roomTwoBaths:"Two bathrooms", bathTitle:"Bath & Shower", bathCopy:"One bathroom with bathtub and a second full bathroom with shower.",
         balconyKicker:"The balcony", balconyTitle:"A simple place for moments that stay with you.",
         balconyCopy:"Coffee in the morning, sunlight in the afternoon and quiet in the evening. The balcony opens the apartment toward Tâmpa and the city.",
-        galleryKicker:"Gallery", galleryTitle:"A few frames. The rest is waiting here.", galleryMore:"View more", galleryAllPhotos:"View full gallery",
+        galleryKicker:"Gallery", galleryTitle:"A few frames. The rest is waiting here.", galleryMore:"View more", galleryAllPhotos:"View full gallery", sisterKicker:"Another option in Brașov", sisterTitle:"Couldn’t find the dates you need?", sisterCopy:"If your preferred dates are unavailable, or you’re travelling with friends and need more space, discover Central Brasov Apartment as well.", sisterButton:"Discover Central Brasov Apartment", contactTitle:"Contact", contactWhatsapp:"WhatsApp",
         amenitiesKicker:"Essential comfort", amenitiesTitle:"Everything that matters for an easy stay.",
         amAir:"Air conditioning", amCoffee:"Automatic coffee machine", amDish:"Dishwasher", amWash:"Washing machine",
         amTv:"Flat-screen TV", amWifi:"Free Wi‑Fi", amParking:"Free parking", amBalcony:"Balcony / terrace",
         locationKicker:"Location", locationTitle:"Central, yet in a quiet residential area.",
         locationCopy:"The apartment is close to the historic centre while keeping the calm atmosphere of a residential neighbourhood.",
         locationCardTitle:"Close to what matters", locOldTown:"Old Town", locCouncil:"Council Square", locMarket:"Supermarket", locParking:"Parking", locParkingValue:"free",
-        reserveKicker:"Plan your stay", reserveTitle:"Choose your dates. Your Brașov stay starts here.", reserveCopy:"Choose your dates and number of guests. The calendar checks live availability from the same system used in the owner dashboard.", reservePanelTitle:"Check your dates", reserveBadge:"up to 6 guests", calendarTitle:"Choose your dates", calendarHelp:"Your first selection is check-in; the second is check-out.", calendarToday:"Today", calendarSelected:"Selected", calendarPast:"Unavailable dates", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Guests", bookingSummaryEmpty:"Choose your dates to see a stay summary.", reserveButton:"Continue booking", reserveStatus:"Availability is synced with the property calendar. Occupied dates cannot be selected.", bookingSummaryNights:"nights", bookingSummaryGuests:"guests", bookingFormMessage:"The selected period is available in the live calendar.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Choose dates",
+        reserveKicker:"Plan your stay", reserveTitle:"Choose your dates. Your Brașov stay starts here.", reserveCopy:"Choose your dates and number of guests. The calendar checks live availability from the same system used in the owner dashboard.", reservePanelTitle:"Check your dates", reserveBadge:"up to 6 guests", calendarTitle:"Choose your dates", calendarHelp:"Your first selection is check-in; the second is check-out.", calendarToday:"Today", calendarSelected:"Selected", calendarPast:"Unavailable dates", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Guests", bookingSummaryEmpty:"Choose your dates to see a stay summary.", reserveButton:"Send request on WhatsApp", reserveStatus:"Availability is synced with the property calendar. Occupied dates cannot be selected.", bookingSummaryNights:"nights", bookingSummaryGuests:"guests", bookingFormMessage:"The selected period is available in the live calendar.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Choose dates",
         bookingKicker:"Central Premium Apartment", bookingTitle:"Brașov looks even better from here.",
         bookingCopy:"For a city break, a family stay or a few quiet days, the apartment offers the space and view that make a real difference.",
         bookingButton:"Check availability", footerText:"RO · EN · DE · Website concept v7 · Explore Brașov"
@@ -3842,14 +4104,14 @@
         roomTwoBaths:"Zwei Badezimmer", bathTitle:"Bath & Shower", bathCopy:"Ein Badezimmer mit Badewanne und ein zweites voll ausgestattetes Bad mit Dusche.",
         balconyKicker:"Der Balkon", balconyTitle:"Ein einfacher Ort für besondere Momente.",
         balconyCopy:"Kaffee am Morgen, Sonne am Nachmittag und Ruhe am Abend. Der Balkon öffnet das Apartment zur Tâmpa und zur Stadt.",
-        galleryKicker:"Galerie", galleryTitle:"Ein paar Eindrücke. Den Rest entdecken Sie hier.", galleryMore:"Mehr anzeigen", galleryAllPhotos:"Gesamte Galerie ansehen",
+        galleryKicker:"Galerie", galleryTitle:"Ein paar Eindrücke. Den Rest entdecken Sie hier.", galleryMore:"Mehr anzeigen", galleryAllPhotos:"Gesamte Galerie ansehen", sisterKicker:"Eine weitere Option in Brașov", sisterTitle:"Sind Ihre Wunschdaten nicht verfügbar?", sisterCopy:"Wenn Ihr gewünschter Zeitraum nicht verfügbar ist oder Sie mit Freunden reisen und mehr Platz benötigen, entdecken Sie auch das Central Brasov Apartment.", sisterButton:"Central Brasov Apartment entdecken", contactTitle:"Kontakt", contactWhatsapp:"WhatsApp",
         amenitiesKicker:"Wesentlicher Komfort", amenitiesTitle:"Alles, was für einen unkomplizierten Aufenthalt zählt.",
         amAir:"Klimaanlage", amCoffee:"Automatische Kaffeemaschine", amDish:"Geschirrspüler", amWash:"Waschmaschine",
         amTv:"Flachbild-TV", amWifi:"Kostenloses Wi‑Fi", amParking:"Kostenloses Parken", amBalcony:"Balkon / Terrasse",
         locationKicker:"Lage", locationTitle:"Zentral und trotzdem ruhig.",
         locationCopy:"Das Apartment liegt nahe am historischen Zentrum und bewahrt gleichzeitig die ruhige Atmosphäre eines Wohnviertels.",
         locationCardTitle:"Nah an allem Wichtigen", locOldTown:"Altstadt", locCouncil:"Rathausplatz", locMarket:"Supermarkt", locParking:"Parken", locParkingValue:"kostenlos",
-        reserveKicker:"Aufenthalt planen", reserveTitle:"Wählen Sie Ihre Daten. Ihr Brașov-Aufenthalt beginnt hier.", reserveCopy:"Wählen Sie Zeitraum und Gästezahl. Der Kalender prüft die Live-Verfügbarkeit aus demselben System wie das Eigentümer-Dashboard.", reservePanelTitle:"Zeitraum prüfen", reserveBadge:"bis zu 6 Gäste", calendarTitle:"Zeitraum wählen", calendarHelp:"Die erste Auswahl ist Check-in, die zweite Check-out.", calendarToday:"Heute", calendarSelected:"Ausgewählt", calendarPast:"Nicht verfügbare Daten", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Gäste", bookingSummaryEmpty:"Wählen Sie die Daten, um die Aufenthaltsübersicht zu sehen.", reserveButton:"Buchung fortsetzen", reserveStatus:"Die Verfügbarkeit ist mit dem Unterkunftskalender synchronisiert. Belegte Daten können nicht ausgewählt werden.", bookingSummaryNights:"Nächte", bookingSummaryGuests:"Gäste", bookingFormMessage:"Der gewählte Zeitraum ist im Live-Kalender verfügbar.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Daten wählen",
+        reserveKicker:"Aufenthalt planen", reserveTitle:"Wählen Sie Ihre Daten. Ihr Brașov-Aufenthalt beginnt hier.", reserveCopy:"Wählen Sie Zeitraum und Gästezahl. Der Kalender prüft die Live-Verfügbarkeit aus demselben System wie das Eigentümer-Dashboard.", reservePanelTitle:"Zeitraum prüfen", reserveBadge:"bis zu 6 Gäste", calendarTitle:"Zeitraum wählen", calendarHelp:"Die erste Auswahl ist Check-in, die zweite Check-out.", calendarToday:"Heute", calendarSelected:"Ausgewählt", calendarPast:"Nicht verfügbare Daten", checkInLabel:"Check-in", checkOutLabel:"Check-out", guestsLabel:"Gäste", bookingSummaryEmpty:"Wählen Sie die Daten, um die Aufenthaltsübersicht zu sehen.", reserveButton:"Anfrage über WhatsApp senden", reserveStatus:"Die Verfügbarkeit ist mit dem Unterkunftskalender synchronisiert. Belegte Daten können nicht ausgewählt werden.", bookingSummaryNights:"Nächte", bookingSummaryGuests:"Gäste", bookingFormMessage:"Der gewählte Zeitraum ist im Live-Kalender verfügbar.", mobileBookText:"Central Premium Apartment", mobileBookButton:"Daten wählen",
         bookingKicker:"Central Premium Apartment", bookingTitle:"Brașov ist von hier aus noch schöner.",
         bookingCopy:"Für einen Citytrip, einen Familienaufenthalt oder ein paar ruhige Tage bietet das Apartment den Raum und die Aussicht, die den Unterschied machen.",
         bookingButton:"Verfügbarkeit prüfen", footerText:"RO · EN · DE · Website concept v7 · Explore Brașov"
@@ -3913,7 +4175,6 @@
 
       languageMenu.classList.remove("open");
       languageBtn.setAttribute("aria-expanded","false");
-      localStorage.setItem("cpa-lang", lang);
       updateBookingSummary();
       renderCalendar();
     }
@@ -4299,6 +4560,54 @@
 
     guestCount.addEventListener("change",updateBookingSummary);
 
+    const OWNER_WHATSAPP_NUMBER = "40747172553";
+
+    function buildBookingWhatsAppMessage(){
+      const start = dateOnly(checkIn.value);
+      const end = dateOnly(checkOut.value);
+      const nights =
+        start && end
+          ? Math.max(0, Math.round((end - start) / 86400000))
+          : 0;
+
+      const messages = {
+        ro:
+`Bună! Doresc să trimit o cerere de rezervare pentru Central Premium Apartment, Brașov.
+
+Check-in: ${checkIn.value}
+Check-out: ${checkOut.value}
+Nopți: ${nights}
+Oaspeți: ${guestCount.value}
+
+Am verificat perioada în calendarul de disponibilitate de pe website.
+Vă rog să-mi confirmați disponibilitatea și detaliile rezervării.`,
+
+        en:
+`Hello! I would like to send a booking request for Central Premium Apartment, Brașov.
+
+Check-in: ${checkIn.value}
+Check-out: ${checkOut.value}
+Nights: ${nights}
+Guests: ${guestCount.value}
+
+I checked the dates in the availability calendar on the website.
+Please confirm availability and the booking details.`,
+
+        de:
+`Hallo! Ich möchte eine Buchungsanfrage für das Central Premium Apartment in Brașov senden.
+
+Check-in: ${checkIn.value}
+Check-out: ${checkOut.value}
+Nächte: ${nights}
+Gäste: ${guestCount.value}
+
+Ich habe den Zeitraum im Verfügbarkeitskalender auf der Website geprüft.
+Bitte bestätigen Sie die Verfügbarkeit und die Buchungsdetails.`
+      };
+
+      return messages[activeLanguage] || messages.ro;
+    }
+
     bookingForm.addEventListener("submit",event=>{
       event.preventDefault();
 
@@ -4306,13 +4615,18 @@
       if(!validateSelectedDates()) return;
 
       updateBookingSummary();
+
+      const message = buildBookingWhatsAppMessage();
+      const whatsappUrl =
+        `https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
       bookingStatus.textContent=translations[activeLanguage].bookingFormMessage;
       bookingStatus.style.color="var(--green-deep)";
       bookingStatus.style.fontWeight="800";
-    });
 
-    const savedLang = localStorage.getItem("cpa-lang");
-    if(savedLang && translations[savedLang]) setLanguage(savedLang); else setLanguage("ro");
+      window.open(whatsappUrl,"_blank","noopener");
+    });
+    setLanguage("ro");
 
     loadLiveAvailability();
 
@@ -4460,18 +4774,6 @@
     async function ebResolvePropertyLocation() {
       if (ebPropertyLocationReady) return;
 
-      const cached = localStorage.getItem("cpa-property-location");
-      if (cached) {
-        try {
-          const parsed = JSON.parse(cached);
-          if (Number.isFinite(parsed.lat) && Number.isFinite(parsed.lon)) {
-            CENTRAL_PREMIUM_PROPERTY = parsed;
-            ebPropertyLocationReady = true;
-            return;
-          }
-        } catch (error) {}
-      }
-
       try {
         const address = encodeURIComponent(
           "Strada Doctor Ion Marinescu 17, Brașov, Romania"
@@ -4488,10 +4790,6 @@
 
           if (Number.isFinite(lat) && Number.isFinite(lon)) {
             CENTRAL_PREMIUM_PROPERTY = { lat, lon };
-            localStorage.setItem(
-              "cpa-property-location",
-              JSON.stringify(CENTRAL_PREMIUM_PROPERTY)
-            );
           }
         }
       } catch (error) {
@@ -4607,12 +4905,9 @@
 
 
     function ebLang() {
-      const stored =
-        localStorage.getItem("cpa-lang");
-
-      return ["ro", "en", "de"].includes(stored)
-        ? stored
-        : (["ro", "en", "de"].includes(document.documentElement.lang)
+      return ["ro","en","de"].includes(activeLanguage)
+        ? activeLanguage
+        : (["ro","en","de"].includes(document.documentElement.lang)
             ? document.documentElement.lang
             : "ro");
     }
