@@ -1537,6 +1537,113 @@
         }
 
 
+
+
+        .ical-export-card {
+            margin-bottom: 18px;
+            padding: 24px 25px;
+            border: 1px solid #d9e5eb;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #f8fbfd, #ffffff);
+            box-shadow: 0 12px 35px rgba(8,45,80,0.05);
+        }
+
+        .ical-export-head {
+            margin-bottom: 14px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 18px;
+        }
+
+        .ical-export-head small {
+            display: block;
+            margin-bottom: 6px;
+            color: #c99a3d;
+            font-size: 8px;
+            font-weight: 800;
+            letter-spacing: 1.8px;
+        }
+
+        .ical-export-head strong {
+            display: block;
+            margin-bottom: 6px;
+            color: #173853;
+            font-size: 15px;
+        }
+
+        .ical-export-head p {
+            max-width: 820px;
+            color: #748391;
+            font-size: 10px;
+            line-height: 1.6;
+        }
+
+        .ical-export-row {
+            display: grid;
+            grid-template-columns: minmax(0,1fr) auto;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .ical-export-row input {
+            width: 100%;
+            min-height: 46px;
+            padding: 0 13px;
+            border: 1px solid #dce5eb;
+            border-radius: 9px;
+            background: #ffffff;
+            color: #173853;
+            font-size: 11px;
+        }
+
+        .ical-copy-button {
+            min-height: 46px;
+            padding: 0 17px;
+            border: 0;
+            border-radius: 9px;
+            background: #082d50;
+            color: #ffffff;
+            font-size: 9px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        .ical-copy-button:hover {
+            background: #c99a3d;
+        }
+
+        .ical-copy-button:disabled {
+            opacity: .55;
+            cursor: not-allowed;
+        }
+
+        .ical-export-message {
+            min-height: 15px;
+            margin-top: 9px;
+            color: #71808c;
+            font-size: 9px;
+            line-height: 1.45;
+        }
+
+        .ical-export-message.success {
+            color: #2f7d50;
+        }
+
+        .ical-export-message.error {
+            color: #a54848;
+        }
+
+        @media (max-width: 650px) {
+            .ical-export-row {
+                grid-template-columns: 1fr;
+            }
+
+            .ical-copy-button {
+                width: 100%;
+            }
+        }
+
         .calendar-sync-card {
             padding: 25px;
 
@@ -2201,6 +2308,148 @@
     }
 }
 
+
+
+/* =========================================
+   CENTRAL PREMIUM — FINAL CALENDAR PALETTE
+   Available = white
+   Direct / Manual = green
+   Booking.com = blue
+   Airbnb = red
+   Vrbo = purple
+========================================= */
+
+.legend-circle.available {
+    background: #ffffff;
+    border: 1px solid #cfd9de;
+}
+
+.legend-circle.direct,
+.legend-circle.manual-source {
+    background: #36a86b;
+}
+
+.legend-circle.booking-source {
+    background: #1677c8;
+}
+
+.legend-circle.airbnb-source {
+    background: #ff5a5f;
+}
+
+.legend-circle.vrbo-source {
+    background: #6f53c6;
+}
+
+/* Four-month overview */
+.overview-day,
+.overview-day.available {
+    background: #ffffff;
+    color: #31506a;
+    border-color: #e1e8ed;
+}
+
+.overview-day.source-direct,
+.overview-day.source-manual,
+.overview-day.pending.source-direct,
+.overview-day.pending.source-manual {
+    background: #e6f7ee !important;
+    color: #247048 !important;
+    border-color: #c8ead8 !important;
+}
+
+.overview-day.source-booking_com,
+.overview-day.pending.source-booking_com {
+    background: #e8f3fc !important;
+    color: #145d97 !important;
+    border-color: #c7e1f5 !important;
+}
+
+.overview-day.source-airbnb,
+.overview-day.pending.source-airbnb {
+    background: #fff0f0 !important;
+    color: #b5454a !important;
+    border-color: #f4d0d2 !important;
+}
+
+.overview-day.source-vrbo,
+.overview-day.pending.source-vrbo {
+    background: #f0ecfb !important;
+    color: #5e49aa !important;
+    border-color: #dcd3f5 !important;
+}
+
+/* Detailed owner calendar */
+.owner-calendar-day.available {
+    background: #ffffff !important;
+    color: #31506a !important;
+    border-color: #e1e8ed !important;
+}
+
+.owner-calendar-day.source-direct,
+.owner-calendar-day.source-manual,
+.owner-calendar-day.pending.source-direct,
+.owner-calendar-day.pending.source-manual {
+    background: #e6f7ee !important;
+    color: #247048 !important;
+    border-color: #c8ead8 !important;
+}
+
+.owner-calendar-day.source-booking_com,
+.owner-calendar-day.pending.source-booking_com {
+    background: #e8f3fc !important;
+    color: #145d97 !important;
+    border-color: #c7e1f5 !important;
+}
+
+.owner-calendar-day.source-airbnb,
+.owner-calendar-day.pending.source-airbnb {
+    background: #fff0f0 !important;
+    color: #b5454a !important;
+    border-color: #f4d0d2 !important;
+}
+
+.owner-calendar-day.source-vrbo,
+.owner-calendar-day.pending.source-vrbo {
+    background: #f0ecfb !important;
+    color: #5e49aa !important;
+    border-color: #dcd3f5 !important;
+}
+
+/* Source badges use the same palette */
+.booking-source-badge.direct,
+.booking-source-badge.manual {
+    background: #e6f7ee;
+    color: #247048 !important;
+}
+
+/* Print / PDF follows the same source colours */
+.print-day.available {
+    background: #ffffff;
+    border-color: #dfe6ea;
+}
+
+.print-day.source-direct,
+.print-day.source-manual {
+    background: #e6f7ee;
+    border-color: #c8ead8;
+}
+
+.print-day.source-booking_com {
+    background: #e8f3fc;
+    border-color: #c7e1f5;
+}
+
+.print-day.source-airbnb {
+    background: #fff0f0;
+    border-color: #f4d0d2;
+}
+
+.print-day.source-vrbo {
+    background: #f0ecfb;
+    border-color: #dcd3f5;
+}
+
 </style>
 
 </head>
@@ -2407,12 +2656,10 @@
             <div class="owner-calendar-legend overview-legend">
 
                 <div><span class="legend-circle available"></span>Available</div>
-                <div><span class="legend-circle direct"></span>Direct website</div>
+                <div><span class="legend-circle direct"></span>Direct / Manual</div>
                 <div><span class="legend-circle booking-source"></span>Booking.com</div>
                 <div><span class="legend-circle airbnb-source"></span>Airbnb</div>
                 <div><span class="legend-circle vrbo-source"></span>Vrbo / Stayz / Bookabach</div>
-                <div><span class="legend-circle manual-source"></span>Manual</div>
-                <div><span class="legend-circle pending"></span>Pending</div>
 
             </div>
 
@@ -2495,7 +2742,7 @@
 
         <div>
             <span class="legend-circle direct"></span>
-            Direct website
+            Direct / Manual
         </div>
 
         <div>
@@ -2511,16 +2758,6 @@
         <div>
             <span class="legend-circle vrbo-source"></span>
             Vrbo / Stayz / Bookabach
-        </div>
-
-        <div>
-            <span class="legend-circle manual-source"></span>
-            Manual
-        </div>
-
-        <div>
-            <span class="legend-circle pending"></span>
-            Pending
         </div>
 
     </div>
@@ -2590,6 +2827,51 @@
                 </button>
 
             </div>
+
+
+
+
+            <article class="ical-export-card">
+
+                <div class="ical-export-head">
+                    <div>
+                        <small>YOUR CALENDAR EXPORT</small>
+                        <strong>One iCal link for your other booking platforms</strong>
+                        <p>
+                            Copy this same private iCal URL into Booking.com, Airbnb, Vrbo
+                            or another platform that accepts external iCal calendars.
+                            It contains availability only — no guest names, phone numbers or prices.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="ical-export-row">
+                    <input
+                        type="text"
+                        id="ownerIcalExportUrl"
+                        value=""
+                        placeholder="Generating your iCal link..."
+                        readonly
+                    >
+                    <button
+                        type="button"
+                        class="ical-copy-button"
+                        id="copyOwnerIcalButton"
+                        disabled
+                    >
+                        COPY ICAL LINK
+                    </button>
+                </div>
+
+                <div
+                    class="ical-export-message"
+                    id="ownerIcalExportMessage"
+                >
+                    The link is generated securely after sign-in.
+                </div>
+
+            </article>
+
 
 
             <div class="calendar-sync-grid">
@@ -3663,6 +3945,21 @@ const vrboSyncMeta =
     );
 
 
+const ownerIcalExportUrl =
+    document.getElementById(
+        "ownerIcalExportUrl"
+    );
+
+const copyOwnerIcalButton =
+    document.getElementById(
+        "copyOwnerIcalButton"
+    );
+
+const ownerIcalExportMessage =
+    document.getElementById(
+        "ownerIcalExportMessage"
+    );
+
 let ownerCalendarFeeds =
     [];
 
@@ -3887,6 +4184,166 @@ async function loadReservationsFromSupabase() {
         );
 
 }
+
+
+
+/* =========================================
+   OWNER ICAL EXPORT LINK
+========================================= */
+
+async function loadOwnerIcalExportLink() {
+
+    if (
+        !ownerProperty ||
+        !ownerIcalExportUrl ||
+        !copyOwnerIcalButton ||
+        !ownerIcalExportMessage
+    ) {
+        return;
+    }
+
+    ownerIcalExportUrl.value = "";
+    copyOwnerIcalButton.disabled = true;
+    ownerIcalExportMessage.className =
+        "ical-export-message";
+    ownerIcalExportMessage.textContent =
+        "Generating your private iCal link...";
+
+    try {
+
+        const {
+            data: sessionData,
+            error: sessionError
+        } =
+            await supabaseClient
+                .auth
+                .getSession();
+
+        if (
+            sessionError ||
+            !sessionData?.session?.access_token
+        ) {
+            throw (
+                sessionError ||
+                new Error(
+                    "No authenticated session is available."
+                )
+            );
+        }
+
+        const response =
+            await fetch(
+                SUPABASE_URL +
+                "/functions/v1/property-ical-feed",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type":
+                            "application/json",
+                        "Authorization":
+                            "Bearer " +
+                            sessionData
+                                .session
+                                .access_token,
+                        "apikey":
+                            SUPABASE_PUBLISHABLE_KEY
+                    },
+                    body:
+                        JSON.stringify({
+                            action:
+                                "link",
+                            property_slug:
+                                OWNER_PROPERTY_SLUG
+                        })
+                }
+            );
+
+        const result =
+            await response.json();
+
+        if (
+            !response.ok ||
+            !result?.url
+        ) {
+            throw new Error(
+                result?.error ||
+                "Could not generate the iCal export link."
+            );
+        }
+
+        ownerIcalExportUrl.value =
+            result.url;
+
+        copyOwnerIcalButton.disabled =
+            false;
+
+        ownerIcalExportMessage.className =
+            "ical-export-message success";
+
+        ownerIcalExportMessage.textContent =
+            "Ready. Use this same URL on any platform that accepts iCal imports.";
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "Could not generate owner iCal link.",
+            error
+        );
+
+        ownerIcalExportMessage.className =
+            "ical-export-message error";
+
+        ownerIcalExportMessage.textContent =
+            "iCal export is not available yet. Deploy the property-ical-feed function first.";
+
+    }
+
+}
+
+
+copyOwnerIcalButton.addEventListener(
+    "click",
+    async function () {
+
+        const value =
+            ownerIcalExportUrl.value.trim();
+
+        if (!value) {
+            return;
+        }
+
+        try {
+
+            await navigator.clipboard
+                .writeText(
+                    value
+                );
+
+            ownerIcalExportMessage.className =
+                "ical-export-message success";
+
+            ownerIcalExportMessage.textContent =
+                "iCal link copied.";
+
+        }
+
+        catch {
+
+            ownerIcalExportUrl.focus();
+            ownerIcalExportUrl.select();
+
+            ownerIcalExportMessage.className =
+                "ical-export-message";
+
+            ownerIcalExportMessage.textContent =
+                "Copy the selected URL manually.";
+
+        }
+
+    }
+);
 
 
 
@@ -4912,6 +5369,8 @@ async function initializeOwnerDashboard() {
 
     await loadCalendarFeeds();
 
+    await loadOwnerIcalExportLink();
+
     showDashboard();
 
 }
@@ -5249,11 +5708,11 @@ function renderOverviewCalendar() {
                 );
 
                 const sourceLabels = {
-                    direct: "Direct website",
+                    direct: "Direct / Manual",
                     booking_com: "Booking.com",
                     airbnb: "Airbnb",
                     vrbo: "Vrbo / Stayz / Bookabach",
-                    manual: "Manual"
+                    manual: "Direct / Manual"
                 };
 
                 cell.title =
@@ -5879,7 +6338,13 @@ function buildPrintMonthReport() {
 
         element.className =
             "print-day " +
-            info.status;
+            info.status +
+            (
+                info.source &&
+                info.source !== "available"
+                    ? " source-" + info.source
+                    : ""
+            );
 
         const dayNumber =
             document.createElement(
@@ -6524,11 +6989,11 @@ function renderBookingList() {
                 "manual";
 
             const sourceLabels = {
-                direct: "Direct website",
+                direct: "Direct / Manual",
                 booking_com: "Booking.com",
                 airbnb: "Airbnb",
                 vrbo: "Vrbo / Stayz / Bookabach",
-                manual: "Manual"
+                manual: "Direct / Manual"
             };
 
             sourceBadge.className =
