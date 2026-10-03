@@ -3660,14 +3660,23 @@
     logoutButton.addEventListener(
         "click",
         async function () {
-            await supabaseClient
-                .auth
-                .signOut();
+            const { error } =
+                await supabaseClient
+                    .auth
+                    .signOut();
+
+            if (error) {
+                console.error(
+                    "Sign-out failed.",
+                    error
+                );
+            }
 
             passwordInput.value =
                 "";
 
-            showLoginScreen();
+            window.location.href =
+                "index.html";
         }
     );
 
